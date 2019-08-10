@@ -22,14 +22,14 @@
                 </router-link>
                 
                 <!-- Livestock -->
-                <router-link to="/portfolio" class="nav-item" activeClass="active" tag="li">
+                <router-link to="/livestock" class="nav-item" activeClass="active" tag="li">
                 
                     <a class="nav-link">Livestock</a>
                     
                 </router-link>
                 
                 <!-- Market -->
-                <router-link to="/stocks" class="nav-item" activeClass="active" tag="li">
+                <router-link to="/market" class="nav-item" activeClass="active" tag="li">
                 
                     <a class="nav-link">Market</a>
                     
