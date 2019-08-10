@@ -1,36 +1,40 @@
 <template>
    
-   <div class="container">
-          
-    <app-header></app-header>
-          
-        <div class="row">
-              
-            <div class="col-xs-12">
-                  
-                <transition name="slide" mode="out-in">
+  <div class="container">
 
-                    <router-view></router-view>
+    <!-- Navbar -->
+    <app-navbar></app-navbar>
+    
+    <br><br><br>
 
-                </transition>  
+    <!-- Router Area -->
+    <div class="row pt-5">
+          
+      <div class="">
+            
+        <transition name="slide" mode="out-in">
+
+          <router-view></router-view>
+
+        </transition>  
+            
+      </div>
+          
+    </div>
                   
-            </div>
-              
-        </div>
-                  
-   </div>
+  </div>
     
 </template>
 
 <script>
     
-    import Header from "./components/Header.vue";
+    import Navbar from "./components/Navbar.vue";
 
     export default {
         
         components: {
             
-            appHeader: Header
+            appNavbar: Navbar
             
         },
         
