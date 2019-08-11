@@ -1,24 +1,24 @@
-import stocks from '../../data/stocks';
+import shrimpData from './../../data/shrimpData.js';
 
 const state = {
     
-    stocks: []
+    shrimpData: []
     
 };
 
 const mutations = {
     
-    'SET_STOCKS' (state, stocks) {
+    'SET_STOCKS' (state, shrimpData) {
         
-        state.stocks = stocks;
+        state.shrimpData = shrimpData;
         
     },
     
     'RND_STOCKS' (state) {
         
-        state.stocks.forEach(stock => {
+        state.shrimpData.forEach(shrimp => {
 
-            stock.price = Math.round(stock.price * (1 + Math.random() - 0.5));
+            shrimp.price = Math.round(shrimp.price * (1 + Math.random() - 0.5));
 
         });
         
@@ -36,13 +36,13 @@ const actions = {
     
     initStocks: ({commit}) => {
         
-        commit('SET_STOCKS', stocks);
+        commit('SET_STOCKS', shrimpData);
         
     },
     
     randomizeStocks: ({commit}) => {
         
-        commit('RND_STOCKS', stocks);
+        commit('RND_STOCKS', shrimpData);
         
     }, 
     
@@ -50,9 +50,9 @@ const actions = {
 
 const getters = {
     
-    stocks: state => {
+    shrimp: state => {
         
-        return state.stocks;
+        return state.shrimpData;
         
     }
     

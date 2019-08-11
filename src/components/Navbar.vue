@@ -35,44 +35,14 @@
                     
                 </router-link>
                     
-            </ul>   
-            
-            <!-- Collapsable Navbar Button -->
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
-               
-                <span class="navbar-toggler-icon"></span>
-                
-            </button>
+            </ul>
                  
             <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
                     
                 <ul class="nav navbar-nav">
                     
-                    <!-- End Day -->
-                    <li class="nav-item"><a href="#" class="nav-link" @click="endDay">End Day</a></li>
-
-                    <!-- Save/Load -->
-                    <li class="nav-item b-dropdown" :class="{open: isDropdownOpen}" @click="isDropdownOpen = !isDropdownOpen">
-
-                        <a 
-                            href="#"
-                            class="nav-link b-dropdown-toggle"
-                            data-toggle="dropdown"
-                            >Save & Load
-                        </a>
-                                
-                        <!-- <div class="b-dropdown-menu">
-                                
-                            <a href="#" class="b-dropdown-item" @click="saveData">Save Data</a>
-                                
-                            <a href="#" class="b-dropdown-item" @click="loadData">Load Data</a>
-                                
-                        </div> -->
-                            
-                    </li>
-                    
                     <!-- Current Funds -->
-                    <strong class="navbar-text">Funds: {{ funds | currency }}</strong>
+                    <!-- <strong class="navbar-text">Funds: {{ funds | currency }}</strong> -->
                     
                 </ul>
                     
