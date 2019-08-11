@@ -1,10 +1,10 @@
 <template>
     
-    <div class="card border-danger mb-3">
+    <div class="card mb-3" :class="shrimp.border">
            
         <img :src="shrimp.photo" class="shrimp-photo card-img-top">
 
-        <div class="card-body text-danger">
+        <div class="card-body" :class="shrimp.text">
 
             <!-- Title -->
             <h5 class="card-title">{{ shrimp.name }}</h5>
@@ -25,14 +25,19 @@
                         class="form-control" 
                         placeholder="Quantity" 
                         v-model="quantity" 
-                        :class="{danger: insufficientFunds}"
+                        :class="shrimp.text"
                     >
 
                 </div>
 
                 <div class="col-6">
 
-                    <button class="btn btn-outline-danger" @click="buyStock" :disabled="insufficientFunds || quantity <= 0">
+                    <button 
+                        class="btn"
+                        :class="shrimp.button"
+                        @click="buyStock" 
+                        :disabled="insufficientFunds || quantity <= 0"
+                    >
                     
                         {{ insufficientFunds ? 'Insufficient Funds' : 'Purchase' }}
                         
