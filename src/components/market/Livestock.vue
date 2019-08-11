@@ -2,7 +2,7 @@
     
     <div class="card border-danger mb-3">
            
-        <img :src="shrimp.photo" class="card-img-top">
+        <img :src="shrimp.photo" class="shrimp-photo card-img-top">
 
         <div class="card-body text-danger">
 
@@ -109,6 +109,10 @@
 </script>
 
 <style scoped>
+
+    .card-img-top {
+        height: 250px;
+    }
 
     .danger {
         
