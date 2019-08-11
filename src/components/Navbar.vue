@@ -21,10 +21,10 @@
                     
                 </router-link>
                 
-                <!-- Livestock -->
-                <router-link to="/livestock" class="nav-item" activeClass="active" tag="li">
+                <!-- Inventory -->
+                <router-link to="/inventory" class="nav-item" activeClass="active" tag="li">
                 
-                    <a class="nav-link">Livestock</a>
+                    <a class="nav-link">Inventory</a>
                     
                 </router-link>
                 
