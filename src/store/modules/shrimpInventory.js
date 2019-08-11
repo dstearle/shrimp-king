@@ -1,15 +1,15 @@
 const state = {
     
-    funds: 10000,
-    stocks: []
+    funds: 1000,
+    shrimpData: []
     
 };
 
 const mutations = {
     
-    'BUY_STOCK'(state, {stockId, quantity, stockPrice}) {
+    'BUY_STOCK'(state, {shrimpId, quantity, shrimpPrice}) {
         
-        const record = state.stocks.find(element => element.id == stockId);
+        const record = state.shrimpData.find(element => element.id == shrimpId);
         
         if (record) {
             
@@ -17,22 +17,22 @@ const mutations = {
             
         }
         
-        else { state.stocks.push({
+        else { state.shrimpData.push({
             
-            id: stockId,
+            id: shrimpId,
             
             quantity: quantity
             
             });
         }
         
-        state.funds -= stockPrice * quantity;
+        state.funds -= shrimpPrice * quantity;
         
     },
     
-    'SELL_STOCK' (state, {stockId, quantity, stockPrice}) {
+    'SELL_STOCK' (state, {shrimpId, quantity, shrimpPrice}) {
         
-        const record = state.stocks.find(element => element.id == stockId);
+        const record = state.shrimpData.find(element => element.id == shrimpId);
         
         if (record.quantity > quantity) {
             
@@ -42,18 +42,18 @@ const mutations = {
         
         else {
             
-            state.stocks.splice(state.stocks.indexOf(record), 1);
+            state.shrimpData.splice(state.shrimpData.indexOf(record), 1);
             
         }
         
-        state.funds += stockPrice * quantity;
+        state.funds += shrimpPrice * quantity;
         
     },
 
     'SET_PORTFOLIO' (state, portfolio) {
 
         state.funds = portfolio.funds;
-        state.stocks = portfolio.stockPortfolio ? portfolio.stockPortfolio : [];
+        state.shrimpData = portfolio.stockPortfolio ? portfolio.stockPortfolio : [];
 
     }
     
@@ -73,15 +73,15 @@ const getters = {
     
     stockPortfolio (state, getters) {
         
-        return state.stocks.map(stock => {
+        return state.shrimpData.map(shrimp => {
             
-            const record = getters.stocks.find(element => element.id == stock.id);
+            const record = getters.shrimpData.find(element => element.id == shrimp.id);
             
             return {
                 
-                id: stock.id,
+                id: shrimp.id,
                 
-                quantity: stock.quantity,
+                quantity: shrimp.quantity,
                 
                 name: record.name,
                 

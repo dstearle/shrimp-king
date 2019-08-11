@@ -42,7 +42,7 @@
                 <ul class="nav navbar-nav">
                     
                     <!-- Current Funds -->
-                    <!-- <strong class="navbar-text">Funds: {{ funds | currency }}</strong> -->
+                    <strong class="navbar-text">Funds: {{ funds | currency }}</strong>
                     
                 </ul>
                     
@@ -53,3 +53,24 @@
     </nav>
     
 </template>
+
+<script>
+
+    import {mapActions} from 'vuex';
+
+    export default {
+        
+
+        computed: {
+            
+            funds() {
+                
+                return this.$store.getters.funds;
+                
+            }
+            
+        },
+        
+    }
+
+</script>
