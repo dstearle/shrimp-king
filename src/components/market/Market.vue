@@ -2,7 +2,7 @@
     
     <div>
         
-        <app-livestock v-for="stock in stocks" :stock="stock"></app-livestock>
+        <app-livestock v-for="shrimp in shrimps" :shrimp="shrimp"></app-livestock>
         
     </div>
     
@@ -24,9 +24,9 @@
         computed: {
             
             
-            stocks() {
+            shrimps() {
                 
-                return this.$store.getters.stocks;
+                return this.$store.getters.shrimp;
                 
             }
             

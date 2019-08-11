@@ -6,9 +6,9 @@
            
             <div class="card-header bg-success">
                 
-                {{ liveStock.name }}
+                {{ shrimp.name }}
                 
-                <small>(Price: {{ liveStock.price }})</small>
+                <small>(Price: {{ shrimp.price }})</small>
                 
             </div>
             
@@ -28,7 +28,7 @@
                 
                 <div class="">
                     
-                    <button class="btn btn-success" @click="buyStock" :disabled="insufficientFunds || quantity <= 0">
+                    <button class="btn btn-success" @click="buyShrimp" :disabled="insufficientFunds || quantity <= 0">
                     
                         {{ insufficientFunds ? 'Insufficient Funds' : 'Buy' }}
                         
@@ -47,7 +47,7 @@
 
     export default {
         
-        props: ['stock'],
+        props: ['shrimp'],
         
         data() {
             
@@ -69,7 +69,7 @@
             
             insufficientFunds() {
                 
-                return this.quantity * this.stock.price > this.funds;
+                return this.quantity * this.shrimp.price > this.funds;
                 
             }
             
@@ -77,19 +77,19 @@
         
         methods: {
             
-            buyStock() {
+            buyShrimp() {
                 
                 const order = {
                     
-                    stockId: this.stock.id,
+                    shrimpId: this.shrimp.id,
                         
-                    stockPrice: this.stock.price,
+                    shimpPrice: this.shrimp.price,
                         
                     quantity: this.quantity
                     
                 };
                                 
-                this.$store.dispatch('buyStock', order);
+                this.$store.dispatch('buyShrimp', order);
                 
                 this.quantity = 0;
                 
