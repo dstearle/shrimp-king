@@ -1,9 +1,12 @@
 export default [
     
-    { id: 1, name: 'Cherry Shrimp', price: 110 },
-                    
-    { id: 2, name: 'Lemon Shrimp', price: 200 },
-                    
-    { id: 3, name: 'Blueberry Shrimp', price: 250 },
+    // Cherry Shrimp
+    { id: 1, name: 'Cherry Shrimp', price: 110, photo: require("./../assets/images/cherryShrimp.png") },
+     
+    // Lemon Shrimp
+    { id: 2, name: 'Lemon Shrimp', price: 200, photo: require("./../assets/images/cherryShrimp.png") },
+    
+    // Blueberry Shrimp
+    { id: 3, name: 'Blueberry Shrimp', price: 250, photo: require("./../assets/images/cherryShrimp.png") },
         
 ];

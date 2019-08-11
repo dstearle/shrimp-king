@@ -1,6 +1,6 @@
 <template>
     
-    <div>
+    <div class="card-columns">
         
         <app-livestock v-for="shrimp in shrimps" :shrimp="shrimp"></app-livestock>
         

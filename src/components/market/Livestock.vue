@@ -1,21 +1,25 @@
 <template>
     
-    <div class="">
-        
-        <div class="card text-white mb-3">
+    <div class="card border-danger mb-3">
            
-            <div class="card-header bg-success">
-                
-                {{ shrimp.name }}
-                
-                <small>(Price: {{ shrimp.price }})</small>
-                
+        <img :src="shrimp.photo" class="card-img-top">
+
+        <div class="card-body text-danger">
+
+            <!-- Title -->
+            <h5 class="card-title">{{ shrimp.name }}</h5>
+
+            <div class="row py-2">
+
+                <!-- Price -->
+                <small class="col-6">(Price: {{ shrimp.price }})</small>
+
             </div>
-            
-            <div class="card-body">
-               
-                <div class="">
-                    
+
+            <div class="row">
+
+                <div class="col-6">
+
                     <input 
                         type="number" 
                         class="form-control" 
@@ -23,20 +27,21 @@
                         v-model="quantity" 
                         :class="{danger: insufficientFunds}"
                     >
-                    
+
                 </div>
-                
-                <div class="">
+
+                <div class="col-6">
+
+                    <button class="btn btn-outline-danger" @click="buyStock" :disabled="insufficientFunds || quantity <= 0">
                     
-                    <button class="btn btn-success" @click="buyShrimp" :disabled="insufficientFunds || quantity <= 0">
-                    
-                        {{ insufficientFunds ? 'Insufficient Funds' : 'Buy' }}
+                        {{ insufficientFunds ? 'Insufficient Funds' : 'Purchase' }}
                         
                     </button>
                     
                 </div>
-                
+
             </div>
+
         </div>
         
     </div>
@@ -83,7 +88,9 @@
                     
                     shrimpId: this.shrimp.id,
                         
-                    shimpPrice: this.shrimp.price,
+                    shrimpPrice: this.shrimp.price,
+
+                    shrimpPhoto: this.shrimp.photo,
                         
                     quantity: this.quantity
                     
