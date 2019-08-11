@@ -1,7 +1,7 @@
 <template>
     
     <div class="card-columns">
-                
+
         <app-livestock v-for="shrimp in shrimps" :shrimp="shrimp"></app-livestock>
         
     </div>
@@ -9,25 +9,25 @@
 </template>
 
 <script>
-    
-    import Livestock from './Livestock.vue';
 
+    import {mapGetters} from 'vuex';
+    import Livestock from './Livestock.vue'; 
+    
     export default {
+        
+        computed: {
+            
+            ...mapGetters({
+                
+                stocks: 'stockPortfolio'
+                
+            })
+            
+        },
         
         components: {
             
             appLivestock: Livestock
-            
-        },
-        
-        computed: {
-            
-            
-            shrimps() {
-                
-                return this.$store.getters.shrimp;
-                
-            }
             
         }
         
