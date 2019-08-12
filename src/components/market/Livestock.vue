@@ -97,13 +97,12 @@
                     shrimpId: this.shrimp.id,
                         
                     shrimpPrice: this.shrimp.price,
-
-                    shrimpPhoto: this.shrimp.photo,
                         
                     quantity: this.quantity
                     
                 };
-                                
+                
+                // Action from shrimpMarket.js
                 this.$store.dispatch('buyShrimp', order);
                 
                 this.quantity = 0;
