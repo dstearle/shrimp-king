@@ -32,5 +32,38 @@ export default [
         button: 'btn-outline-info',
         border: 'border-info'
     },
+
+    // Kiwi Shrimp
+    { 
+        id: 4, 
+        name: 'Kiwi Shrimp', 
+        price: 240, 
+        photo: require("./../assets/images/kiwiShrimp.jpg"), 
+        text: 'text-success',
+        button: 'btn-outline-success',
+        border: 'border-success'
+    },
+
+    // Coconut Shrimp
+    { 
+        id: 5, 
+        name: 'Coconut Shrimp', 
+        price: 100, 
+        photo: require("./../assets/images/coconutShrimp.jpg"), 
+        text: 'text-dark',
+        button: 'btn-outline-dark',
+        border: 'border-dark'
+    },
+
+    // Red Rili Shrimp
+    { 
+        id: 6, 
+        name: 'Red Rili', 
+        price: 320, 
+        photo: require("./../assets/images/redRili.jpg"), 
+        text: 'text-danger',
+        button: 'btn-outline-danger',
+        border: 'border-danger'
+    },
         
 ];

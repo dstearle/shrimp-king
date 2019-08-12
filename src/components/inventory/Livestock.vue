@@ -1,6 +1,6 @@
 <template>
     
-    <div class="card mb-3" :class="shrimp.border">
+    <div class="card mb-3" :class="shrimp.border" style="max-width: 300px">
            
         <!-- Shrimp Photo -->
         <img :src="shrimp.photo" class="shrimp-photo card-img-top">
@@ -13,7 +13,7 @@
             <div class="row py-2">
 
                 <!-- Price / Quantity -->
-                <small class="col-6">(Price: {{ shrimp.price }} | Quantity: {{ shrimp.quantity }} )</small>
+                <small class="col-6">Price: {{ shrimp.price }} | Qnty: {{ shrimp.quantity }} </small>
 
             </div>
 
@@ -36,7 +36,7 @@
 
                     <!-- Sell Button -->
                     <button 
-                        class="btn"
+                        class="btn btn-block"
                         :class="shrimp.button"
                         @click="sellShrimp" 
                         :disabled="insufficientQuantity || quantity <= 0"
