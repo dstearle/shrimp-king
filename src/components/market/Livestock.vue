@@ -13,7 +13,7 @@
             <div class="row py-2">
 
                 <!-- Price -->
-                <small class="col-6">Price: {{ shrimp.price }}</small>
+                <small class="col-6">Price: {{ shrimp.price | currency }}</small>
 
             </div>
 
