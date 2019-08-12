@@ -26,7 +26,7 @@
             
             shrimps() {
                 
-                return this.$store.getters.shrimp;
+                return this.$store.getters.shrimpDataMarketGet;
                 
             }
             

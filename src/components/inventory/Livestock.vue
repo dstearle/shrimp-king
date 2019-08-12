@@ -2,6 +2,7 @@
     
     <div class="card mb-3" :class="shrimp.border">
            
+        <!-- Shrimp Photo -->
         <img :src="shrimp.photo" class="shrimp-photo card-img-top">
 
         <div class="card-body" :class="shrimp.text">
@@ -11,7 +12,7 @@
 
             <div class="row py-2">
 
-                <!-- Price -->
+                <!-- Price / Quantity -->
                 <small class="col-6">(Price: {{ shrimp.price }} | Quantity: {{ shrimp.quantity }} )</small>
 
             </div>
@@ -20,6 +21,7 @@
 
                 <div class="col-6">
 
+                    <!-- Sell Amount Input -->
                     <input 
                         type="number" 
                         class="form-control" 
@@ -32,10 +34,11 @@
 
                 <div class="col-6">
 
+                    <!-- Sell Button -->
                     <button 
                         class="btn"
                         :class="shrimp.button"
-                        @click="sellStock" 
+                        @click="sellShrimp" 
                         :disabled="insufficientQuantity || quantity <= 0"
                     >
                     
@@ -85,12 +88,11 @@
             
             ...mapActions({ placeSellOrder: 'sellStock' }),
             
-            sellStock() {
+            sellShrimp() {
                 
                 const order = {
                     
                     shrimpId: this.shrimp.id,
-                    
                     
                     shrimpPrice: this.shrimp.price,
                     

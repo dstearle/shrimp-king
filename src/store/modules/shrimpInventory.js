@@ -1,23 +1,29 @@
 const state = {
     
+    // User's available funds
     funds: 1000,
-    shrimpData: []
+    // User's stock of shrimp
+    shrimpDataInventory: []
     
 };
 
 const mutations = {
     
+    // Mutation for buying shrimp
     'BUY_STOCK'(state, {shrimpId, quantity, shrimpPrice}) {
         
-        const record = state.shrimpData.find(element => element.id == shrimpId);
+        // Checks to see which items are already in the array
+        const record = state.shrimpDataInventory.find(element => element.id == shrimpId);
         
+        // If item already exists then add to its quantity
         if (record) {
             
             record.quantity += quantity;
             
         }
         
-        else { state.shrimpData.push({
+        // If item is not in the array then add it
+        else { state.shrimpDataInventory.push({
             
             id: shrimpId,
             
@@ -26,26 +32,32 @@ const mutations = {
             });
         }
         
+        // Updates funds when an item is purchased
         state.funds -= shrimpPrice * quantity;
         
     },
     
+    // Mutation for selling shrimp
     'SELL_STOCK' (state, {shrimpId, quantity, shrimpPrice}) {
         
-        const record = state.shrimpData.find(element => element.id == shrimpId);
+        // Checks to see which items are already in the array
+        const record = state.shrimpDataInventory.find(element => element.id == shrimpId);
         
+        // Checks to see if you are selling a quantity greater than what is available
         if (record.quantity > quantity) {
             
             record.quantity -= quantity;
             
         }
         
+        // Removes the item from the array if amount sold is the amount available
         else {
             
-            state.shrimpData.splice(state.shrimpData.indexOf(record), 1);
+            state.shrimpDataInventory.splice(state.shrimpDataInventory.indexOf(record), 1);
             
         }
         
+        // Updates funds when items are sold
         state.funds += shrimpPrice * quantity;
         
     },
@@ -53,7 +65,7 @@ const mutations = {
     'SET_PORTFOLIO' (state, portfolio) {
 
         state.funds = portfolio.funds;
-        state.shrimpData = portfolio.stockPortfolio ? portfolio.stockPortfolio : [];
+        state.shrimpData = portfolio.shrimpInventory ? portfolio.shrimpInventory : [];
 
     }
     
@@ -61,7 +73,7 @@ const mutations = {
 
 const actions = {
     
-    sellStock({commit}, order) {
+    sellShrimp({commit}, order) {
         
         commit('SELL_STOCK', order);
         
@@ -71,11 +83,11 @@ const actions = {
 
 const getters = {
     
-    stockPortfolio (state, getters) {
+    shrimpInventory (state, getters) {
         
-        return state.shrimpData.map(shrimp => {
+        return state.shrimpDataInventory.map(shrimp => {
             
-            const record = getters.shrimpData.find(element => element.id == shrimp.id);
+            const record = getters.shrimpDataMarketGet.find(element => element.id == shrimp.id);
             
             return {
                 
@@ -85,7 +97,15 @@ const getters = {
                 
                 name: record.name,
                 
-                price: record.price
+                price: record.price,
+
+                photo: record.photo,
+
+                text: record.text,
+
+                button: record.button,
+
+                border: record.border
                 
             }
             

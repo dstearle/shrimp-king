@@ -2,21 +2,24 @@ import shrimpData from './../../data/shrimpData.js';
 
 const state = {
     
-    shrimpData: []
+    // Array to store available shrimp for the Market
+    shrimpDataMarket: []
     
 };
 
 const mutations = {
     
+    // Sets the stored data in ShrimpData into the array
     'SET_STOCKS' (state, shrimpData) {
         
-        state.shrimpData = shrimpData;
+        state.shrimpDataMarket = shrimpData;
         
     },
     
+    // Randomizes the prices for each shrimp
     'RND_STOCKS' (state) {
         
-        state.shrimpData.forEach(shrimp => {
+        state.shrimpDataMarket.forEach(shrimp => {
 
             shrimp.price = Math.round(shrimp.price * (1 + Math.random() - 0.5));
 
@@ -28,7 +31,7 @@ const mutations = {
 
 const actions = {
     
-    buyStock: ({commit}, order) => {
+    buyShrimp: ({commit}, order) => {
         
         commit('BUY_STOCK', order);
         
@@ -50,9 +53,9 @@ const actions = {
 
 const getters = {
     
-    shrimp: state => {
+    shrimpDataMarketGet: state => {
         
-        return state.shrimpData;
+        return state.shrimpDataMarket;
         
     }
     
