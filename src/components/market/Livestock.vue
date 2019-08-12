@@ -1,6 +1,6 @@
 <template>
     
-    <div class="card mb-3" :class="shrimp.border">
+    <div class="card mb-3" :class="shrimp.border" style="max-width: 300px">
            
         <!-- Shrimp Photo -->
         <img :src="shrimp.photo" class="shrimp-photo card-img-top">
@@ -13,7 +13,7 @@
             <div class="row py-2">
 
                 <!-- Price -->
-                <small class="col-6">(Price: {{ shrimp.price }})</small>
+                <small class="col-6">Price: {{ shrimp.price }}</small>
 
             </div>
 
@@ -36,7 +36,7 @@
 
                     <!-- Buy Button -->
                     <button 
-                        class="btn"
+                        class="btn btn-block"
                         :class="shrimp.button"
                         @click="buyShrimp" 
                         :disabled="insufficientFunds || quantity <= 0"
