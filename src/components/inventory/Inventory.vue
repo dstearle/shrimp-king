@@ -19,7 +19,7 @@
             
             ...mapGetters({
                 
-                shrimpInventory: 'shrimpInventory'
+                shrimpInventory: 'shrimpInventoryGet'
                 
             })
             

@@ -86,8 +86,9 @@
         
         methods: {
             
-            ...mapActions({ placeSellOrder: 'sellStock' }),
+            ...mapActions({ placeSellOrder: 'sellShrimp' }),
             
+            // Method for selling shrimp
             sellShrimp() {
                 
                 const order = {

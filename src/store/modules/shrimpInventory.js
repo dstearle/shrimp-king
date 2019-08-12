@@ -43,7 +43,7 @@ const mutations = {
         // Checks to see which items are already in the array
         const record = state.shrimpDataInventory.find(element => element.id == shrimpId);
         
-        // Checks to see if you are selling a quantity greater than what is available
+        // Detracts from quantity
         if (record.quantity > quantity) {
             
             record.quantity -= quantity;
@@ -83,10 +83,13 @@ const actions = {
 
 const getters = {
     
-    shrimpInventory (state, getters) {
+    // Getter for available shrimp in Inventory
+    shrimpInventoryGet (state, getters) {
         
+        // Transfers data from Market to Inventory
         return state.shrimpDataInventory.map(shrimp => {
             
+            // Gets the stored data from Market
             const record = getters.shrimpDataMarketGet.find(element => element.id == shrimp.id);
             
             return {
@@ -113,6 +116,7 @@ const getters = {
         
     },
     
+    // Getter for funds
     funds (state) {
         
         return state.funds;

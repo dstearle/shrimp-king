@@ -53,6 +53,7 @@ const actions = {
 
 const getters = {
     
+    // Getter for available shrimp in Market
     shrimpDataMarketGet: state => {
         
         return state.shrimpDataMarket;
