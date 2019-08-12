@@ -2,7 +2,7 @@
     
     <div class="card-columns">
 
-        <app-livestock v-for="shrimp in shrimps" :shrimp="shrimp"></app-livestock>
+        <app-livestock v-for="shrimp in shrimpInventory" :shrimp="shrimp"></app-livestock>
         
     </div>
     
@@ -19,7 +19,7 @@
             
             ...mapGetters({
                 
-                stocks: 'stockPortfolio'
+                shrimpInventory: 'shrimpInventory'
                 
             })
             

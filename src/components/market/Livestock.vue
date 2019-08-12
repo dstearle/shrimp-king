@@ -2,6 +2,7 @@
     
     <div class="card mb-3" :class="shrimp.border">
            
+        <!-- Shrimp Photo -->
         <img :src="shrimp.photo" class="shrimp-photo card-img-top">
 
         <div class="card-body" :class="shrimp.text">
@@ -20,6 +21,7 @@
 
                 <div class="col-6">
 
+                    <!-- Buy Amount Input -->
                     <input 
                         type="number" 
                         class="form-control" 
@@ -32,10 +34,11 @@
 
                 <div class="col-6">
 
+                    <!-- Buy Button -->
                     <button 
                         class="btn"
                         :class="shrimp.button"
-                        @click="buyStock" 
+                        @click="buyShrimp" 
                         :disabled="insufficientFunds || quantity <= 0"
                     >
                     
