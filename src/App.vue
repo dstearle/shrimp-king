@@ -74,7 +74,19 @@
 <style>
 
   .bg-dashboard {background: white;}
-  .bg-inventory {background: pink;}
-  .bg-market {background: blue;}
+  .bg-inventory {
+    background: url("./assets/images/inventoryBg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .bg-market {
+    background: url("./assets/images/marketBg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
 </style>
