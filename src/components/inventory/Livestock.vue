@@ -100,7 +100,7 @@
                     
                     shrimpPrice: this.shrimp.price,
                     
-                    quantity: this.quantity
+                    quantity: this.shrimp.quantity
                     
                 };
                 

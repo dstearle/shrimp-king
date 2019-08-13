@@ -12,8 +12,8 @@ Vue.use(VueRouter);
 //Applies currency filter to funds (turns 100 to $100)
 Vue.filter('currency', (value) => {
 
-  const s1 = '¥';
-  return s1 + value.toLocaleString();
+  const dong = '¥';
+  return dong + value.toLocaleString();
 
 });
 
