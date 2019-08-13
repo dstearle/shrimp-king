@@ -12,8 +12,11 @@
 
             <div class="row py-2">
 
+                <!-- Quantity -->
+                <small class="col-6"> Qnty: </small>
+
                 <!-- Price -->
-                <small class="col-6">Price: {{ shrimp.price | currency }}</small>
+                <small class="col-6 text-center">Price: {{ shrimp.price | currency }} </small>
 
             </div>
 

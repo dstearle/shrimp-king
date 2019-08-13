@@ -10,15 +10,7 @@
     <!-- Router Area -->
     <div class="row pt-5">
           
-      <div class="">
-            
-        <transition name="slide" mode="out-in">
-
-          <router-view></router-view>
-
-        </transition>  
-            
-      </div>
+      <router-view></router-view>
           
     </div>
                   
