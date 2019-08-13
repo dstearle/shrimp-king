@@ -74,3 +74,11 @@
     }
 
 </script>
+
+<style scoped>
+
+    .navbar-dark {
+        background-color: #000000!important;
+    }
+
+</style>
