@@ -15,7 +15,7 @@
             <ul class="navbar-nav">
 
                 <!-- Dashboard -->
-                <router-link to="/" class="nav-item" activeClass="active" tag="li">
+                <router-link to="/" class="nav-item" activeClass="active" tag="li" exact>
                 
                     <a class="nav-link">Dashboard</a>
                     
