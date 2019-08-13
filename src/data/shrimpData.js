@@ -5,7 +5,7 @@ export default [
         id: 1, 
         name: 'Cherry Shrimp', 
         price: 110, 
-        photo: require("./../assets/images/cherryShrimp.png"), 
+        photo: require("./../assets/images/shrimpPhotos/cherryShrimp.png"), 
         text: 'text-danger',
         button: 'btn-outline-danger',
         border: 'border-danger'
@@ -16,7 +16,7 @@ export default [
         id: 2, 
         name: 'Lemon Shrimp', 
         price: 200, 
-        photo: require("./../assets/images/lemonShrimp.jpg"), 
+        photo: require("./../assets/images/shrimpPhotos/lemonShrimp.jpg"), 
         text: 'text-warning',
         button: 'btn-outline-warning',
         border: 'border-warning'
@@ -27,7 +27,7 @@ export default [
         id: 3, 
         name: 'Blueberry Shrimp', 
         price: 250, 
-        photo: require("./../assets/images/blueberryShrimp.jpg"), 
+        photo: require("./../assets/images/shrimpPhotos/blueberryShrimp.jpg"), 
         text: 'text-info',
         button: 'btn-outline-info',
         border: 'border-info'
@@ -38,7 +38,7 @@ export default [
         id: 4, 
         name: 'Kiwi Shrimp', 
         price: 240, 
-        photo: require("./../assets/images/kiwiShrimp.jpg"), 
+        photo: require("./../assets/images/shrimpPhotos/kiwiShrimp.jpg"), 
         text: 'text-success',
         button: 'btn-outline-success',
         border: 'border-success'
@@ -49,7 +49,7 @@ export default [
         id: 5, 
         name: 'Coconut Shrimp', 
         price: 100, 
-        photo: require("./../assets/images/coconutShrimp.jpg"), 
+        photo: require("./../assets/images/shrimpPhotos/coconutShrimp.jpg"), 
         text: 'text-dark',
         button: 'btn-outline-dark',
         border: 'border-dark'
@@ -60,7 +60,7 @@ export default [
         id: 6, 
         name: 'Red Rili', 
         price: 320, 
-        photo: require("./../assets/images/redRili.jpg"), 
+        photo: require("./../assets/images/shrimpPhotos/redRili.jpg"), 
         text: 'text-danger',
         button: 'btn-outline-danger',
         border: 'border-danger'
