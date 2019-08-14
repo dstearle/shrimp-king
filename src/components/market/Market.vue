@@ -1,9 +1,17 @@
 <template>
     
-    <div class="card-columns">
-        
-        <app-livestock v-for="shrimp in shrimps" :shrimp="shrimp"></app-livestock>
-        
+    <div class="container">
+
+        <!-- Shrimp Category Title -->
+        <h1 class="text-white pb-3" v-if="shrimps.length > 0">Neocaridina</h1>
+
+        <!-- Shrimp List -->
+        <div class="card-columns">
+            
+            <app-livestock v-for="shrimp in shrimps" :shrimp="shrimp" v-bind:key="shrimp.id"></app-livestock>
+            
+        </div>
+
     </div>
     
 </template>

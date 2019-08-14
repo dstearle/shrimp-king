@@ -1,9 +1,17 @@
 <template>
     
-    <div class="card-columns">
+    <div class="container">
 
-        <app-livestock v-for="shrimp in shrimpInventory" :shrimp="shrimp"></app-livestock>
-        
+        <!-- Shrimp Category Title -->
+        <h1 class="text-white pb-3" v-if="shrimpInventory.length > 0">Neocaridina</h1>
+
+        <!-- Shrimp List -->
+        <div class="card-columns">
+
+            <app-livestock v-for="shrimp in shrimpInventory" :shrimp="shrimp" v-bind:key="shrimp.id"></app-livestock>
+            
+        </div>
+
     </div>
     
 </template>
@@ -29,6 +37,11 @@
             
             appLivestock: Livestock
             
+        },
+
+        method: {
+
+            isShown() {}
         }
         
     }
