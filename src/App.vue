@@ -8,7 +8,7 @@
     <br><br><br>
 
     <!-- Router Area -->
-    <div class="row pt-5">
+    <div class="pt-5">
           
       <router-view></router-view>
           
@@ -74,6 +74,7 @@
 <style>
 
   .bg-dashboard {background: white;}
+  
   .bg-inventory {
     background: url("./assets/images/inventoryBg.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -83,21 +84,12 @@
   }
   .bg-inventory:before {
     content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: rgba(77, 77, 77, 0.7);
-  }
-  .bg-inventory:before {
-    content: '';
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(77, 77, 77, 0.7);
+    background: rgba(77, 77, 77, 0.6);
   }
 
   .bg-market {
@@ -114,7 +106,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(77, 77, 77, 0.7);
+    background: rgba(77, 77, 77, 0.6);
   }
 
 </style>

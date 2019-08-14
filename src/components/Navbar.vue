@@ -2,7 +2,7 @@
     
     <nav class="navbar fixed-top navbar-expand navbar-dark bg-dark mb-3">
        
-        <div class="container-fluid">
+        <div class="container">
             
             <!-- Title -->
             <span class="navbar-brand">
@@ -55,8 +55,6 @@
 </template>
 
 <script>
-
-    import {mapActions} from 'vuex';
 
     export default {
         

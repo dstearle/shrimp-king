@@ -1,6 +1,6 @@
 <template>
     
-    <div class="card mb-3" :class="shrimp.border" style="max-width: 300px; border-width: medium;">
+    <div class="card" :class="shrimp.border" style="max-width: 300px; border-width: medium;">
            
         <!-- Shrimp Photo -->
         <img :src="shrimp.photo" class="shrimp-photo card-img-top">
