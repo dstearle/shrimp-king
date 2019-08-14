@@ -24,7 +24,7 @@
 
                 <div class="col-6">
 
-                    <!-- Buy Amount Input -->
+                    <!-- Purchase Input -->
                     <input 
                         type="number" 
                         class="form-control" 
@@ -37,7 +37,7 @@
 
                 <div class="col-6">
 
-                    <!-- Buy Button -->
+                    <!-- Purchase Button -->
                     <button 
                         class="btn btn-block"
                         :class="shrimp.button"
