@@ -79,6 +79,7 @@
         
         computed: {
             
+            // Marks insufficientQuantity as true if quantity being sold is greater than available quantity
             insufficientQuantity() {
                 
                 return this.quantity > this.shrimp.quantity;

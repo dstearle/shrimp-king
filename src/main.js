@@ -9,7 +9,7 @@ import store from './store/store.js';
 
 Vue.use(VueRouter);
 
-//Applies currency filter to funds (turns 100 to $100)
+// Applies currency filter to funds (turns 100 to ¥100)
 Vue.filter('currency', (value) => {
 
   const dong = '¥';
@@ -19,6 +19,7 @@ Vue.filter('currency', (value) => {
 
 Vue.config.productionTip = false
 
+// Cleans up the address bar directory
 const router = new VueRouter ({
     
   mode: 'history',
