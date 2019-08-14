@@ -29,7 +29,7 @@
                         type="number" 
                         class="form-control" 
                         placeholder="Quantity" 
-                        v-model="quantity" 
+                        v-model.number="quantity" 
                         :class="shrimp.text"
                     >
 
@@ -83,6 +83,7 @@
                 
             },
             
+            // Marks insufficientFunds as true if purchase exceeds available funds
             insufficientFunds() {
                 
                 return this.quantity * this.shrimp.price > this.funds;
