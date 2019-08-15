@@ -45,7 +45,7 @@
                         :disabled="insufficientQuantity || quantity <= 0"
                     >
                     
-                        {{ insufficientQuantity ? 'Not Enough Livestock' : 'Sell' }}
+                        {{ insufficientQuantity ? 'N/E Stock' : 'Sell' }}
                         
                     </button>
                     

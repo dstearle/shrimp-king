@@ -45,7 +45,7 @@
                         :disabled="insufficientFunds || quantity <= 0"
                     >
                     
-                        {{ insufficientFunds ? 'Insufficient Funds' : 'Purchase' }}
+                        {{ insufficientFunds ? 'N/E Funds' : 'Purchase' }}
                         
                     </button>
                     
