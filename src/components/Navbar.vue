@@ -57,7 +57,6 @@
 <script>
 
     export default {
-        
 
         computed: {
             

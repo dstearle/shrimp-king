@@ -17,7 +17,7 @@ const mutations = {
     },
     
     // Randomizes the prices for each shrimp
-    'RND_STOCKS' (state) {
+    'RND_PRICES' (state) {
         
         state.shrimpDataMarket.forEach(shrimp => {
 
@@ -45,7 +45,7 @@ const actions = {
     
     randomizeStocks: ({commit}) => {
         
-        commit('RND_STOCKS', shrimpData);
+        commit('RND_PRICES', shrimpData);
         
     }, 
     
