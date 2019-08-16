@@ -3,11 +3,15 @@ export default [
     // Cherry Shrimp
     { 
         id: 1, 
-        name: 'Cherry Shrimp', 
+        name: 'Cherry Shrimp',
+        photo: require("./../assets/images/shrimpPhotos/cherryShrimp.png"),
+        
+        // Pricing
         price: 110,
         priceMin: 60,
         priceMax: 180, 
-        photo: require("./../assets/images/shrimpPhotos/cherryShrimp.png"), 
+        
+        // Styling
         text: 'text-danger',
         button: 'btn-outline-danger',
         border: 'border-danger'
@@ -16,11 +20,15 @@ export default [
     // Lemon Shrimp
     { 
         id: 2, 
-        name: 'Lemon Shrimp', 
+        name: 'Lemon Shrimp',
+        photo: require("./../assets/images/shrimpPhotos/lemonShrimp.jpg"),
+        
+        // Pricing
         price: 200,
         priceMin: 120,
         priceMax: 230, 
-        photo: require("./../assets/images/shrimpPhotos/lemonShrimp.jpg"), 
+        
+        // Styling
         text: 'text-warning',
         button: 'btn-outline-warning',
         border: 'border-warning'
@@ -29,11 +37,15 @@ export default [
     // Blueberry Shrimp
     { 
         id: 3, 
-        name: 'Blueberry Shrimp', 
+        name: 'Blueberry Shrimp',
+        photo: require("./../assets/images/shrimpPhotos/blueberryShrimp.jpg"),
+        
+        // Pricing
         price: 250,
         priceMin: 145,
         priceMax: 320,
-        photo: require("./../assets/images/shrimpPhotos/blueberryShrimp.jpg"), 
+        
+        // Styling
         text: 'text-info',
         button: 'btn-outline-info',
         border: 'border-info'
@@ -42,11 +54,15 @@ export default [
     // Kiwi Shrimp
     { 
         id: 4, 
-        name: 'Kiwi Shrimp', 
+        name: 'Kiwi Shrimp',
+        photo: require("./../assets/images/shrimpPhotos/kiwiShrimp.jpg"),
+
+        // Pricing
         price: 240,
         priceMin: 160,
-        priceMax: 350, 
-        photo: require("./../assets/images/shrimpPhotos/kiwiShrimp.jpg"), 
+        priceMax: 350,
+
+        // Styling
         text: 'text-success',
         button: 'btn-outline-success',
         border: 'border-success'
@@ -55,11 +71,15 @@ export default [
     // Coconut Shrimp
     { 
         id: 5, 
-        name: 'Coconut Shrimp', 
+        name: 'Coconut Shrimp',
+        photo: require("./../assets/images/shrimpPhotos/coconutShrimp.jpg"),
+
+        // Pricing
         price: 100,
         priceMin: 20,
         priceMax: 110,
-        photo: require("./../assets/images/shrimpPhotos/coconutShrimp.jpg"), 
+
+        // Styling
         text: 'text-dark',
         button: 'btn-outline-dark',
         border: 'border-dark'
@@ -68,11 +88,15 @@ export default [
     // Red Rili Shrimp
     { 
         id: 6, 
-        name: 'Red Rili', 
+        name: 'Red Rili',
+        photo: require("./../assets/images/shrimpPhotos/redRili.jpg"),
+
+        // Pricing
         price: 320,
         priceMin: 270,
         priceMax: 400,
-        photo: require("./../assets/images/shrimpPhotos/redRili.jpg"), 
+
+        // Styling
         text: 'text-danger',
         button: 'btn-outline-danger',
         border: 'border-danger'
