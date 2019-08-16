@@ -2,16 +2,18 @@
    
   <div class="container">
 
-    <!-- Navbar -->
-    <app-navbar></app-navbar>
-    
-    <br><br><br>
+    <div class="row">
 
-    <!-- Router Area -->
-    <div class="pt-5">
-          
-      <router-view></router-view>
-          
+      <!-- Navbar -->
+      <app-navbar></app-navbar>
+
+      <!-- Router Area -->
+      <div class="m-3 mt-5 pt-5">
+            
+        <router-view></router-view>
+            
+      </div>
+
     </div>
                   
   </div>
