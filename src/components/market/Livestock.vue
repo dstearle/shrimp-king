@@ -5,17 +5,20 @@
         <!-- Shrimp Photo -->
         <img :src="shrimp.photo" class="shrimp-photo card-img-top">
 
-        <div class="row">
+        <!-- Favicons -->
+        <div class="row top" style="margin: auto">
 
-            <div class="col-6 d-flex justify-content-start pl-4 pt-2">
+            <!-- Info Icon -->
+            <div class="col-6 d-flex justify-content-start pl-2 pt-2">
 
-                <img src="./../../assets/logo.png" class="" style="height: 20px; width: 20px;">
+                <img src="./../../assets/logo.png" class="" style="height: 25px; width: 25px;">
 
             </div>
 
-            <div class="col-6 d-flex justify-content-end pr-4 pt-2">
+            <!-- Star Icon -->
+            <div class="col-6 d-flex justify-content-end pr-2 pt-2">
 
-                <img src="./../../assets/logo.png" class="" style="height: 20px; width: 20px;">
+                <img src="./../../assets/logo.png" class="" style="height: 25px; width: 25px;">
                 
             </div>
 
@@ -139,6 +142,13 @@
 
     .card-img-top {
         height: 250px;
+    }
+
+    .top {
+
+        position: absolute;
+        top: 0;
+        width: 100%;
     }
 
     .danger {
