@@ -21,7 +21,8 @@ const mutations = {
         
         state.shrimpDataMarket.forEach(shrimp => {
 
-            shrimp.price = Math.round(shrimp.price * (1 + Math.random() - 0.5));
+            // Randomizes the price for each available shrimp between their minimum and maximum prices
+            shrimp.price = Math.round((Math.random() * (shrimp.priceMax - shrimp.priceMin + 1)) + shrimp.priceMin);
 
         });
         
