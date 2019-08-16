@@ -5,6 +5,22 @@
         <!-- Shrimp Photo -->
         <img :src="shrimp.photo" class="shrimp-photo card-img-top">
 
+        <div class="row">
+
+            <div class="col-6 d-flex justify-content-start pl-4 pt-2">
+
+                <img src="./../../assets/logo.png" class="" style="height: 20px; width: 20px;">
+
+            </div>
+
+            <div class="col-6 d-flex justify-content-end pr-4 pt-2">
+
+                <img src="./../../assets/logo.png" class="" style="height: 20px; width: 20px;">
+                
+            </div>
+
+        </div>
+
         <div class="card-body" :class="shrimp.text">
 
             <!-- Title -->
