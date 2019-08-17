@@ -5,7 +5,10 @@
     <div class="row">
 
       <!-- Navbar -->
-      <app-navbar></app-navbar>
+      <app-navbar v-if="!navMobile"></app-navbar>
+
+      <!-- Navbar -->
+      <app-navbar-drop v-else></app-navbar-drop>
 
       <!-- Router Area -->
       <div class="m-3 mt-5 pt-5">
@@ -23,12 +26,15 @@
 <script>
     
   import Navbar from "./components/Navbar.vue";
+  import NavbarDrop from "./components/NavbarDrop.vue";
 
   export default {
       
     components: {
         
-      appNavbar: Navbar
+      appNavbar: Navbar,
+
+      appNavbarDrop: NavbarDrop
         
     },
       
@@ -36,6 +42,16 @@
         
       this.$store.dispatch('initStocks')
         
+    },
+
+    data() {
+
+      return {
+
+        navMobile: false,
+        
+      }
+
     },
 
     methods: {
