@@ -15,15 +15,15 @@
 <strong>To Do List:</strong>
 
 - Fix HMR error (sockjs related from previous project?)
-- Navbar: Make collapse feature
+- Navbar: Style area
 - Dashboard Section: Add save/load features, style area
 - Inventory Section: Refactor for new item types, info icon overlay, favorite star icon, add end day button
 - Market Section: Refactor for new item types, info icon overlay, favorite star icon, add varying quantities for items, add end day button
-- Misc: Fix responsive scaling
+- Misc:
 
 <br>
 
 <strong>Dependecies:</strong>
 
-- vue-router:
+- vue-router
 - vuex
