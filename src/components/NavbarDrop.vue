@@ -13,7 +13,7 @@
                     <strong class="navbar-text text-white">Shrimp King</strong>
 
                     <!-- Dropdown Caret -->
-                    <span class="caret"></span>
+                    <span class="caret pl-1"></span>
 
                 </a>
 
@@ -84,6 +84,16 @@
 
     .navbar-dark {
         background-color: #000000!important;
+    }
+
+    a.dropdown-toggle {color: white;}
+    
+    .dropdown-menu li>a {
+        color:white;
+    }
+    .dropdown-menu {
+        background:rgba(0,0,0,0.5); 
+        color:white;
     }
 
 </style>
