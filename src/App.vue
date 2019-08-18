@@ -5,10 +5,10 @@
     <div class="row">
 
       <!-- Navbar -->
-      <app-navbar v-if="!navMobile"></app-navbar>
+      <app-navbar class="visibility1"></app-navbar>
 
-      <!-- Navbar -->
-      <app-navbar-drop v-else></app-navbar-drop>
+      <!-- Navbar Dropdown -->
+      <app-navbar-drop class="visibility2"></app-navbar-drop>
 
       <!-- Router Area -->
       <div class="m-3 mt-5 pt-5">
@@ -125,6 +125,30 @@
     right: 0;
     left: 0;
     background: rgba(77, 77, 77, 0.6);
+  }
+
+  .visibility1 { visibility: hidden;}
+  .visibility2 { visibility: hidden;}
+
+  @media (max-width: 576px) {
+    .visibility1 { visibility: hidden;}
+    .visibility2 { visibility: visible;}
+  }
+  @media (min-width: 576px) {
+    .visibility1 { visibility: hidden;}
+    .visibility2 { visibility: visible;}
+  }
+  @media (min-width: 768px) {
+    .visibility1 { visibility: visible;}
+    .visibility2 { visibility: hidden;}
+  }
+  @media (min-width: 992px) {
+    .visibility1 { visibility: visible;}
+    .visibility2 { visibility: hidden;}
+  }
+  @media (min-width: 1200px) {
+    .visibility1 { visibility: visible;}
+    .visibility2 { visibility: hidden;}
   }
 
 </style>
