@@ -5,16 +5,12 @@
         <div class="container">
             
             <!-- Navbar Dropdown -->
-            <ul class="dropdown">
+            <ul class="dropdown mb-0 pl-0">
 
                 <a class="dropdown-toggle" data-toggle="dropdown" href="">
 
                     <!-- Title -->
-                    <span class="navbar-brand">
-                
-                        <h3>Shrimp King</h3>
-                        
-                    </span>
+                    <strong class="navbar-text text-white">Shrimp King</strong>
 
                     <!-- Dropdown Caret -->
                     <span class="caret"></span>
