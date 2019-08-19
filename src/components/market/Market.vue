@@ -15,6 +15,8 @@
             
         </div>
 
+        <hr>
+
     </div>
     
 </template>
@@ -48,6 +50,11 @@
 </script>
 
 <style>
+
+    hr {              
+        background-color: white;
+        height: 0.5px;
+    }
 
     @media (min-width: 576px) {
         .card-columns {

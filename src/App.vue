@@ -11,7 +11,7 @@
       <app-navbar-drop class="visibility2"></app-navbar-drop>
 
       <!-- Router Area -->
-      <div class="m-3 mt-5 pt-5">
+      <div class="col m-3 mt-5 pt-5">
             
         <router-view></router-view>
             
