@@ -3,7 +3,7 @@
     <div class="row">
 
         <!-- Save Button -->
-        <div class="col-4">
+        <div class="col-xs-12 col-md-4 saveLoadButton">
 
             <button type="button" class="btn btn-warning btn-lg btn-block text-white">
             
@@ -14,7 +14,7 @@
         </div>
 
         <!-- Load Button -->
-        <div class="col-4">
+        <div class="col-xs-12 col-md-4 saveLoadButton">
 
             <button type="button" class="btn btn-info btn-lg btn-block">
             
@@ -25,7 +25,7 @@
         </div>
 
         <!-- End Day Button -->
-        <div class="col-4">
+        <div class="col-xs-12 col-md-4 saveLoadButton">
 
             <button type="button" class="btn btn-danger btn-lg btn-block" @click="endDay">
             
@@ -90,3 +90,20 @@
     }
 
 </script>
+
+<style scoped>
+
+    @media (max-width: 575px) {
+        .saveLoadButton {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+    @media (min-width: 576px) {
+        .saveLoadButton {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+
+</style>
