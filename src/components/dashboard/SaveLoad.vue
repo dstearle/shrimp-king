@@ -7,7 +7,14 @@
 
             <button type="button" class="btn btn-warning btn-lg btn-block text-white">
             
-                <h3>Save</h3>
+                <h3>
+                    
+                    <!-- Save Icon -->
+                    <font-awesome-icon icon="save" class="pr-1"/>
+                    
+                    Save
+                
+                </h3>
                 
             </button>
 
@@ -18,7 +25,14 @@
 
             <button type="button" class="btn btn-info btn-lg btn-block">
             
-                <h3>Load</h3>
+                <h3>
+                    
+                    <!-- Load Icon -->
+                    <font-awesome-icon icon="book" class="pr-1"/>
+                    
+                    Load
+                    
+                </h3>
                 
             </button>
 
@@ -29,7 +43,14 @@
 
             <button type="button" class="btn btn-danger btn-lg btn-block" @click="endDay">
             
-                <h3>End Day</h3>
+                <h3>
+                    
+                    <!-- End Day Icon -->
+                    <font-awesome-icon icon="hourglass-end" class="pr-1"/>
+                    
+                    End Day
+                    
+                </h3>
                 
             </button>
 
