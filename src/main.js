@@ -4,8 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import VueRouter from 'vue-router';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { routes } from './routes';
 import store from './store/store.js';
+
+library.add(faInfoCircle)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(VueRouter);
 

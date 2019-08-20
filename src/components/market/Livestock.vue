@@ -11,7 +11,7 @@
             <!-- Info Icon -->
             <div class="col-6 d-flex justify-content-start pl-2 pt-2">
 
-                <img src="./../../assets/logo.png" class="" style="height: 25px; width: 25px;">
+                <font-awesome-icon icon="info-circle" class="text-white"/>
 
             </div>
 
