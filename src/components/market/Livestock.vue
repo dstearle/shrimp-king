@@ -11,14 +11,14 @@
             <!-- Info Icon -->
             <div class="col-6 d-flex justify-content-start pl-2 pt-2">
 
-                <font-awesome-icon icon="info-circle" class="text-light"/>
+                <font-awesome-icon icon="info-circle" class="text-light hoverClass"/>
 
             </div>
 
             <!-- Star Icon -->
             <div class="col-6 d-flex justify-content-end pr-2 pt-2">
 
-                <font-awesome-icon icon="star" class="text-light"/>
+                <font-awesome-icon icon="star" class="text-light hoverClass"/>
                 
             </div>
 
@@ -142,6 +142,12 @@
 
     .card-img-top {
         height: 250px;
+    }
+
+    .hoverClass {
+
+        opacity: 0.6;
+        
     }
 
     .top {
