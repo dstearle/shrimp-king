@@ -17,8 +17,8 @@
 - Fix HMR error (sockjs related from previous project?)
 - Navbar: Style area
 - Dashboard Section: Add save/load features, style area
-- Inventory Section: Refactor for new item types, info icon overlay, favorite star icon, add end day button
-- Market Section: Refactor for new item types, info icon overlay, favorite star icon, add varying quantities for items, add end day button
+- Inventory Section: Refactor for new item types, icon functionality
+- Market Section: Refactor for new item types, icon functionality, add varying quantities for items
 - Misc:
 
 <br>
