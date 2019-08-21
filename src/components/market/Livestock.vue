@@ -62,7 +62,7 @@
         <div class="card-body" :class="shrimp.text">
 
             <!-- Title -->
-            <h5 class="card-title">{{ shrimp.name }}</h5>
+            <h5 class="card-title"> {{ shrimp.name }} </h5>
 
             <div class="row py-2">
 
@@ -70,7 +70,7 @@
                 <small class="col-6"> Qnty: </small>
 
                 <!-- Price -->
-                <small class="col-6 text-center">Price: {{ shrimp.price | currency }} </small>
+                <small class="col-6 text-center"> Price: {{ shrimp.price | currency }} </small>
 
             </div>
 
