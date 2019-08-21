@@ -3,7 +3,61 @@
     <div class="card" :class="shrimp.border" style="max-width: 300px; border-width: medium;">
            
         <!-- Shrimp Photo -->
-        <img :src="shrimp.photo" class="shrimp-photo card-img-top">
+        <img 
+            :src="shrimp.photo" 
+            class="shrimp-photo card-img-top"
+        >
+
+        <!-- Photo Overlay -->
+        <div 
+            class="card-img-overlay text-center" 
+            :class="{ active: !activeInfo , 'photoHover': activeInfo }"
+            style="height: 250px;"
+        >
+
+            <!-- Overlay Text -->
+            <div 
+                class="text-white" 
+                style="opacity: 1; margin-top: 50%;"
+                v-show="activeInfo"
+            >
+
+                {{ shrimp.overlayText }}
+
+            </div>
+
+        </div>
+
+        <!-- Card Icons -->
+        <div class="row top" style="margin: auto">
+
+            <!-- Info Icon -->
+            <div class="col-6 d-flex justify-content-start pl-2 pt-2">
+
+                <font-awesome-icon 
+                    icon="info-circle" 
+                    class="text-light"
+                    @mouseover="activeInfo = true"
+                    @mouseleave="activeInfo = false"
+                    :class="{ active: activeInfo , 'inActiveHover': !activeInfo }"
+                />
+
+            </div>
+
+            <!-- Star Icon -->
+            <div class="col-6 d-flex justify-content-end pr-2 pt-2">
+
+                <!-- <font-awesome-icon 
+                    icon="star" 
+                    class="text-light"
+                    @mouseover="activeStar = true"
+                    @mouseleave="activeStar = false"
+                    :class="{ active: activeStar , 'inActiveHover': !activeStar }"
+                /> -->
+                
+            </div>
+
+        </div>
 
         <div class="card-body" :class="shrimp.text">
 
@@ -71,7 +125,11 @@
             
             return {
                 
-                quantity: 0
+                quantity: 0,
+
+                activeInfo: false,
+
+                activeStar: false
                 
             }
             
@@ -109,7 +167,17 @@
         
                 this.quantity = 0;
                 
-            }
+            },
+
+            // Method for icon hover toggles
+            mouseOver() {
+
+                // Toggles info icon classes
+                this.activeInfo = !this.activeInfo;
+                // Toggles star classes
+                this.activeStar = !this.activeStar;
+
+            },
             
         }
         
@@ -124,10 +192,22 @@
         height: 250px;
     }
 
-    .danger {
-        
-        border: 3px solid red;
-        
+    .activeHover {
+        opacity: 1 !important;
+    }
+    .inActiveHover {
+        opacity: 0.6;
+    }
+    .photoHover {
+        background: #000000; 
+        opacity: 0.6;
+    }
+
+    .top {
+
+        position: absolute;
+        top: 0;
+        width: 100%;
     }
 
 </style>

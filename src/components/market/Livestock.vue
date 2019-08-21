@@ -21,7 +21,9 @@
                 style="opacity: 1; margin-top: 50%;"
                 v-show="activeInfo"
             >
-                something
+
+                {{ shrimp.overlayText }}
+
             </div>
 
         </div>
@@ -45,13 +47,13 @@
             <!-- Star Icon -->
             <div class="col-6 d-flex justify-content-end pr-2 pt-2">
 
-                <font-awesome-icon 
+                <!-- <font-awesome-icon 
                     icon="star" 
                     class="text-light"
                     @mouseover="activeStar = true"
                     @mouseleave="activeStar = false"
                     :class="{ active: activeStar , 'inActiveHover': !activeStar }"
-                />
+                /> -->
                 
             </div>
 
