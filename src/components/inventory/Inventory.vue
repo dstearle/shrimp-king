@@ -43,11 +43,6 @@
             appLivestock: Livestock
             
         },
-
-        method: {
-
-            isShown() {}
-        }
         
     }
 
