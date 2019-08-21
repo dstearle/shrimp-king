@@ -18,7 +18,7 @@
             <!-- Overlay Text -->
             <div 
                 class="text-white" 
-                style="opacity: 1; margin-top: 50%;"
+                style="opacity: 1; margin-top: 30%;"
                 v-show="activeInfo"
             >
 
