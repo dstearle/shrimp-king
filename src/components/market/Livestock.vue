@@ -16,7 +16,13 @@
         >
 
             <!-- Overlay Text -->
-            <div class="text-white" style="opacity: 1; margin-top: 50%;">poop</div>
+            <div 
+                class="text-white" 
+                style="opacity: 1; margin-top: 50%;"
+                v-show="activeInfo"
+            >
+                something
+            </div>
 
         </div>
 
