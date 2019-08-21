@@ -62,7 +62,7 @@
         <div class="card-body" :class="shrimp.text">
 
             <!-- Title -->
-            <h5 class="card-title">{{ shrimp.name }}</h5>
+            <h5 class="card-title"> {{ shrimp.name }} </h5>
 
             <div class="row py-2">
 
@@ -70,7 +70,7 @@
                 <small class="col-6"> Qnty: {{ shrimp.quantity }} </small>
 
                 <!-- Price -->
-                <small class="col-6 text-center">Price: {{ shrimp.price | currency }} </small>
+                <small class="col-6 text-center"> Price: {{ shrimp.price | currency }} </small>
 
             </div>
 
@@ -83,7 +83,7 @@
                         type="number" 
                         class="form-control" 
                         placeholder="Quantity" 
-                        v-model="quantity" 
+                        v-model.number="quantity" 
                         :class="shrimp.text"
                     >
 
@@ -159,7 +159,7 @@
                     
                     shrimpPrice: this.shrimp.price,
                     
-                    quantity: this.shrimp.quantity
+                    quantity: this.quantity
                     
                 };
                 
