@@ -3,7 +3,22 @@
     <div class="card mb-3" :class="shrimp.border" style="max-width: 300px; border-width: medium;">
            
         <!-- Shrimp Photo -->
-        <img :src="shrimp.photo" class="shrimp-photo card-img-top">
+        <img 
+            :src="shrimp.photo" 
+            class="shrimp-photo card-img-top"
+        >
+
+        <!-- Photo Overlay -->
+        <div 
+            class="card-img-overlay text-center" 
+            :class="{ active: !activeInfo , 'photoHover': activeInfo }"
+            style="height: 250px;"
+        >
+
+            <!-- Overlay Text -->
+            <div class="text-white" style="opacity: 1; margin-top: 50%;">poop</div>
+
+        </div>
 
         <!-- Card Icons -->
         <div class="row top" style="margin: auto">
@@ -176,7 +191,11 @@
     .inActiveHover {
         opacity: 0.6;
     }
-
+    .photoHover {
+        background: #000000; 
+        opacity: 0.6;
+    }
+    
     .top {
 
         position: absolute;
