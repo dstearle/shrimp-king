@@ -99,9 +99,14 @@ export default [
         photo: require("./../assets/images/shrimpPhotos/coconutShrimp.jpg"),
         overlayText: 'Not as popular as other color morphs, but very prolific.',
 
+        // Pricing
+        price: 100,
+        priceMin: 20,
+        priceMax: 110,
+
         // Quantity
         quantity: 12,
-        quantityMin: 6,
+        quantityMin: 4,
         quantityMax: 18,
 
         // Styling
