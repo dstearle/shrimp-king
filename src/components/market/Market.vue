@@ -11,7 +11,12 @@
         <!-- Shrimp List -->
         <div class="card-columns">
             
-            <app-livestock v-for="shrimp in shrimps" :shrimp="shrimp" v-bind:key="shrimp.id"></app-livestock>
+            <app-livestock 
+                v-for="shrimp in shrimps" 
+                :shrimp="shrimp" 
+                v-bind:key="shrimp.id" 
+                v-show="shrimp.quantity > 0"
+            ></app-livestock>
             
         </div>
 
