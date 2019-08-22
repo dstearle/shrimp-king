@@ -26,7 +26,19 @@ const mutations = {
 
         });
         
-    }
+    },
+
+    // Randomizes the quantities for each shrimp
+    'RND_QUANTITY' (state) {
+        
+        state.shrimpDataMarket.forEach(shrimp => {
+
+            // Randomizes the quantity for each available shrimp between their minimum and maximum quantities
+            shrimp.quantity = Math.round((Math.random() * (shrimp.quantityMax - shrimp.quantityMin + 1)) + shrimp.quantityMin);
+
+        });
+        
+    },
     
 };
 
@@ -47,6 +59,8 @@ const actions = {
     randomizeStocks: ({commit}) => {
         
         commit('RND_PRICES', shrimpData);
+
+        commit('RND_QUANTITY', shrimpData);
         
     }, 
     
