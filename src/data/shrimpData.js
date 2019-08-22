@@ -10,7 +10,12 @@ export default [
         // Pricing
         price: 110,
         priceMin: 60,
-        priceMax: 180, 
+        priceMax: 180,
+
+        // Quantity
+        quantity: 10,
+        quantityMin: 4,
+        quantityMax: 16,
         
         // Styling
         text: 'text-danger',
@@ -28,7 +33,12 @@ export default [
         // Pricing
         price: 200,
         priceMin: 120,
-        priceMax: 230, 
+        priceMax: 230,
+
+        // Quantity
+        quantity: 8,
+        quantityMin: 2,
+        quantityMax: 14,
         
         // Styling
         text: 'text-warning',
@@ -47,6 +57,11 @@ export default [
         price: 250,
         priceMin: 145,
         priceMax: 320,
+
+        // Quantity
+        quantity: 6,
+        quantityMin: 1,
+        quantityMax: 10,
         
         // Styling
         text: 'text-info',
@@ -66,6 +81,11 @@ export default [
         priceMin: 160,
         priceMax: 350,
 
+        // Quantity
+        quantity: 4,
+        quantityMin: 0,
+        quantityMax: 6,
+
         // Styling
         text: 'text-success',
         button: 'btn-outline-success',
@@ -79,10 +99,10 @@ export default [
         photo: require("./../assets/images/shrimpPhotos/coconutShrimp.jpg"),
         overlayText: 'Not as popular as other color morphs, but very prolific.',
 
-        // Pricing
-        price: 100,
-        priceMin: 20,
-        priceMax: 110,
+        // Quantity
+        quantity: 12,
+        quantityMin: 6,
+        quantityMax: 18,
 
         // Styling
         text: 'text-dark',
@@ -101,6 +121,11 @@ export default [
         price: 320,
         priceMin: 270,
         priceMax: 400,
+
+        // Quantity
+        quantity: 3,
+        quantityMin: 0,
+        quantityMax: 4,
 
         // Styling
         text: 'text-danger',
