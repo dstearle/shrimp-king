@@ -18,12 +18,12 @@
 - Navbar: Style area
 - Dashboard Section: Add save/load features, style area
 - Inventory Section: Refactor for new item types, star icon functionality
-- Market Section: Refactor for new item types, star icon functionality, add varying quantities for items
+- Market Section: Refactor for new item types, star icon functionality
 - Misc:
 
 <br>
 
 <strong>Dependecies:</strong>
 
-- vue-router
 - vuex
+- vue-router
