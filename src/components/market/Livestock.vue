@@ -96,7 +96,7 @@
                         class="btn btn-block"
                         :class="shrimp.button"
                         @click="buyShrimp" 
-                        :disabled="insufficientFunds || quantity <= 0"
+                        :disabled="insufficientFunds ||  insufficientQuantity || quantity <= 0 "
                     >
                     
                         {{ insufficientFunds ? 'N/E Funds' : 'Purchase' }}
