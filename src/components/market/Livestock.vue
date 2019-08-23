@@ -167,6 +167,7 @@
                 // Action from shrimpMarket.js
                 this.$store.dispatch('buyShrimp', order);
                 
+                // Sets input for quantity back to zero after purchase
                 this.quantity = 0;
                 
             },
