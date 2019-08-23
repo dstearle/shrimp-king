@@ -124,7 +124,7 @@ export default [
 
         // Pricing
         price: 320,
-        priceMin: 270,
+        priceMin: 220,
         priceMax: 400,
 
         // Quantity

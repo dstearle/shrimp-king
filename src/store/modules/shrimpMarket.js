@@ -3,7 +3,7 @@ import shrimpData from './../../data/shrimpData.js';
 const state = {
     
     // Array to store available shrimp for the Market
-    shrimpDataMarket: []
+    shrimpMarketData: []
     
 };
 
@@ -12,14 +12,14 @@ const mutations = {
     // Sets the stored data in ShrimpData into the array
     'SET_STOCKS' (state, shrimpData) {
         
-        state.shrimpDataMarket = shrimpData;
+        state.shrimpMarketData = shrimpData;
         
     },
     
     // Randomizes the prices for each shrimp
     'RND_PRICES' (state) {
         
-        state.shrimpDataMarket.forEach(shrimp => {
+        state.shrimpMarketData.forEach(shrimp => {
 
             // Randomizes the price for each available shrimp between their minimum and maximum prices
             shrimp.price = Math.round((Math.random() * (shrimp.priceMax - shrimp.priceMin + 1)) + shrimp.priceMin);
@@ -31,7 +31,7 @@ const mutations = {
     // Randomizes the quantities for each shrimp
     'RND_QUANTITY' (state) {
         
-        state.shrimpDataMarket.forEach(shrimp => {
+        state.shrimpMarketData.forEach(shrimp => {
 
             // Randomizes the quantity for each available shrimp between their minimum and maximum quantities
             shrimp.quantity = Math.round((Math.random() * (shrimp.quantityMax - shrimp.quantityMin + 1)) + shrimp.quantityMin);
@@ -44,7 +44,7 @@ const mutations = {
     'SUBTRACT_QUANTITY' (state, {shrimpId, quantity}) {
         
         // Retrieves the available shrimps in the market
-        const record = state.shrimpDataMarket.find(element => element.id == shrimpId);
+        const record = state.shrimpMarketData.find(element => element.id == shrimpId);
         
         // Subtracts the market quantity from purchase quantity
         record.quantity -= quantity;
@@ -55,7 +55,7 @@ const mutations = {
     'ADD_QUANTITY' (state, {shrimpId, quantity}) {
         
         // Retrieves the available shrimps in the market
-        const record = state.shrimpDataMarket.find(element => element.id == shrimpId);
+        const record = state.shrimpMarketData.find(element => element.id == shrimpId);
         
         // Subtracts the market quantity from purchase quantity
         record.quantity += quantity;
@@ -95,9 +95,9 @@ const actions = {
 const getters = {
     
     // Getter for available shrimp in Market
-    shrimpDataMarketGet: state => {
+    shrimpMarketDataGet: state => {
         
-        return state.shrimpDataMarket;
+        return state.shrimpMarketData;
         
     }
     

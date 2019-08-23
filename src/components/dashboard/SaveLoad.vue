@@ -5,7 +5,7 @@
         <!-- Save Button -->
         <div class="col-xs-12 col-md-4 saveLoadButton">
 
-            <button type="button" class="btn btn-warning btn-lg btn-block text-white">
+            <button @click="saveData" type="button" class="btn btn-warning btn-lg btn-block text-white">
             
                 <h3>
                     
@@ -23,7 +23,7 @@
         <!-- Load Button -->
         <div class="col-xs-12 col-md-4 saveLoadButton">
 
-            <button type="button" class="btn btn-info btn-lg btn-block">
+            <button @click="loadData" type="button" class="btn btn-info btn-lg btn-block">
             
                 <h3>
                     
@@ -86,11 +86,15 @@
             // Saves user's session
             saveData() {
 
+                // Stores both the user's and market's current funds and inventory.
                 const data = {
 
+                    // User's funds
                     funds: this.$store.getters.funds,
-                    stockPortfolio: this.$store.getters.stockPortfolio,
-                    stocks: this.$store.getters.stocks
+                    // User's inventory
+                    shrimpInventoryData: this.$store.getters.shrimpInventoryDataGet,
+                    // Market's inventory
+                    shrimpMarketData: this.$store.getters.shrimpMarketDataGet
 
                 };
 
