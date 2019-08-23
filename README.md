@@ -38,7 +38,7 @@
 
 <br>
 
-<strong>Dependecies:</strong>
+<strong>Dependencies:</strong>
 
 - vuex
 - vue-router
