@@ -6,25 +6,35 @@
 
 - Coming soon.
 
+<br>
+
 <strong>What Is This Project? :</strong>
 
-- Welcome to Shrimp King, a basic ecommerce website sim! In this simulator users can buy and sell fancy shrimp over a period of time. Starting with a set amount of funds the user can visit the "Market" page where various shrimps will be sold for varying prices. Each day the prices will randomly go up or down so it is the users best interest to buy low then sell high to gain a profit. Every time a shrimp is purchased it is added to the user's inventory on the "Inventory" page where they will have the option to sell their available shrimps. Once the user has completed all transactions for that day they can then visit the "Dashboard" page where they can end the day which will randomize the prices for shrimp. The "Dashboard" page will also have a save/load feature so that user's can save their current session and load it at a different time.
+- Welcome to Shrimp King, a basic ecommerce website sim! In this simulator users can buy and sell fancy shrimp over a period of time. Starting with a set amount of funds the user can visit the "Market" page where various shrimps will be sold for varying prices. Each day the prices and available shrimp will randomly go up or down so it is the user's best interest to buy low then sell high to gain a profit. Every time a shrimp is purchased it is added to the user's inventory on the "Inventory" page where they will have the option to sell their available shrimps. Once the user has completed all transactions (sales/purchases) for that day they can then visit the "Dashboard" page where they can end the day, which will randomize both the prices and quantities for shrimp in the market. The "Dashboard" page will also have also has a save/load feature so that user's can save their current session and load it at a different time.
 
-- The data for each shrimp is stored in a file that is used by Vuex to populate a list of cards. The cards come from a reusable component that has the basic format of the card and uses stored data to fill out aspects of the card such as the photo of the shrimp and it's name.
+<br>
+
+<strong>What Is The Purpose For This Project? :</strong>
+
+- The purpose of Shrimp King is to show off my skills using the javascript framework Vue.js and other resources it can implement. A particular highlight would be the use of Vuex to keep track of data between the user's inventory and the market as well as saving/loading that data onto an actual database (I am currently using firebase for this project).
+
+<br>
 
 <strong>To Do List:</strong>
 
 - Navbar:
-- Dashboard Section: Add save/load features
-- Inventory Section: Refactor for new item types, star icon functionality
-- Market Section: Refactor for new item types, star icon functionality
+- Dashboard Section:
+- Inventory Section:
+- Market Section:
 - Misc:
 
 <br>
 
 <strong>Future Developments:</strong>
 
-- Chart for dashboard showing prices over a period of time
+- Favorite system
+- Refactor for new types of shrimp (Caridina)
+- Chart for dashboard showing prices for shrimp over a period of time
 
 <br>
 
@@ -32,3 +42,4 @@
 
 - vuex
 - vue-router
+- vue-resource
