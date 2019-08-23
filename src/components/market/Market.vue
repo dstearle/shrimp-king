@@ -44,7 +44,7 @@
             
             shrimps() {
                 
-                return this.$store.getters.shrimpDataMarketGet;
+                return this.$store.getters.shrimpMarketDataGet;
                 
             }
             

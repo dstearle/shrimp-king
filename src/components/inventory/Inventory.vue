@@ -32,7 +32,7 @@
             
             ...mapGetters({
                 
-                shrimpInventory: 'shrimpInventoryGet'
+                shrimpInventory: 'shrimpInventoryDataGet'
                 
             })
             

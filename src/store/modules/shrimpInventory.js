@@ -3,7 +3,7 @@ const state = {
     // User's available funds
     funds: 1000,
     // User's stock of shrimp
-    shrimpDataInventory: []
+    shrimpInventoryData: []
     
 };
 
@@ -13,7 +13,7 @@ const mutations = {
     'BUY_STOCK'(state, {shrimpId, quantity, shrimpPrice}) {
         
         // Checks to see which items are already in the array
-        const record = state.shrimpDataInventory.find(element => element.id == shrimpId);
+        const record = state.shrimpInventoryData.find(element => element.id == shrimpId);
         
         // If item already exists then add to its quantity
         if (record) {
@@ -23,7 +23,7 @@ const mutations = {
         }
         
         // If item is not in the array then add it
-        else { state.shrimpDataInventory.push({
+        else { state.shrimpInventoryData.push({
             
             id: shrimpId,
             
@@ -41,7 +41,7 @@ const mutations = {
     'SELL_STOCK' (state, {shrimpId, quantity, shrimpPrice}) {
         
         // Checks to see which items are already in the array
-        const record = state.shrimpDataInventory.find(element => element.id == shrimpId);
+        const record = state.shrimpInventoryData.find(element => element.id == shrimpId);
         
         // Detracts from quantity
         if (record.quantity > quantity) {
@@ -53,7 +53,7 @@ const mutations = {
         // Removes the item from the array if amount sold is the amount available
         else {
             
-            state.shrimpDataInventory.splice(state.shrimpDataInventory.indexOf(record), 1);
+            state.shrimpInventoryData.splice(state.shrimpInventoryData.indexOf(record), 1);
             
         }
         
@@ -62,10 +62,11 @@ const mutations = {
         
     },
 
-    'SET_PORTFOLIO' (state, portfolio) {
+    // Mutation for loading saved data for User's funds and inventory
+    'SET_PORTFOLIO' (state, portfolioLoad) {
 
-        state.funds = portfolio.funds;
-        state.shrimpData = portfolio.shrimpInventory ? portfolio.shrimpInventory : [];
+        state.funds = portfolioLoad.fundsLoad;
+        state.shrimpInventoryData = portfolioLoad.shrimpInventoryDataLoad ? portfolioLoad.shrimpInventoryDataLoad : [];
 
     }
     
@@ -89,13 +90,13 @@ const actions = {
 const getters = {
     
     // Getter for available shrimp in Inventory
-    shrimpInventoryGet (state, getters) {
+    shrimpInventoryDataGet (state, getters) {
         
         // Transfers data from Market to Inventory
-        return state.shrimpDataInventory.map(shrimp => {
+        return state.shrimpInventoryData.map(shrimp => {
             
             // Gets the stored data from Market
-            const record = getters.shrimpDataMarketGet.find(element => element.id == shrimp.id);
+            const record = getters.shrimpMarketDataGet.find(element => element.id == shrimp.id);
             
             return {
                 
