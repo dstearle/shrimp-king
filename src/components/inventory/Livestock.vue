@@ -165,6 +165,7 @@
                 
                 this.placeSellOrder(order);
         
+                // Sets input for quantity back to zero after sale
                 this.quantity = 0;
                 
             },

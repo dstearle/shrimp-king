@@ -39,6 +39,17 @@ const mutations = {
         });
         
     },
+
+    // Randomizes the quantities for each shrimp
+    'SUBTRACT_QUANTITY' (state, {shrimpId, quantity}) {
+        
+        // Checks to see which items are already in the array
+        const record = state.shrimpDataMarket.find(element => element.id == shrimpId);
+        
+        // Randomizes the quantity for each available shrimp between their minimum and maximum quantities
+        record.quantity -= quantity;
+        
+    },
     
 };
 
@@ -47,15 +58,18 @@ const actions = {
     buyShrimp: ({commit}, order) => {
         
         commit('BUY_STOCK', order);
+        commit('SUBTRACT_QUANTITY', order);
         
     },
     
+    // Sets the initial values for shrimp at start of program
     initStocks: ({commit}) => {
         
         commit('SET_STOCKS', shrimpData);
         
     },
     
+    // Randomizes the prices and quantities for shrimp in the market
     randomizeStocks: ({commit}) => {
         
         commit('RND_PRICES', shrimpData);
