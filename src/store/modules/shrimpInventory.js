@@ -73,9 +73,14 @@ const mutations = {
 
 const actions = {
     
+    // Action for when a sale is made
     sellShrimp({commit}, order) {
         
+        // Sale transaction
         commit('SELL_STOCK', order);
+
+        // Adds the quantity sold to market quantity
+        commit('ADD_QUANTITY', order);
         
     }
     
