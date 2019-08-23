@@ -33,7 +33,7 @@
 <strong>Future Developments:</strong>
 
 - Favorite system
-- Refactor for new types of shrimp (Caridina)
+- Refactor for new types of shrimp (Caridina, Crayfish, Misc)
 - Chart for dashboard showing prices for shrimp over a period of time
 
 <br>
