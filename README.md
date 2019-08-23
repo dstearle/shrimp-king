@@ -14,12 +14,17 @@
 
 <strong>To Do List:</strong>
 
-- Fix HMR error (sockjs related from previous project?)
-- Navbar: Style area
-- Dashboard Section: Add save/load features, style area
+- Navbar:
+- Dashboard Section: Add save/load features
 - Inventory Section: Refactor for new item types, star icon functionality
 - Market Section: Refactor for new item types, star icon functionality
 - Misc:
+
+<br>
+
+<strong>Future Developments:</strong>
+
+- Chart for dashboard showing prices over a period of time
 
 <br>
 
