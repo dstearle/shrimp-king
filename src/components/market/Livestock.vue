@@ -6,6 +6,7 @@
         <img 
             :src="shrimp.photo" 
             class="shrimp-photo card-img-top"
+            :alt="shrimp.alt"
         >
 
         <!-- Photo Overlay -->

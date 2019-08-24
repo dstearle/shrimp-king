@@ -4,7 +4,8 @@
            
         <!-- Shrimp Photo -->
         <img 
-            :src="shrimp.photo" 
+            :src="shrimp.photo"
+            :alt="shrimp.alt"
             class="shrimp-photo card-img-top"
         >
 
