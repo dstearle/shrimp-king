@@ -110,6 +110,8 @@ const getters = {
 
                 photo: record.photo,
 
+                alt: record.alt,
+
                 overlayText: record.overlayText,
 
                 text: record.text,
