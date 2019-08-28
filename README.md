@@ -4,7 +4,7 @@
 
 <strong>Link To Live Website :</strong>
 
-- Coming soon.
+- http://shrimp-king.s3-website-us-west-2.amazonaws.com/
 
 <br>
 
