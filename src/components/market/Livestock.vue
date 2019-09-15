@@ -48,13 +48,13 @@
             <!-- Star Icon -->
             <div class="col-6 d-flex justify-content-end pr-2 pt-2">
 
-                <!-- <font-awesome-icon 
+                <font-awesome-icon 
                     icon="star" 
-                    class="text-light"
+                    class=""
                     @mouseover="activeStar = true"
                     @mouseleave="activeStar = false"
-                    :class="{ active: activeStar , 'inActiveHover': !activeStar }"
-                /> -->
+                    :class="{ 'text-warning' : activeStar , 'text-light inActiveHover': !activeStar }"
+                />
                 
             </div>
 
