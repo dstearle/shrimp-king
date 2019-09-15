@@ -12,11 +12,11 @@
         <!-- Photo Overlay -->
         <div 
             class="card-img-overlay text-center" 
-            :class="{ active: !activeInfo , 'photoHover': activeInfo }"
+            :class="{ active: !activeInfo , 'photoHover': activeInfo || activeStar }"
             style="height: 250px;"
         >
 
-            <!-- Overlay Text -->
+            <!-- Info Overlay Text -->
             <div 
                 class="text-white" 
                 style="opacity: 1; margin-top: 30%;"
@@ -24,6 +24,17 @@
             >
 
                 {{ shrimp.overlayText }}
+
+            </div>
+
+            <!-- Star Overlay Text -->
+            <div 
+                class="text-white" 
+                style="opacity: 1; margin-top: 30%;"
+                v-show="activeStar"
+            >
+
+                {{ 'Click to add to favorites' }}
 
             </div>
 
@@ -51,6 +62,7 @@
                 <font-awesome-icon 
                     icon="star" 
                     class=""
+                    @click="favoriteItem"
                     @mouseover="activeStar = true"
                     @mouseleave="activeStar = false"
                     :class="{ 'text-warning' : activeStar , 'text-light inActiveHover': !activeStar }"
@@ -178,6 +190,13 @@
                 // Sets input for quantity back to zero after purchase
                 this.quantity = 0;
                 
+            },
+
+            // Method for favoriting an item
+            favoriteItem() {
+
+                
+
             },
 
             // Method for icon hover toggles
