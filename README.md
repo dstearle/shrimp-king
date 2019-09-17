@@ -38,7 +38,7 @@ Market:
 
 <strong>The Item Cards :</strong>
 
-- The cards that display each shrimp come from two reusable components (One for inventory and one for the market). To generate the information for each card data stored in a file is put into a for loop. Each shrimp has its own data object nested with elements such as a picture, name and even the styling for the card. The data objects for each shrimp also store the maximum and minimum prices and quantites that are used in the market (and the inventory pricing as well).
+- The cards that display each shrimp come from two reusable components (One for inventory and one for the market). To generate the information for each card, data stored in a file is put into a for loop. Each shrimp has its own data object nested with elements such as a picture, name, and even the styling for the card. The data objects for each shrimp also store the maximum and minimum prices and quantites that are used in the market (and the inventory pricing as well).
 
 <br>
 
