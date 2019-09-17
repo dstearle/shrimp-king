@@ -3,7 +3,7 @@
     <div class="container">
 
         <!-- Shrimp Category Title -->
-        <h1 class="text-white pb-3" v-if="shrimps.length > 0">Neocaridina</h1>
+        <h1 class="text-white pb-3" v-if="neocaridina.length > 0">Neocaridina</h1>
 
         <!-- Market Closed -->
         <h1 class="text-white pb-3" v-else>Market is Closed</h1>
@@ -12,7 +12,7 @@
         <div class="card-columns">
             
             <app-livestock 
-                v-for="shrimp in shrimps" 
+                v-for="shrimp in neocaridina" 
                 :shrimp="shrimp" 
                 v-bind:key="shrimp.id" 
                 v-show="shrimp.quantity > 0"
@@ -41,10 +41,12 @@
         
         computed: {
             
-            
-            shrimps() {
+            // The list for neocaridina shrimps
+            neocaridina() {
                 
-                return this.$store.getters.shrimpMarketDataGet;
+                const arr = this.$store.getters.shrimpMarketDataGet;
+
+                return arr.filter(shrimp => shrimp.favorited != true)
                 
             }
             
