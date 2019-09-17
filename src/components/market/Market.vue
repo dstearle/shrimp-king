@@ -2,7 +2,7 @@
     
     <div class="container">
 
-        <!-- Favorites -->
+        <!-- Favorites List -->
         <div class="mb-5">
 
             <!-- Shrimp Category Title -->
@@ -24,17 +24,17 @@
 
         </div>
 
-        <!-- Neocaridina -->
+        <!-- Neocaridina List -->
         <div class="my-5">
 
             <!-- Shrimp Category Title -->
-            <h1 class="text-white pb-3" v-show="neocaridina.length > 0">Neocaridina</h1>
+            <h1 class="text-white pb-3" v-show="neocaridinaList.length > 0">Neocaridina</h1>
 
             <!-- Shrimp List -->
             <div class="card-columns">
                 
                 <app-livestock 
-                    v-for="shrimp in neocaridina" 
+                    v-for="shrimp in neocaridinaList" 
                     :shrimp="shrimp" 
                     v-bind:key="shrimp.id" 
                     v-show="shrimp.quantity > 0"
@@ -64,22 +64,22 @@
         },
         
         computed: {
-            
-            // The list for neocaridina shrimps
-            neocaridina() {
-                
-                const arr = this.$store.getters.shrimpMarketDataGet;
 
-                return arr.filter(shrimp => shrimp.favorited != true)
-                
-            },
-
-            // The list for neocaridina shrimps
+            // The list for favorited shrimps
             favoritesList() {
                 
                 const arr = this.$store.getters.shrimpMarketDataGet;
 
                 return arr.filter(shrimp => shrimp.favorited != false)
+                
+            },
+            
+            // The list for neocaridina shrimps
+            neocaridinaList() {
+                
+                const arr = this.$store.getters.shrimpMarketDataGet;
+
+                return arr.filter(shrimp => shrimp.favorited != true)
                 
             },
             
