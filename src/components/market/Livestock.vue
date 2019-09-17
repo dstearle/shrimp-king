@@ -60,8 +60,7 @@
             <div class="col-6 d-flex justify-content-end pr-2 pt-2">
 
                 <font-awesome-icon 
-                    icon="star" 
-                    class=""
+                    icon="star"
                     @click="favoriteItem"
                     @mouseover="activeStar = true"
                     @mouseleave="activeStar = false"
@@ -202,7 +201,7 @@
 
                 }
 
-                if(this.shrimp.favorited === false) {
+                else {
 
                     // Action from favorites.js
                     this.$store.dispatch('favItem');
