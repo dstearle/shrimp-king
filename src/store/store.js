@@ -3,6 +3,8 @@ import Vuex from 'vuex';
 
 import shrimpMarket from './modules/shrimpMarket.js';
 import shrimpInventory from './modules/shrimpInventory';
+import favorites from './modules/favorites';
+
 
 import * as actions from './actions';
 
@@ -16,7 +18,9 @@ export default new Vuex.Store({
         
         shrimpMarket,
         
-        shrimpInventory
+        shrimpInventory,
+
+        favorites
         
     }
     
