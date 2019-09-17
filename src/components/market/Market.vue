@@ -2,25 +2,49 @@
     
     <div class="container">
 
-        <!-- Shrimp Category Title -->
-        <h1 class="text-white pb-3" v-if="neocaridina.length > 0">Neocaridina</h1>
+        <!-- Favorites -->
+        <div class="mb-5">
 
-        <!-- Market Closed -->
-        <h1 class="text-white pb-3" v-else>Market is Closed</h1>
+            <!-- Shrimp Category Title -->
+            <h1 class="text-white pb-3" v-show="favoritesList.length > 0">Favorites</h1>
 
-        <!-- Shrimp List -->
-        <div class="card-columns">
-            
-            <app-livestock 
-                v-for="shrimp in neocaridina" 
-                :shrimp="shrimp" 
-                v-bind:key="shrimp.id" 
-                v-show="shrimp.quantity > 0"
-            ></app-livestock>
-            
+            <!-- Shrimp List -->
+            <div class="card-columns">
+                
+                <app-livestock 
+                    v-for="shrimp in favoritesList" 
+                    :shrimp="shrimp" 
+                    v-bind:key="shrimp.id" 
+                    v-show="shrimp.quantity > 0"
+                ></app-livestock>
+                
+            </div>
+
+            <hr>
+
         </div>
 
-        <hr>
+        <!-- Neocaridina -->
+        <div class="my-5">
+
+            <!-- Shrimp Category Title -->
+            <h1 class="text-white pb-3" v-show="neocaridina.length > 0">Neocaridina</h1>
+
+            <!-- Shrimp List -->
+            <div class="card-columns">
+                
+                <app-livestock 
+                    v-for="shrimp in neocaridina" 
+                    :shrimp="shrimp" 
+                    v-bind:key="shrimp.id" 
+                    v-show="shrimp.quantity > 0"
+                ></app-livestock>
+                
+            </div>
+
+            <hr>
+
+        </div>
 
     </div>
     
@@ -48,7 +72,16 @@
 
                 return arr.filter(shrimp => shrimp.favorited != true)
                 
-            }
+            },
+
+            // The list for neocaridina shrimps
+            favoritesList() {
+                
+                const arr = this.$store.getters.shrimpMarketDataGet;
+
+                return arr.filter(shrimp => shrimp.favorited != false)
+                
+            },
             
         }
         
