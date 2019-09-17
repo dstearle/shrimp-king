@@ -9,7 +9,7 @@ const state = {
 
 const mutations = {
     
-    // Sets the stored data in ShrimpData into the array
+    // Sets the stored data from imports into the array
     'SET_STOCKS' (state, shrimpData) {
         
         state.shrimpMarketData = shrimpData;
