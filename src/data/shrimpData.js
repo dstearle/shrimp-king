@@ -7,6 +7,7 @@ export default [
         photo: require("./../assets/images/shrimpPhotos/cherryShrimp.png"),
         alt: 'Cherry Shrimp Image',
         overlayText: 'The original cherry shrimp!',
+        favorited: true,
         
         // Pricing
         price: 110,
@@ -31,6 +32,7 @@ export default [
         photo: require("./../assets/images/shrimpPhotos/lemonShrimp.jpg"),
         alt: 'Lemon Shrimp Image',
         overlayText: 'Will brighten up any tank!',
+        favorited: false,
         
         // Pricing
         price: 200,
@@ -55,6 +57,7 @@ export default [
         photo: require("./../assets/images/shrimpPhotos/blueberryShrimp.jpg"),
         alt: 'Blueberry Shrimp Image',
         overlayText: 'Also known as "blue dream" or "blue velvet" shrimps.',
+        favorited: false,
         
         // Pricing
         price: 250,
@@ -79,6 +82,7 @@ export default [
         photo: require("./../assets/images/shrimpPhotos/kiwiShrimp.jpg"),
         alt: 'Kiwi Shrimp Image',
         overlayText: 'Formerly known as "Jade" shrimp, this morph is quite rare.',
+        favorited: false,
 
         // Pricing
         price: 240,
@@ -103,6 +107,7 @@ export default [
         photo: require("./../assets/images/shrimpPhotos/coconutShrimp.jpg"),
         alt: 'Coconut Shrimp Image',
         overlayText: 'Not as popular as other color morphs, but very prolific.',
+        favorited: false,
 
         // Pricing
         price: 100,
@@ -127,6 +132,7 @@ export default [
         photo: require("./../assets/images/shrimpPhotos/redRili.jpg"),
         alt: 'Red Rili Shrimp Image',
         overlayText: 'The most prestigious morph of cherry shrimp. Both rare and pricey!',
+        favorited: false,
 
         // Pricing
         price: 320,
