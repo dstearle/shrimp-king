@@ -41,8 +41,8 @@
     created() {
         
       this.$store.dispatch('initStocks')
-      this.$store.dispatch('initFavs')
-      console.log(this.$store.getters.favoritesDataGet)
+      // this.$store.dispatch('initFavs')
+      console.log(this.$store.getters.shrimpMarketDataGet)
         
     },
 
