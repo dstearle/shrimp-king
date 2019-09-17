@@ -46,9 +46,9 @@ Market:
 
 - Navbar:
 - Dashboard Section:
-- Inventory Section:
-- Market Section:
-- Misc:
+- Inventory Section: make filter for favorited items in the computed method for neocaridina, finish toggle for favorited
+- Market Section: make filter for favorited items in the computed method for neocaridina, finish toggle for favorited
+- Misc: make sure favorited items can be saved and loaded
 
 <br>
 
