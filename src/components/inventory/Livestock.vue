@@ -61,6 +61,7 @@
 
                 <font-awesome-icon 
                     icon="star"
+                    @click="favoriteItem"
                     @mouseover="activeStar = true"
                     @mouseleave="activeStar = false"
                     :class="{ 'text-warning' : activeStar , 'text-light inActiveHover': !activeStar }"
@@ -179,6 +180,13 @@
                 // Sets input for quantity back to zero after sale
                 this.quantity = 0;
                 
+            },
+
+            // Method for favoriting an item
+            favoriteItem() {
+
+                this.shrimp.favorited = !this.shrimp.favorited;
+
             },
 
             // Method for icon hover toggles
