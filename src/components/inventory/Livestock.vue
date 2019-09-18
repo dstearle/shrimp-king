@@ -12,7 +12,7 @@
         <!-- Photo Overlay -->
         <div 
             class="card-img-overlay text-center" 
-            :class="{ active: !activeInfo , 'photoHover': activeInfo }"
+            :class="{ active: !activeInfo , 'photoHover': activeInfo || activeStar }"
             style="height: 250px;"
         >
 
@@ -24,6 +24,17 @@
             >
 
                 {{ shrimp.overlayText }}
+
+            </div>
+
+            <!-- Star Overlay Text -->
+            <div 
+                class="text-white" 
+                style="opacity: 1; margin-top: 30%;"
+                v-show="activeStar"
+            >
+
+                {{ 'Click to add to favorites' }}
 
             </div>
 
@@ -48,13 +59,12 @@
             <!-- Star Icon -->
             <div class="col-6 d-flex justify-content-end pr-2 pt-2">
 
-                <!-- <font-awesome-icon 
-                    icon="star" 
-                    class="text-light"
+                <font-awesome-icon 
+                    icon="star"
                     @mouseover="activeStar = true"
                     @mouseleave="activeStar = false"
-                    :class="{ active: activeStar , 'inActiveHover': !activeStar }"
-                /> -->
+                    :class="{ 'text-warning' : activeStar , 'text-light inActiveHover': !activeStar }"
+                />
                 
             </div>
 

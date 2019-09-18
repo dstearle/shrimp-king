@@ -3,10 +3,10 @@
     <div class="container">
 
         <!-- Favorites List -->
-        <div class="mb-5">
+        <div class="mb-5" v-show="favoritesList.length > 0">
 
             <!-- Shrimp Category Title -->
-            <h1 class="text-white pb-3" v-show="favoritesList.length > 0">Favorites</h1>
+            <h1 class="text-white pb-3">Favorites</h1>
 
             <!-- Shrimp List -->
             <div class="card-columns">
@@ -25,10 +25,10 @@
         </div>
 
         <!-- Neocaridina List -->
-        <div class="my-5">
+        <div class="my-5" v-show="neocaridinaList.length > 0">
 
             <!-- Shrimp Category Title -->
-            <h1 class="text-white pb-3" v-show="neocaridinaList.length > 0">Neocaridina</h1>
+            <h1 class="text-white pb-3">Neocaridina</h1>
 
             <!-- Shrimp List -->
             <div class="card-columns">
