@@ -88,7 +88,7 @@ const actions = {
 
         commit('RND_QUANTITY', shrimpData);
         
-    }, 
+    },
     
 };
 

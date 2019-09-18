@@ -194,19 +194,7 @@
             // Method for favoriting an item
             favoriteItem() {
 
-                if(this.shrimp.favorited === true) {
-
-                    // Action from favorites.js
-                    this.$store.dispatch('unFavItem');
-
-                }
-
-                else {
-
-                    // Action from favorites.js
-                    this.$store.dispatch('favItem');
-
-                }
+                this.shrimp.favorited = !this.shrimp.favorited;
 
             },
 

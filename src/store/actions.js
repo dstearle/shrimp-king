@@ -15,9 +15,6 @@ export const loadData = ({commit}) => {
                 
                 // Stored data for Market
                 const shrimpMarketDataLoad = data.shrimpMarketData;
-
-                // Stored data for Market
-                const favoritesDataLoad = data.favoritesData;
                 
                 // Stored data for User's funds
                 const fundsLoad = data.funds;
@@ -37,8 +34,6 @@ export const loadData = ({commit}) => {
                 commit('SET_STOCKS', shrimpMarketDataLoad);
                 // Sets the stored data for the User's funds and inventory from the data base
                 commit('SET_PORTFOLIO', portfolioLoad);
-                // Sets the stored data for favorites
-                commit('SET_FAVS', favoritesDataLoad);
             
             }
 
