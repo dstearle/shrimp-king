@@ -114,6 +114,8 @@ const getters = {
 
                 overlayText: record.overlayText,
 
+                favorited: record.favorited,
+
                 text: record.text,
 
                 button: record.button,
