@@ -28,13 +28,26 @@
             </div>
 
             <!-- Star Overlay Text -->
+            <!-- Add to Favorites -->
             <div 
                 class="text-white" 
                 style="opacity: 1; margin-top: 30%;"
-                v-show="activeStar"
+                v-show="activeStar && !shrimp.favorited"
             >
 
                 {{ 'Click to add to favorites' }}
+
+            </div>
+
+            <!-- Star Overlay Text -->
+            <!-- Remove From Favorites -->
+            <div 
+                class="text-white" 
+                style="opacity: 1; margin-top: 30%;"
+                v-show="activeStar && shrimp.favorited"
+            >
+
+                {{ 'Click to remove from favorites' }}
 
             </div>
 
