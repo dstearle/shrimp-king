@@ -5,9 +5,6 @@
         <!-- Shrimp Category Title -->
         <h1 class="text-white pb-3" v-if="shrimpInventory.length > 0">Neocaridina</h1>
 
-        <!-- No Inventory -->
-        <h1 class="text-white pb-3" v-else>Inventory is Empty</h1>
-
         <!-- Shrimp List -->
         <div class="card-columns">
 
