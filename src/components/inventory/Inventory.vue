@@ -2,20 +2,31 @@
     
     <div class="container">
 
-        <!-- Shrimp Category Title -->
-        <h1 class="text-white pb-3" v-if="shrimpInventory.length > 0">Neocaridina</h1>
+        <!-- Available Categories -->
+        <div v-if="shrimpInventory.length > 0">
 
-        <!-- No Inventory -->
-        <h1 class="text-white pb-3" v-else>Inventory is Empty</h1>
+            <!-- Shrimp Category Title -->
+            <h1 class="text-white pb-3">Neocaridina</h1>
 
-        <!-- Shrimp List -->
-        <div class="card-columns">
+            <!-- Shrimp List -->
+            <div class="card-columns">
 
-            <app-livestock v-for="shrimp in shrimpInventory" :shrimp="shrimp" v-bind:key="shrimp.id"></app-livestock>
-            
+                <app-livestock v-for="shrimp in shrimpInventory" :shrimp="shrimp" v-bind:key="shrimp.id"></app-livestock>
+                
+            </div>
+
+            <hr>
+
         </div>
 
-        <hr>
+        <!-- No Inventory -->
+        <div v-else>
+
+            <h1 class="text-white pb-3">Inventory is Empty</h1>
+
+            <hr>
+            
+        </div>
 
     </div>
     
