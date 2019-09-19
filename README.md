@@ -46,9 +46,9 @@ Market:
 
 - Navbar:
 - Dashboard Section:
-- Inventory Section: make filter for favorited items in the computed method for neocaridina, finish toggle for favorited
-- Market Section: finish toggle for favorited
-- Misc: make sure favorited items can be saved and loaded
+- Inventory Section: import favorite category from market, make favorites update with eachother
+- Market Section:
+- Misc:
 
 <br>
 
@@ -56,7 +56,7 @@ Market:
 
 - Refactor for new types of shrimp (Caridina, Crayfish, Misc)
 - Chart for dashboard showing prices for shrimp over a period of time
-- Search bar
+- Search bar?
 
 <br>
 
