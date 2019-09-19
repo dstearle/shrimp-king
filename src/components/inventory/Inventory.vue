@@ -5,17 +5,49 @@
         <!-- Available Categories -->
         <div v-if="shrimpInventory.length > 0">
 
-            <!-- Shrimp Category Title -->
-            <h1 class="text-white pb-3">Neocaridina</h1>
+            <!-- Favorites List -->
+            <div class="mb-5" v-show="favoritesInventory.length > 0">
 
-            <!-- Shrimp List -->
-            <div class="card-columns">
+                <!-- Shrimp Category Title -->
+                <h1 class="text-white pb-3">Favorites</h1>
 
-                <app-livestock v-for="shrimp in shrimpInventory" :shrimp="shrimp" v-bind:key="shrimp.id"></app-livestock>
-                
+                <!-- Shrimp List -->
+                <div class="card-columns">
+                    
+                    <app-livestock 
+                        v-for="shrimp in favoritesInventory" 
+                        :shrimp="shrimp" 
+                        v-bind:key="shrimp.id" 
+                        v-show="shrimp.quantity > 0"
+                    ></app-livestock>
+                    
+                </div>
+
+                <hr>
+
             </div>
 
-            <hr>
+            <!-- Neocaridina List -->
+            <div class="my-5" v-show="neocaridinaInventory.length > 0">
+
+                <!-- Shrimp Category Title -->
+                <h1 class="text-white pb-3">Neocaridina</h1>
+
+                <!-- Shrimp List -->
+                <div class="card-columns">
+                    
+                    <app-livestock 
+                        v-for="shrimp in neocaridinaInventory" 
+                        :shrimp="shrimp" 
+                        v-bind:key="shrimp.id"
+                        v-show="shrimp.quantity > 0"
+                    ></app-livestock>
+                    
+                </div>
+
+                <hr>
+
+            </div>
 
         </div>
 
@@ -51,7 +83,29 @@
                 
                 shrimpInventory: 'shrimpInventoryDataGet'
                 
-            })
+            }),
+
+            // The list for favorited shrimps
+            favoritesInventory() {
+                
+                // Array to hold available shrimp
+                const arr = this.shrimpInventory;
+
+                // Filters out shrimp that have not been favorited
+                return arr.filter(shrimp => shrimp.favorited != false)
+                
+            },
+
+            // The list for neocaridina shrimps
+            neocaridinaInventory() {
+
+                // Array to hold available shrimp
+                const arr = this.shrimpInventory;
+
+                // Filters out shrimp that have been favorited
+                return arr.filter(shrimp => shrimp.favorited != true)
+                
+            },
             
         },
         
