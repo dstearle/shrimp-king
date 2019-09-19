@@ -28,13 +28,26 @@
             </div>
 
             <!-- Star Overlay Text -->
+            <!-- Add to Favorites -->
             <div 
                 class="text-white" 
                 style="opacity: 1; margin-top: 30%;"
-                v-show="activeStar"
+                v-show="activeStar && !shrimp.favorited"
             >
 
                 {{ 'Click to add to favorites' }}
+
+            </div>
+
+            <!-- Star Overlay Text -->
+            <!-- Remove From Favorites -->
+            <div 
+                class="text-white" 
+                style="opacity: 1; margin-top: 30%;"
+                v-show="activeStar && shrimp.favorited"
+            >
+
+                {{ 'Click to remove from favorites' }}
 
             </div>
 
@@ -59,12 +72,24 @@
             <!-- Star Icon -->
             <div class="col-6 d-flex justify-content-end pr-2 pt-2">
 
+                <!-- Add to Favorites -->
                 <font-awesome-icon 
                     icon="star"
                     @click="favoriteItem"
                     @mouseover="activeStar = true"
                     @mouseleave="activeStar = false"
                     :class="{ 'text-warning' : activeStar , 'text-light inActiveHover': !activeStar }"
+                    v-show="!shrimp.favorited"
+                />
+
+                <!-- Remove From Favorites -->
+                <font-awesome-icon 
+                    icon="star"
+                    @click="favoriteItem"
+                    @mouseover="activeStar = true"
+                    @mouseleave="activeStar = false"
+                    :class="{ 'text-light inActiveHover' : activeStar , 'text-warning': !activeStar }"
+                    v-show="shrimp.favorited"
                 />
                 
             </div>
