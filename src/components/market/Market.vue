@@ -3,7 +3,7 @@
     <div class="container">
 
         <!-- Favorites List -->
-        <div class="mb-5" v-show="favoritesList.length > 0">
+        <div class="mb-5" v-show="favoritesMarket.length > 0">
 
             <!-- Shrimp Category Title -->
             <h1 class="text-white pb-3">Favorites</h1>
@@ -12,7 +12,7 @@
             <div class="card-columns">
                 
                 <app-livestock 
-                    v-for="shrimp in favoritesList" 
+                    v-for="shrimp in favoritesMarket" 
                     :shrimp="shrimp" 
                     v-bind:key="shrimp.id" 
                     v-show="shrimp.quantity > 0"
@@ -25,7 +25,7 @@
         </div>
 
         <!-- Neocaridina List -->
-        <div class="my-5" v-show="neocaridinaList.length > 0">
+        <div class="my-5" v-show="neocaridinaMarket.length > 0">
 
             <!-- Shrimp Category Title -->
             <h1 class="text-white pb-3">Neocaridina</h1>
@@ -34,7 +34,7 @@
             <div class="card-columns">
                 
                 <app-livestock 
-                    v-for="shrimp in neocaridinaList" 
+                    v-for="shrimp in neocaridinaMarket" 
                     :shrimp="shrimp" 
                     v-bind:key="shrimp.id" 
                     v-show="shrimp.quantity > 0"
@@ -66,19 +66,23 @@
         computed: {
 
             // The list for favorited shrimps
-            favoritesList() {
+            favoritesMarket() {
                 
+                // Array to hold available shrimp
                 const arr = this.$store.getters.shrimpMarketDataGet;
 
+                // Filters out shrimp that have not been favorited
                 return arr.filter(shrimp => shrimp.favorited != false)
                 
             },
             
             // The list for neocaridina shrimps
-            neocaridinaList() {
+            neocaridinaMarket() {
                 
+                // Array to hold available shrimp
                 const arr = this.$store.getters.shrimpMarketDataGet;
 
+                // Filters out shrimp that have been favorited
                 return arr.filter(shrimp => shrimp.favorited != true)
                 
             },
