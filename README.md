@@ -46,7 +46,7 @@ Market:
 
 - Navbar:
 - Dashboard Section:
-- Inventory Section: import favorite category from market, make favorites update with eachother
+- Inventory Section: make favorites update with eachother
 - Market Section:
 - Misc:
 
