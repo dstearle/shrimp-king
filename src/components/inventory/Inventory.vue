@@ -81,6 +81,7 @@
             
             ...mapGetters({
                 
+                // Retrieves the data for inventory from the store
                 shrimpInventory: 'shrimpInventoryDataGet'
                 
             }),
