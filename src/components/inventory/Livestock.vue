@@ -185,11 +185,17 @@
         
         methods: {
             
-            ...mapActions({ placeSellOrder: 'sellShrimp' }),
+            ...mapActions({ 
+                
+                // Vuex action for selling shrimps
+                placeSellOrder: 'sellShrimp' 
+                
+            }),
             
             // Method for selling shrimp
             sellShrimp() {
                 
+                // Prepares information for vuex action
                 const order = {
                     
                     shrimpId: this.shrimp.id,
@@ -200,6 +206,7 @@
                     
                 };
                 
+                // Vuex action to be committed
                 this.placeSellOrder(order);
         
                 // Sets input for quantity back to zero after sale

@@ -52,7 +52,8 @@
 
 
 <script>
-    
+
+    import {mapGetters} from 'vuex';    
     import Livestock from './Livestock.vue';
 
     export default {
@@ -65,11 +66,18 @@
         
         computed: {
 
+            ...mapGetters({
+                
+                // Retrieves the data for market from the store
+                shrimpMarket: 'shrimpMarketDataGet'
+                
+            }),
+
             // The list for favorited shrimps
             favoritesMarket() {
                 
                 // Array to hold available shrimp
-                const arr = this.$store.getters.shrimpMarketDataGet;
+                const arr = this.shrimpMarket;
 
                 // Filters out shrimp that have not been favorited
                 return arr.filter(shrimp => shrimp.favorited != false)
@@ -80,7 +88,7 @@
             neocaridinaMarket() {
                 
                 // Array to hold available shrimp
-                const arr = this.$store.getters.shrimpMarketDataGet;
+                const arr = this.shrimpMarket;
 
                 // Filters out shrimp that have been favorited
                 return arr.filter(shrimp => shrimp.favorited != true)
