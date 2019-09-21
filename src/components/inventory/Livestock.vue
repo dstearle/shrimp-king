@@ -152,7 +152,7 @@
 
 <script>
     
-    import { mapActions } from 'vuex';
+    import { mapGetters, mapActions } from 'vuex';
 
     export default {
         
@@ -173,6 +173,13 @@
         },
         
         computed: {
+
+            ...mapGetters({
+                
+                // Retrieves the data for market from the store
+                shrimpMarket: 'shrimpMarketDataGet'
+                
+            }),
             
             // Marks insufficientQuantity as true if quantity being sold is greater than available quantity
             insufficientQuantity() {
@@ -217,7 +224,11 @@
             // Method for favoriting an item
             favoriteItem() {
 
-                this.shrimp.favorited = !this.shrimp.favorited;
+                // Matches the id of the item to its corresponding item in the store
+                const record = this.shrimpMarket.find(element => element.id == this.shrimp.id);
+
+                // Toggles the store from true to false
+                record.favorited = !record.favorited
 
             },
 
