@@ -149,5 +149,80 @@ export default [
         button: 'btn-outline-danger',
         border: 'border-danger'
     },
+
+    // Red Crystal Shrimp
+    { 
+        id: 7, 
+        name: 'Red Crystal Shrimp',
+        photo: require("./../assets/images/shrimpPhotos/redRili.jpg"),
+        alt: 'Red Crystal Shrimp Image',
+        overlayText: 'One of the thorough breds of shrimp. Has exquisite white markings!',
+        favorited: false,
+
+        // Pricing
+        price: 400,
+        priceMin: 260,
+        priceMax: 500,
+
+        // Quantity
+        quantity: 3,
+        quantityMin: 0,
+        quantityMax: 4,
+
+        // Styling
+        text: 'text-danger',
+        button: 'btn-outline-danger',
+        border: 'border-danger'
+    },
+
+    // Black Crystal Shrimp
+    { 
+        id: 8, 
+        name: 'Black Crystal Shrimp',
+        photo: require("./../assets/images/shrimpPhotos/redRili.jpg"),
+        alt: 'Black Crystal Shrimp Image',
+        overlayText: 'One of the thorough breds of shrimp. Has exquisite white markings!',
+        favorited: false,
+
+        // Pricing
+        price: 400,
+        priceMin: 240,
+        priceMax: 480,
+
+        // Quantity
+        quantity: 3,
+        quantityMin: 0,
+        quantityMax: 4,
+
+        // Styling
+        text: 'text-dark',
+        button: 'btn-outline-dark',
+        border: 'border-dark'
+    },
+
+    // Blue Bolt Shrimp
+    { 
+        id: 9, 
+        name: 'Blue Bolt Shrimp',
+        photo: require("./../assets/images/shrimpPhotos/redRili.jpg"),
+        alt: 'Blue Bolt Shrimp Image',
+        overlayText: 'One of the thorough breds of shrimp. A mixture of blue and turquoise.',
+        favorited: false,
+
+        // Pricing
+        price: 550,
+        priceMin: 550,
+        priceMax: 800,
+
+        // Quantity
+        quantity: 1,
+        quantityMin: 0,
+        quantityMax: 2,
+
+        // Styling
+        text: 'text-info',
+        button: 'btn-outline-info',
+        border: 'border-info'
+    },
         
 ];
