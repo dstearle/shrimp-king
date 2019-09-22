@@ -253,7 +253,7 @@
     }
     .photoHover {
         background: #000000; 
-        opacity: 0.6;
+        opacity: 0.7;
     }
     
     .top {

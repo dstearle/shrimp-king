@@ -154,9 +154,9 @@ export default [
     { 
         id: 7, 
         name: 'Red Crystal Shrimp',
-        photo: require("./../assets/images/shrimpPhotos/redRili.jpg"),
+        photo: require("./../assets/images/shrimpPhotos/redCrystal.jpg"),
         alt: 'Red Crystal Shrimp Image',
-        overlayText: 'One of the thorough breds of shrimp. Has exquisite white markings!',
+        overlayText: 'One of the thoroughbreds of shrimp. Has exquisite white markings!',
         favorited: false,
 
         // Pricing
@@ -179,9 +179,9 @@ export default [
     { 
         id: 8, 
         name: 'Black Crystal Shrimp',
-        photo: require("./../assets/images/shrimpPhotos/redRili.jpg"),
+        photo: require("./../assets/images/shrimpPhotos/blackCrystal.jpg"),
         alt: 'Black Crystal Shrimp Image',
-        overlayText: 'One of the thorough breds of shrimp. Has exquisite white markings!',
+        overlayText: 'One of the thoroughbreds of shrimp. Has exquisite white markings!',
         favorited: false,
 
         // Pricing
@@ -204,9 +204,9 @@ export default [
     { 
         id: 9, 
         name: 'Blue Bolt Shrimp',
-        photo: require("./../assets/images/shrimpPhotos/redRili.jpg"),
+        photo: require("./../assets/images/shrimpPhotos/blueBolt.jpg"),
         alt: 'Blue Bolt Shrimp Image',
-        overlayText: 'One of the thorough breds of shrimp. A mixture of blue and turquoise.',
+        overlayText: 'One of the thoroughbreds of shrimp. A mixture of blue and turquoise.',
         favorited: false,
 
         // Pricing
