@@ -49,6 +49,28 @@
 
             </div>
 
+            <!-- Caridina List -->
+            <div class="my-5" v-show="caridinaInventory.length > 0">
+
+                <!-- Shrimp Category Title -->
+                <h1 class="text-white pb-3">Caridina</h1>
+
+                <!-- Shrimp List -->
+                <div class="card-columns">
+                    
+                    <app-livestock 
+                        v-for="shrimp in caridinaInventory" 
+                        :shrimp="shrimp" 
+                        v-bind:key="shrimp.id" 
+                        v-show="shrimp.quantity > 0"
+                    ></app-livestock>
+                    
+                </div>
+
+                <hr>
+
+            </div>
+
         </div>
 
         <!-- No Inventory -->
@@ -103,8 +125,25 @@
                 // Array to hold available shrimp
                 const arr = this.shrimpInventory;
 
+                // Filters out shrimp based off id
+                const range = arr.filter(shrimp => shrimp.id < 7 );
+
                 // Filters out shrimp that have been favorited
-                return arr.filter(shrimp => shrimp.favorited != true)
+                return range.filter(shrimp => shrimp.favorited != true)
+                
+            },
+
+            // The list for neocaridina shrimps
+            caridinaInventory() {
+
+                // Array to hold available shrimp
+                const arr = this.shrimpInventory;
+
+                // Filters out shrimp based off id
+                const range = arr.filter(shrimp => shrimp.id > 6 );
+
+                // Filters out shrimp that have been favorited
+                return range.filter(shrimp => shrimp.favorited != true)
                 
             },
             
