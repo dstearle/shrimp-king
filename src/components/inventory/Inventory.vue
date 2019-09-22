@@ -108,7 +108,7 @@
                 
             }),
 
-            // The list for favorited shrimps
+            // The filtered list for favorited shrimps
             favoritesInventory() {
                 
                 // Array to hold available shrimp
@@ -119,7 +119,7 @@
                 
             },
 
-            // The list for neocaridina shrimps
+            // The filtered list for neocaridina shrimps
             neocaridinaInventory() {
 
                 // Array to hold available shrimp
@@ -133,7 +133,7 @@
                 
             },
 
-            // The list for neocaridina shrimps
+            // The filtered list for neocaridina shrimps
             caridinaInventory() {
 
                 // Array to hold available shrimp
