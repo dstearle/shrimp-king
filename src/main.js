@@ -6,12 +6,12 @@ import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faInfoCircle, faStar, faSave, faBook, faHourglassEnd } from '@fortawesome/free-solid-svg-icons'
+import { faInfoCircle, faStar, faSave, faBook, faHourglassEnd, faTags } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { routes } from './routes';
 import store from './store/store.js';
 
-library.add([faInfoCircle, faStar, faSave, faBook, faHourglassEnd])
+library.add([faInfoCircle, faStar, faSave, faBook, faHourglassEnd, faTags])
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(VueRouter);
