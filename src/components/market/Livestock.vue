@@ -12,7 +12,7 @@
         <!-- Photo Overlay -->
         <div 
             class="card-img-overlay text-center" 
-            :class="{ active: !activeInfo , 'photoHover': activeInfo || activeStar }"
+            :class="{ active: !activeInfo , 'photoHover': activeInfo || activeTags || activeStar }"
             style="height: 250px;"
         >
 
@@ -24,6 +24,17 @@
             >
 
                 {{ shrimp.overlayText }}
+
+            </div>
+
+            <!-- Tags Overlay Text -->
+            <div 
+                class="text-white" 
+                style="opacity: 1; margin-top: 30%;"
+                v-show="activeTags"
+            >
+
+                {{ "test" }}
 
             </div>
 
@@ -56,7 +67,7 @@
         <!-- Card Icons -->
         <div class="row top" style="margin: auto">
 
-            <!-- Info Icon -->
+            <!-- Info & Tags Icons -->
             <div class="col-6 d-flex justify-content-start pl-2 pt-2">
 
                 <font-awesome-icon 
@@ -65,6 +76,13 @@
                     @mouseover="activeInfo = true"
                     @mouseleave="activeInfo = false"
                     :class="{ active: activeInfo , 'inActiveHover': !activeInfo }"
+                />
+                <font-awesome-icon 
+                    icon="tags" 
+                    class="text-light ml-2"
+                    @mouseover="activeTags = true"
+                    @mouseleave="activeTags = false"
+                    :class="{ active: activeTags , 'inActiveHover': !activeTags }"
                 />
 
             </div>
@@ -164,7 +182,9 @@
 
                 activeInfo: false,
 
-                activeStar: false
+                activeStar: false,
+
+                activeTags: false
                 
             }
             
@@ -230,6 +250,8 @@
                 this.activeInfo = !this.activeInfo;
                 // Toggles star classes
                 this.activeStar = !this.activeStar;
+                // Toggles tags classes
+                this.activeTags = !this.activeTags;
 
             },
             
