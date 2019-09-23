@@ -151,7 +151,7 @@ export default [
 
             // Icons
             overlayText: 'The most prestigious morph of cherry shrimp. Both rare and pricey!',
-            tags: ['#Neocaridina', '#Red', '#Markings', '#Uncommon'],
+            tags: ['#Neocaridina', '#Red', '#Rili', '#Markings', '#Uncommon'],
             favorited: false,
 
             // Pricing
