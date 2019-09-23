@@ -8,7 +8,10 @@ export default [
             name: 'Cherry Shrimp',
             photo: require("./../assets/images/shrimpPhotos/cherryShrimp.png"),
             alt: 'Cherry Shrimp Image',
+
+            // Icons
             overlayText: 'The original cherry shrimp!',
+            tags: ['#Neocaridina', '#Red', '#Common'],
             favorited: true,
             
             // Pricing
@@ -33,7 +36,10 @@ export default [
             name: 'Lemon Shrimp',
             photo: require("./../assets/images/shrimpPhotos/lemonShrimp.jpg"),
             alt: 'Lemon Shrimp Image',
+
+            // Icons
             overlayText: 'Will brighten up any tank!',
+            tags: ['#Neocaridina', '#Yellow', '#Common'],
             favorited: false,
             
             // Pricing
@@ -58,7 +64,10 @@ export default [
             name: 'Blueberry Shrimp',
             photo: require("./../assets/images/shrimpPhotos/blueberryShrimp.jpg"),
             alt: 'Blueberry Shrimp Image',
+
+            // Icons
             overlayText: 'Also known as "blue dream" or "blue velvet" shrimps.',
+            tags: ['#Neocaridina', '#Blue', '#Common'],
             favorited: false,
             
             // Pricing
@@ -83,7 +92,10 @@ export default [
             name: 'Kiwi Shrimp',
             photo: require("./../assets/images/shrimpPhotos/kiwiShrimp.jpg"),
             alt: 'Kiwi Shrimp Image',
+
+            // Icons
             overlayText: 'Formerly known as "Jade" shrimp, this morph is quite rare.',
+            tags: ['#Neocaridina', '#Green', '#Uncommon'],
             favorited: false,
 
             // Pricing
@@ -108,7 +120,10 @@ export default [
             name: 'Coconut Shrimp',
             photo: require("./../assets/images/shrimpPhotos/coconutShrimp.jpg"),
             alt: 'Coconut Shrimp Image',
+
+            // Icons
             overlayText: 'Not as popular as other color morphs, but very prolific.',
+            tags: ['#Neocaridina', '#Brown', '#Common'],
             favorited: false,
 
             // Pricing
@@ -133,7 +148,10 @@ export default [
             name: 'Red Rili',
             photo: require("./../assets/images/shrimpPhotos/redRili.jpg"),
             alt: 'Red Rili Shrimp Image',
+
+            // Icons
             overlayText: 'The most prestigious morph of cherry shrimp. Both rare and pricey!',
+            tags: ['#Neocaridina', '#Red', '#Markings', '#Uncommon'],
             favorited: false,
 
             // Pricing
@@ -160,7 +178,10 @@ export default [
             name: 'Red Crystal Shrimp',
             photo: require("./../assets/images/shrimpPhotos/redCrystal.jpg"),
             alt: 'Red Crystal Shrimp Image',
+
+            // Icons
             overlayText: 'One of the thoroughbreds of shrimp. Has exquisite white markings!',
+            tags: ['#Caridina', '#Red', '#Crystal', '#Markings', '#Uncommon'],
             favorited: false,
 
             // Pricing
@@ -185,7 +206,10 @@ export default [
             name: 'Black Crystal Shrimp',
             photo: require("./../assets/images/shrimpPhotos/blackCrystal.jpg"),
             alt: 'Black Crystal Shrimp Image',
+
+            // Icons
             overlayText: 'One of the thoroughbreds of shrimp. Has exquisite white markings!',
+            tags: ['#Caridina', '#Black', '#Crystal', '#Markings', '#Uncommon'],
             favorited: false,
 
             // Pricing
@@ -210,7 +234,10 @@ export default [
             name: 'Blue Bolt Shrimp',
             photo: require("./../assets/images/shrimpPhotos/blueBolt.jpg"),
             alt: 'Blue Bolt Shrimp Image',
+
+            // Icons
             overlayText: 'One of the thoroughbreds of shrimp. A mixture of blue and turquoise.',
+            tags: ['#Caridina', '#Blue', '#Rare'],
             favorited: false,
 
             // Pricing
@@ -235,7 +262,10 @@ export default [
             name: 'Taiwan Tiger Shrimp',
             photo: require("./../assets/images/shrimpPhotos/taiwanTiger.jpg"),
             alt: 'Taiwan Tiger Shrimp Image',
+
+            // Icons
             overlayText: 'A bright red shrimp with white tiger stripes.',
+            tags: ['#Caridina', '#Red','#Tiger', '#Markings', '#Rare'],
             favorited: false,
 
             // Pricing
@@ -260,7 +290,10 @@ export default [
             name: 'OE Blue Tiger Shrimp',
             photo: require("./../assets/images/shrimpPhotos/oeBlueTiger.jpg"),
             alt: 'OE Blue Tiger Shrimp Image',
+
+            // Icons
             overlayText: 'A dark blue tiger shrimp with glowing orange eyes.',
+            tags: ['#Caridina', '#Blue', '#Tiger', '#Markings', '#Uncommon'],
             favorited: false,
 
             // Pricing
@@ -271,7 +304,7 @@ export default [
             // Quantity
             quantity: 1,
             quantityMin: 0,
-            quantityMax: 2,
+            quantityMax: 3,
 
             // Styling
             text: 'text-info',
@@ -285,7 +318,10 @@ export default [
             name: 'Gold Bee Shrimp',
             photo: require("./../assets/images/shrimpPhotos/goldBee.jpg"),
             alt: 'Gold Bee Shrimp Image',
+
+            // Icons
             overlayText: 'A rare shrimp with flakes of gold.',
+            tags: ['#Caridina', '#Yellow', '#Rare'],
             favorited: false,
 
             // Pricing

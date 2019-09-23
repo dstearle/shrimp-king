@@ -34,7 +34,7 @@
                 v-show="activeTags"
             >
 
-                {{ "test" }}
+                {{ shrimp.tags }}
 
             </div>
 
