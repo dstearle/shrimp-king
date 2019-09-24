@@ -50,6 +50,7 @@ The Favorite System:
 <br>
 
 **To Do List:**
+
 - Navbar: show sale/buy amount
 - Dashboard Section:
 - Inventory Section:
@@ -59,12 +60,15 @@ The Favorite System:
 <br>
 
 **Future Developments:**
+
+- New "About" section with link to portfolio and github. Also directions from the readme
 - Chart for dashboard showing prices for shrimp over a period of time
 - Search bar?
 
 <br>
 
 **Dependencies:**
+
 - vuex
 - vue-router
 - vue-resource
