@@ -54,7 +54,7 @@ The Favorite System:
 - Dashboard Section:
 - Inventory Section:
 - Market Section:
-- Misc: Give tags proper colors
+- Misc:
 
 <br>
 
