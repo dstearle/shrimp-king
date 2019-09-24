@@ -117,7 +117,7 @@ export default [
                 
                 { name: '#Neocaridina', color: 'badge-light' },  
                 {name:'#Green', color: 'badge-success' }, 
-                { name:'#Uncommon', color: 'badge-secondary'} 
+                { name:'#Uncommon', color: 'badge-warning text-white'} 
             
             ],
             favorited: false,
@@ -187,7 +187,7 @@ export default [
                 {name:'#Red', color: 'badge-danger' }, 
                 {name:'#Rili', color: 'badge-info' },
                 {name:'#Markings', color: 'badge-light' },
-                { name:'#Uncommon', color: 'badge-secondary'} ]
+                { name:'#Uncommon', color: 'badge-warning text-white'} ]
 
             ,
             favorited: false,
@@ -225,7 +225,7 @@ export default [
                 {name:'#Red', color: 'badge-danger' }, 
                 {name:'#Crystal', color: 'badge-info' },
                 {name:'#Markings', color: 'badge-light' },
-                { name:'#Uncommon', color: 'badge-secondary'} ]
+                { name:'#Uncommon', color: 'badge-warning text-white'} ]
 
             ,
             favorited: false,
@@ -261,7 +261,7 @@ export default [
                 {name:'#Black', color: 'badge-dark' }, 
                 {name:'#Crystal', color: 'badge-info' },
                 {name:'#Markings', color: 'badge-light' },
-                { name:'#Uncommon', color: 'badge-secondary'} ]
+                { name:'#Uncommon', color: 'badge-warning text-white'} ]
 
             ,
             favorited: false,
@@ -367,7 +367,7 @@ export default [
                 {name:'#Blue', color: 'badge-info' }, 
                 {name:'#Tiger', color: 'badge-dark' },
                 {name:'#Markings', color: 'badge-light' },
-                { name:'#Uncommon', color: 'badge-secondary'} ]
+                { name:'#Uncommon', color: 'badge-warning text-white'} ]
 
             ,
             favorited: false,
