@@ -284,8 +284,7 @@
         opacity: 0.6;
     }
     .photoHover {
-        background: #000000; 
-        opacity: 0.7;
+        background: rgba(0,0,0,0.7); 
     }
     
     .top {
