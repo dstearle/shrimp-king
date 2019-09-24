@@ -11,7 +11,13 @@ export default [
 
             // Icons
             overlayText: 'The original cherry shrimp!',
-            tags: ['#Neocaridina', '#Red', '#Common'],
+            tags: [ 
+                
+                { name: '#Neocaridina', color: 'badge-light' },  
+                {name:'#Red', color: 'badge-danger' }, 
+                { name:'#Common', color: 'badge-secondary'} 
+            
+            ],
             favorited: true,
             
             // Pricing
@@ -39,7 +45,13 @@ export default [
 
             // Icons
             overlayText: 'Will brighten up any tank!',
-            tags: ['#Neocaridina', '#Yellow', '#Common'],
+            tags: [ 
+                
+                { name: '#Neocaridina', color: 'badge-light' },  
+                {name:'#Yellow', color: 'badge-warning text-white' }, 
+                { name:'#Common', color: 'badge-secondary'} 
+            
+            ],
             favorited: false,
             
             // Pricing
@@ -67,7 +79,13 @@ export default [
 
             // Icons
             overlayText: 'Also known as "blue dream" or "blue velvet" shrimps.',
-            tags: ['#Neocaridina', '#Blue', '#Common'],
+            tags: [ 
+                
+                { name: '#Neocaridina', color: 'badge-light' },  
+                {name:'#Blue', color: 'badge-info' }, 
+                { name:'#Common', color: 'badge-secondary'} 
+            
+            ],
             favorited: false,
             
             // Pricing
@@ -95,7 +113,13 @@ export default [
 
             // Icons
             overlayText: 'Formerly known as "Jade" shrimp, this morph is quite rare.',
-            tags: ['#Neocaridina', '#Green', '#Uncommon'],
+            tags: [ 
+                
+                { name: '#Neocaridina', color: 'badge-light' },  
+                {name:'#Green', color: 'badge-success' }, 
+                { name:'#Uncommon', color: 'badge-secondary'} 
+            
+            ],
             favorited: false,
 
             // Pricing
@@ -123,7 +147,13 @@ export default [
 
             // Icons
             overlayText: 'Not as popular as other color morphs, but very prolific.',
-            tags: ['#Neocaridina', '#Brown', '#Common'],
+            tags: [ 
+                
+                { name: '#Neocaridina', color: 'badge-light' },  
+                {name:'#Brown', color: 'badge-dark' }, 
+                { name:'#Common', color: 'badge-secondary'} 
+            
+            ],
             favorited: false,
 
             // Pricing
@@ -151,7 +181,15 @@ export default [
 
             // Icons
             overlayText: 'The most prestigious morph of cherry shrimp. Both rare and pricey!',
-            tags: ['#Neocaridina', '#Red', '#Rili', '#Markings', '#Uncommon'],
+            tags: [ 
+                
+                { name: '#Neocaridina', color: 'badge-light' },  
+                {name:'#Red', color: 'badge-danger' }, 
+                {name:'#Rili', color: 'badge-info' },
+                {name:'#Markings', color: 'badge-light' },
+                { name:'#Uncommon', color: 'badge-secondary'} ]
+
+            ,
             favorited: false,
 
             // Pricing
@@ -181,7 +219,15 @@ export default [
 
             // Icons
             overlayText: 'One of the thoroughbreds of shrimp. Has exquisite white markings!',
-            tags: ['#Caridina', '#Red', '#Crystal', '#Markings', '#Uncommon'],
+            tags: [ 
+                
+                { name: '#Caridina', color: 'badge-light' },  
+                {name:'#Red', color: 'badge-danger' }, 
+                {name:'#Crystal', color: 'badge-info' },
+                {name:'#Markings', color: 'badge-light' },
+                { name:'#Uncommon', color: 'badge-secondary'} ]
+
+            ,
             favorited: false,
 
             // Pricing
@@ -209,7 +255,15 @@ export default [
 
             // Icons
             overlayText: 'One of the thoroughbreds of shrimp. Has exquisite white markings!',
-            tags: ['#Caridina', '#Black', '#Crystal', '#Markings', '#Uncommon'],
+            tags: [ 
+                
+                { name: '#Caridina', color: 'badge-light' },  
+                {name:'#Black', color: 'badge-dark' }, 
+                {name:'#Crystal', color: 'badge-info' },
+                {name:'#Markings', color: 'badge-light' },
+                { name:'#Uncommon', color: 'badge-secondary'} ]
+
+            ,
             favorited: false,
 
             // Pricing
@@ -237,7 +291,13 @@ export default [
 
             // Icons
             overlayText: 'One of the thoroughbreds of shrimp. A mixture of blue and turquoise.',
-            tags: ['#Caridina', '#Blue', '#Rare'],
+            tags: [ 
+                
+                { name: '#Caridina', color: 'badge-light' },  
+                {name:'#Blue', color: 'badge-info' }, 
+                { name:'#Rare', color: 'badge-danger'} ]
+
+            ,
             favorited: false,
 
             // Pricing
@@ -265,7 +325,15 @@ export default [
 
             // Icons
             overlayText: 'A bright red shrimp with white tiger stripes.',
-            tags: ['#Caridina', '#Red','#Tiger', '#Markings', '#Rare'],
+            tags: [ 
+                
+                { name: '#Caridina', color: 'badge-light' },  
+                {name:'#Red', color: 'badge-danger' }, 
+                {name:'#Tiger', color: 'badge-dark' },
+                {name:'#Markings', color: 'badge-light' },
+                { name:'#Rare', color: 'badge-danger'} ]
+
+            ,
             favorited: false,
 
             // Pricing
@@ -293,7 +361,15 @@ export default [
 
             // Icons
             overlayText: 'A dark blue tiger shrimp with glowing orange eyes.',
-            tags: ['#Caridina', '#Blue', '#Tiger', '#Markings', '#Uncommon'],
+            tags: [ 
+                
+                { name: '#Caridina', color: 'badge-light' },  
+                {name:'#Blue', color: 'badge-info' }, 
+                {name:'#Tiger', color: 'badge-dark' },
+                {name:'#Markings', color: 'badge-light' },
+                { name:'#Uncommon', color: 'badge-secondary'} ]
+
+            ,
             favorited: false,
 
             // Pricing
@@ -321,7 +397,13 @@ export default [
 
             // Icons
             overlayText: 'A rare shrimp with flakes of gold.',
-            tags: ['#Caridina', '#Yellow', '#Rare'],
+            tags: [ 
+                
+                { name: '#Caridina', color: 'badge-light' },  
+                {name:'#Yellow', color: 'badge-warning text-white' }, 
+                { name:'#Rare', color: 'badge-danger'} ]
+
+            ,
             favorited: false,
 
             // Pricing

@@ -19,7 +19,7 @@
             <!-- Info Overlay Text -->
             <div 
                 class="text-white" 
-                style="opacity: 1; margin-top: 30%;"
+                style="margin-top: 30%;"
                 v-show="activeInfo"
             >
 
@@ -30,17 +30,19 @@
             <!-- Tags Overlay Text -->
             <div 
                 class="text-white" 
-                style="opacity: 1; margin-top: 30%;"
+                style="margin-top: 30%;"
                 v-show="activeTags"
             >
 
                 <!-- List Of Tags -->
-                <span class="d-inline-flex m-1 badge badge-light mr-1" 
+                <span 
+                    class="d-inline-flex m-1 badge mr-1"
+                    :class="tag.color"
                     v-for="tag in shrimp.tags" 
                     :tag="tag"
-                    v-bind:key="tag" 
+                    v-bind:key="tag.name" 
                 >
-                    {{ tag }}
+                    {{ tag.name }}
                 
                 </span>
 
@@ -50,7 +52,7 @@
             <!-- Add to Favorites -->
             <div 
                 class="text-white" 
-                style="opacity: 1; margin-top: 30%;"
+                style="margin-top: 30%;"
                 v-show="activeStar && !shrimp.favorited"
             >
 
@@ -62,7 +64,7 @@
             <!-- Remove From Favorites -->
             <div 
                 class="text-white" 
-                style="opacity: 1; margin-top: 30%;"
+                style="margin-top: 30%;"
                 v-show="activeStar && shrimp.favorited"
             >
 
