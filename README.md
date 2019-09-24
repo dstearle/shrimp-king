@@ -62,8 +62,9 @@ The Favorite System:
 **Future Developments:**
 
 - New "About" section with link to portfolio and github. Also directions from the readme
+- Search filter for tags
+- Ghost shrimp for skeleton screen demo
 - Chart for dashboard showing prices for shrimp over a period of time
-- Search bar?
 
 <br>
 
