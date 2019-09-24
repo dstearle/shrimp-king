@@ -80,6 +80,7 @@
             <!-- Info & Tags Icons -->
             <div class="col-6 d-flex justify-content-start pl-2 pt-2">
 
+                <!-- Info -->
                 <font-awesome-icon 
                     icon="info-circle" 
                     class="text-light"
@@ -87,6 +88,8 @@
                     @mouseleave="activeInfo = false"
                     :class="{ active: activeInfo , 'inActiveHover': !activeInfo }"
                 />
+
+                <!-- Tags -->
                 <font-awesome-icon 
                     icon="tags" 
                     class="text-light ml-2"
