@@ -34,7 +34,15 @@
                 v-show="activeTags"
             >
 
-                {{ shrimp.tags }}
+                <!-- List Of Tags -->
+                <span class="d-inline-flex m-1 badge badge-light mr-1" 
+                    v-for="tag in shrimp.tags" 
+                    :tag="tag"
+                    v-bind:key="tag" 
+                >
+                    {{ tag }}
+                
+                </span>
 
             </div>
 
