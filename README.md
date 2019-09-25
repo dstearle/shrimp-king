@@ -51,7 +51,7 @@ The Favorite System:
 
 **To Do List:**
 
-- Navbar: show sale/buy amount
+- Navbar:
 - Dashboard Section:
 - Inventory Section:
 - Market Section:
@@ -63,6 +63,8 @@ The Favorite System:
 
 - New "About" section with link to portfolio and github. Also directions from the readme
 - Search filter for tags
+- show sale/buy amount
+- Collapsable categories
 - Ghost shrimp for skeleton screen demo
 - Chart for dashboard showing prices for shrimp over a period of time
 
