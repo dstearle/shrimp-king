@@ -6,7 +6,7 @@ export default [
         { 
             id: 1, 
             name: 'Cherry Shrimp',
-            photo: require("./../assets/images/shrimpPhotos/cherryShrimp.png"),
+            photo: require("./../assets/images/shrimpPhotos/cherryShrimp.jpg"),
             alt: 'Cherry Shrimp Image',
 
             // Icons
@@ -329,7 +329,7 @@ export default [
                 
                 { name: '#Caridina', color: 'badge-light' },  
                 {name:'#Red', color: 'badge-danger' }, 
-                {name:'#Tiger', color: 'badge-dark' },
+                {name:'#Tiger', color: 'badge-orange' },
                 {name:'#Markings', color: 'badge-light' },
                 { name:'#Rare', color: 'badge-danger'} ]
 
