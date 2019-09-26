@@ -20,8 +20,15 @@
                 <!-- Dropdown Items -->
                 <ul class="dropdown-menu">
 
-                    <!-- Dashboard -->
+                    <!-- About -->
                     <router-link to="/" class="nav-item" activeClass="active" tag="li" exact>
+                    
+                        <a class="nav-link">About</a>
+                        
+                    </router-link>
+
+                    <!-- Dashboard -->
+                    <router-link to="/dashboard" class="nav-item" activeClass="active" tag="li">
                     
                         <a class="nav-link">Dashboard</a>
                         
