@@ -51,7 +51,8 @@ The Favorite System:
 
 **To Do List:**
 
-- Navbar:
+- Navbar: Add links to portfolio and github
+- About Section:
 - Dashboard Section:
 - Inventory Section:
 - Market Section:
@@ -61,7 +62,6 @@ The Favorite System:
 
 **Future Developments:**
 
-- New "About" section with link to portfolio and github. Also directions from the readme
 - Search filter for tags
 - show sale/buy amount
 - Collapsable categories
