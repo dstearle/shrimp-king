@@ -1,13 +1,16 @@
+import About from './components/about/About.vue';
 import Dashboard from './components/dashboard/Dashboard.vue';
 import Inventory from './components/inventory/Inventory.vue';
 import Market from './components/market/Market.vue';
 
 export const routes = [
     
-    { path: '/', component: Dashboard},
+    { path: '/', component: About },
 
-    { path: '/inventory', component: Inventory},
+    { path: '/dashboard', component: Dashboard },
 
-    { path: '/market', component: Market}
+    { path: '/inventory', component: Inventory },
+
+    { path: '/market', component: Market }
     
 ];

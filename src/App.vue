@@ -61,6 +61,9 @@
         // Applies background for the dashboard
         if (['/'].includes(this.$route.path)) document.body.className = 'bg-dashboard'
 
+        // Applies background for the dashboard
+        if (['/dashboard'].includes(this.$route.path)) document.body.className = 'bg-dashboard'
+
         // Applies background for inventory
         if (['/inventory'].includes(this.$route.path)) document.body.className = 'bg-inventory'
 
