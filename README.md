@@ -51,8 +51,8 @@ The Favorite System:
 
 **To Do List:**
 
-- Navbar: Add links to portfolio and github
-- About Section:
+- Navbar: 
+- About Section: Add links to portfolio and github
 - Dashboard Section:
 - Inventory Section:
 - Market Section:
