@@ -59,7 +59,7 @@
       routeStyles () {
 
         // Applies background for the dashboard
-        if (['/'].includes(this.$route.path)) document.body.className = 'bg-dashboard'
+        if (['/'].includes(this.$route.path)) document.body.className = 'bg-about'
 
         // Applies background for the dashboard
         if (['/dashboard'].includes(this.$route.path)) document.body.className = 'bg-dashboard'
@@ -94,10 +94,27 @@
 
 <style>
 
-  .bg-dashboard {background: white;}
+  .bg-about {background: white;}
+
+  .bg-dashboard {
+    background: url("./assets/images/backgrounds/dbBg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .bg-dashboard:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(77, 77, 77, 0.6);
+  }
   
   .bg-inventory {
-    background: url("./assets/images/inventoryBg.jpg") no-repeat center center fixed;
+    background: url("./assets/images/backgrounds/inventoryBg.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -114,7 +131,7 @@
   }
 
   .bg-market {
-    background: url("./assets/images/marketBg.jpg") no-repeat center center fixed;
+    background: url("./assets/images/backgrounds/marketBg.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

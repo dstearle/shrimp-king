@@ -14,8 +14,8 @@
                         <h1>Visit My Other Websites!</h1>
 
                         <p>
-                            Interested in seeing or learning more? 
-                            This project along with many others are hosted on my github account and web developer portfolio!
+                            Interested in seeing or learning more about Shrimp King or other projects I have worked on? 
+                            This project along with many others can be found on my github account and web developer portfolio!
                         </p>
 
                         <!-- Card Footer -->
