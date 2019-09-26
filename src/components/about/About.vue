@@ -6,6 +6,41 @@
 
             <div class="col">
 
+                <!-- Links To Portfolio & Github -->
+                <div class="card">
+
+                    <div class="card-body">
+
+                        <h1>Visit My Other Websites!</h1>
+
+                        <p>
+                            Interested in seeing or learning more? 
+                            This project along with many others are hosted on my github account and web developer portfolio!
+                        </p>
+
+                        <!-- Card Footer -->
+                        <div class="row" style="padding:0px 20px 0px 20px">
+
+                            <strong class="mr-auto">
+
+                                <!-- My Portfolio -->
+                                <a href="http://dstearle.com/">my portfolio</a>
+
+                            </strong>
+
+                            <strong class="ml-auto">
+
+                                <!-- Github Repo -->
+                                <a href="https://github.com/dstearle">github profile</a>
+
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
                 <!-- Welcome -->
                 <div class="card">
 
@@ -43,7 +78,7 @@
 
                 </div>
 
-                <!-- Purpose -->
+                <!-- Page Descriptions -->
                 <div class="card">
 
                     <div class="card-body">
