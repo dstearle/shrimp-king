@@ -7,33 +7,41 @@
             <div class="col">
 
                 <!-- Links To Portfolio & Github -->
-                <div class="card">
+                <div class="card bg-success text-white">
 
                     <div class="card-body">
 
-                        <h1>Visit My Other Websites!</h1>
+                        <div class="row">
 
-                        <p>
-                            Interested in seeing or learning more about Shrimp King or other projects I have worked on? 
-                            This project along with many others can be found on my github account and web developer portfolio!
-                        </p>
+                            <div class="col-4">hi</div>
 
-                        <!-- Card Footer -->
-                        <div class="row" style="padding:0px 20px 0px 20px">
+                            <div class="col-8">
 
-                            <strong class="mr-auto">
+                                <p>
+                                    Interested in seeing or learning more about Shrimp King or other projects I have worked on? 
+                                    This project along with many others can be found on my personal portfolio and github profile!
+                                </p>
 
-                                <!-- My Portfolio -->
-                                <a href="http://dstearle.com/">my portfolio</a>
+                                <!-- Card Footer -->
+                                <div class="row" style="padding:0px 20px 0px 20px">
 
-                            </strong>
+                                    <strong class="mr-auto">
 
-                            <strong class="ml-auto">
+                                        <!-- My Portfolio -->
+                                        <a class="text-white" href="http://dstearle.com/">my portfolio</a>
 
-                                <!-- Github Repo -->
-                                <a href="https://github.com/dstearle">github profile</a>
+                                    </strong>
 
-                            </strong>
+                                    <strong class="ml-auto">
+
+                                        <!-- Github Repo -->
+                                        <a class="text-white" href="https://github.com/dstearle">github profile</a>
+
+                                    </strong>
+
+                                </div>
+
+                            </div>
 
                         </div>
 
@@ -42,11 +50,13 @@
                 </div>
 
                 <!-- Welcome -->
-                <div class="card">
+                <div class="card text-white aboutCard">
 
                     <div class="card-body">
 
-                        <h1>Welcome To Shrimp King!</h1>
+                        <h1 class="text-success">Welcome To Shrimp King!</h1>
+
+                        <hr class="my-3">
 
                         <p>
                             Welcome to Shrimp King, an ecommerce website sim! 
@@ -114,3 +124,16 @@
     </div>
     
 </template>
+
+<style scoped>
+
+    hr {              
+        background-color: white;
+        height: 0.5px;
+    }
+
+    .aboutCard {
+        background: rgba(0,0,0,0.6);
+    }
+
+</style>
