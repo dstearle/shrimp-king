@@ -7,47 +7,7 @@
             <div class="col">
 
                 <!-- Links To Portfolio & Github -->
-                <div class="card bg-success text-white">
-
-                    <div class="card-body">
-
-                        <div class="row">
-
-                            <div class="col-4">hi</div>
-
-                            <div class="col-8">
-
-                                <p>
-                                    Interested in seeing or learning more about Shrimp King or other projects I have worked on? 
-                                    This project along with many others can be found on my personal portfolio and github profile!
-                                </p>
-
-                                <!-- Card Footer -->
-                                <div class="row" style="padding:0px 20px 0px 20px">
-
-                                    <strong class="mr-auto">
-
-                                        <!-- My Portfolio -->
-                                        <a class="text-white" href="http://dstearle.com/">my portfolio</a>
-
-                                    </strong>
-
-                                    <strong class="ml-auto">
-
-                                        <!-- Github Repo -->
-                                        <a class="text-white" href="https://github.com/dstearle">github profile</a>
-
-                                    </strong>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                <app-portfolio-card></app-portfolio-card>
 
                 <!-- Welcome -->
                 <div class="card text-white aboutCard">
@@ -66,22 +26,6 @@
                             Every time a shrimp is purchased it is added to the user's inventory on the "Inventory" page where they will have the option to sell their available shrimps. 
                             Once the user has completed all transactions (sales/purchases) for that day they can then visit the "Dashboard" page where they can end the day, which will randomize both the prices and quantities for shrimp in the market. 
                             The "Dashboard" page will also have also has a save/load feature so that user's can save their current session and load it at a different time.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <!-- Purpose -->
-                <div class="card">
-
-                    <div class="card-body">
-
-                        <h1>What Is The Purpose For This Project?</h1>
-
-                        <p>
-                            The purpose of Shrimp King is to show off my skills using the javascript framework Vue.js and other resources it can implement. 
-                            A particular highlight would be the use of Vuex to keep track of data between the user's inventory and the market as well as saving/loading that data onto an actual database (I am currently using firebase for this project).
                         </p>
 
                     </div>
@@ -124,6 +68,22 @@
     </div>
     
 </template>
+
+<script>
+
+    import PortfolioCard from "./PortfolioCard.vue"
+
+    export default {
+
+        components: {
+        
+            appPortfolioCard: PortfolioCard,
+            
+        },
+        
+    }
+
+</script>
 
 <style scoped>
 
