@@ -9,37 +9,51 @@
 
                 <div class="row">
 
-                    <div class="col-4">
+                    <!-- Image Column -->
+                    <div class="col-4 align-self-center">
 
-                        <div class="d-flex align-self-center">
-
-                            <!-- Portfolio Image -->
-                            <img src="./../../assets/images/dallasPortrait.png" class="portfolio-avatar" alt="Portfolio Picture">
-
-                        </div>
+                        <!-- Portfolio Image -->
+                        <img 
+                            src="./../../assets/images/dallasPortrait.png" 
+                            class="portfolio-avatar" 
+                            alt="Portfolio Picture"
+                        >
 
                     </div>
 
-                    <div class="col-8">
+                    <!-- Content Column -->
+                    <div class="col-8 align-self-center">
+
+                        <h3>More From The Developer</h3>
+
+                        <hr>
 
                         <p>
-                            Interested in seeing or learning more about Shrimp King and other projects I have worked on? 
+                            Hi I am Dallas the author of "Shrimp King"!
+                            Interested in learning more about Shrimp King or seeing other projects I have worked on? 
                             This project along with many others can be found on my personal portfolio and github profile!
                         </p>
 
                         <!-- Card Footer -->
                         <div class="row" style="padding:0px 20px 0px 20px">
 
+                            <!-- My Portfolio -->
                             <strong class="mr-auto">
 
-                                <!-- My Portfolio -->
                                 <a class="text-white" href="http://dstearle.com/">my portfolio</a>
 
                             </strong>
 
+                            <!-- Shrimp King Repo -->
+                            <strong class="mx-auto">
+
+                                <a class="text-white" href="https://github.com/dstearle/shrimp-king">shrimp king repo</a>
+
+                            </strong>
+
+                            <!-- Github Repo -->
                             <strong class="ml-auto">
 
-                                <!-- Github Repo -->
                                 <a class="text-white" href="https://github.com/dstearle">github profile</a>
 
                             </strong>
@@ -62,7 +76,7 @@
 
     .leftRound
     {
-        border-radius: 130px 10px 10px 130px;
+        border-radius: 150px 10px 10px 150px;
     }
 
     .portfolio-avatar {
@@ -71,6 +85,27 @@
         border-radius: 9999px;
         display: block;
         margin-right: 0.5rem;
+    }
+
+    @media (min-width: 576px) {
+        .card-columns {
+            column-count: 1;
+        }
+    }
+    @media (min-width: 768px) {
+        .card-columns {
+            column-count: 2;
+        }
+    }
+    @media (min-width: 992px) {
+        .card-columns {
+            column-count: 3;
+        }
+    }
+    @media (min-width: 1200px) {
+        .card-columns {
+            column-count: 3;
+        }
     }
 
 </style>
