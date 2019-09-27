@@ -10,13 +10,13 @@
                 <app-portfolio-card></app-portfolio-card>
 
                 <!-- Welcome -->
-                <div class="card text-white aboutCard">
+                <h1 class="text-white">Welcome To Shrimp King!</h1>
+
+                <hr class="my-3">
+
+                <div class="card text-white about-card">
 
                     <div class="card-body">
-
-                        <h1 class="text-success">Welcome To Shrimp King!</h1>
-
-                        <hr class="my-3">
 
                         <p>
                             Welcome to Shrimp King, an ecommerce website sim! 
@@ -33,11 +33,15 @@
                 </div>
 
                 <!-- Page Descriptions -->
-                <div class="card">
+                <h1 class="text-white">What Are The Functions For Each Page?</h1>
+
+                <hr class="my-3">
+
+                <div class="card text-white about-card">
 
                     <div class="card-body">
 
-                        <h1>What Are The Functions For Each Page?</h1>
+                        <h5><u class="dash-ul">Dashboard</u></h5>
 
                         <p>
                             The dashboard page is where the user can save their current progress, load a previously saved game or end they fiscal day. 
@@ -45,11 +49,15 @@
                             The prices for shrimp you purchased in your inventory will also match their current market prices.
                         </p>
 
+                        <h5><u class="inventory-ul">Inventory</u></h5>
+
                         <p>
                             The inventory page allows you to sell shrimp you have purchased. 
                             The quantity for each shrimp will only change as you buy or sell more shrimp. The prices for the shrimp will match the current day's market price. 
                             So make sure to sell when the market price is higher than what you originally purchased.
                         </p>
+
+                        <h5><u class="market-ul">Market</u></h5>
 
                         <p>
                             The market is where you may buy new or more shirmp. 
@@ -92,8 +100,14 @@
         height: 0.5px;
     }
 
-    .aboutCard {
+    .about-card {
         background: rgba(0,0,0,0.6);
     }
+
+    .dash-ul { text-decoration: underline red; }
+
+    .inventory-ul { text-decoration: underline yellow; }
+
+    .market-ul { text-decoration: underline blue; }
 
 </style>
