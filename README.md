@@ -52,8 +52,8 @@ The Favorite System:
 **To Do List:**
 
 - Navbar: 
-- About Section: Add portfolio picture, style area
-- Dashboard Section:Find appropriate background
+- About Section: style area
+- Dashboard Section:
 - Inventory Section:
 - Market Section:
 - Misc:
