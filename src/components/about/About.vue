@@ -41,6 +41,7 @@
 
                     <div class="card-body">
 
+                        <!-- Dashboard Description -->
                         <h5><u class="dash-ul">Dashboard</u></h5>
 
                         <p>
@@ -49,6 +50,7 @@
                             The prices for shrimp you purchased in your inventory will also match their current market prices.
                         </p>
 
+                        <!-- Inventory Description -->
                         <h5><u class="inventory-ul">Inventory</u></h5>
 
                         <p>
@@ -57,6 +59,7 @@
                             So make sure to sell when the market price is higher than what you originally purchased.
                         </p>
 
+                        <!-- Market Description -->
                         <h5><u class="market-ul">Market</u></h5>
 
                         <p>
