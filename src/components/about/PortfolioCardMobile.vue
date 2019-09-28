@@ -10,29 +10,27 @@
                 <div class="row">
 
                     <!-- Image Column -->
-                    <div class="col-4 align-self-center">
+                    <div class="col align-self-center">
 
                         <!-- Portfolio Image -->
                         <img 
                             src="./../../assets/images/dallasPortrait.png" 
                             class="portfolio-avatar" 
-                            alt="Portfolio Picture"
+                            alt="Portfolio Picture Mobile"
                         >
 
                     </div>
 
-                    <!-- Content Column -->
-                    <div class="col-8 align-self-center">
+                </div>
 
-                        <h3>More From The Developer</h3>
+                <div class="row">
+
+                    <!-- Image Column -->
+                    <div class="col mt-3 align-self-center">
+
+                        <h5>More From The Developer</h5>
 
                         <hr>
-
-                        <p>
-                            Hi I am Dallas the author of "Shrimp King"!
-                            Interested in learning more about Shrimp King or seeing other projects I have worked on? 
-                            This project along with many others can be found on my personal portfolio and github profile!
-                        </p>
 
                         <!-- Card Footer -->
                         <div class="row" style="padding:0px 20px 0px 20px">
@@ -76,7 +74,7 @@
 
     .leftRound
     {
-        border-radius: 150px 10px 10px 150px;
+        border-radius: 150px 150px 10px 10px;
     }
 
     .portfolio-avatar {
