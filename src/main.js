@@ -5,14 +5,15 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faInfoCircle, faStar, faSave, faBook, faHourglassEnd, faTags } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faInfoCircle, faStar, faSave, faBook, faHourglassEnd, faTags, faGlobe, faCrown } from '@fortawesome/free-solid-svg-icons';
+import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { routes } from './routes';
 import store from './store/store.js';
 
-library.add([faInfoCircle, faStar, faSave, faBook, faHourglassEnd, faTags])
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+library.add([faInfoCircle, faStar, faSave, faBook, faHourglassEnd, faTags, faGlobe, faCrown, faGithubAlt]);
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.use(VueRouter);
 Vue.use(VueResource);

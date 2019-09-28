@@ -36,25 +36,43 @@
                         <div class="row" style="padding:0px 20px 0px 20px">
 
                             <!-- My Portfolio -->
-                            <strong class="mr-auto">
+                            <a class="mr-auto" href="http://dstearle.com/">
 
-                                <a class="text-white" href="http://dstearle.com/">my portfolio</a>
-
-                            </strong>
+                                <font-awesome-icon 
+                                    icon="globe" 
+                                    class="text-white"
+                                    @mouseover="activeInfo = true"
+                                    @mouseleave="activeInfo = false"
+                                    :class="{ active: activeInfo , 'inActiveHover': !activeInfo }"
+                                />
+                            
+                            </a>
 
                             <!-- Shrimp King Repo -->
-                            <strong class="mx-auto">
+                            <a class="mx-auto" href="https://github.com/dstearle/shrimp-king">
 
-                                <a class="text-white" href="https://github.com/dstearle/shrimp-king">shrimp king repo</a>
-
-                            </strong>
+                                <font-awesome-icon 
+                                    icon="crown" 
+                                    class="text-white"
+                                    @mouseover="activeInfo = true"
+                                    @mouseleave="activeInfo = false"
+                                    :class="{ active: activeInfo , 'inActiveHover': !activeInfo }"
+                                />
+                            
+                            </a>
 
                             <!-- Github Repo -->
-                            <strong class="ml-auto">
+                            <a class="ml-auto" href="https://github.com/dstearle">
 
-                                <a class="text-white" href="https://github.com/dstearle">github profile</a>
-
-                            </strong>
+                                <font-awesome-icon 
+                                    :icon="['fab', 'github-alt']" 
+                                    class="text-white"
+                                    @mouseover="activeInfo = true"
+                                    @mouseleave="activeInfo = false"
+                                    :class="{ active: activeInfo , 'inActiveHover': !activeInfo }"
+                                />
+                            
+                            </a>
 
                         </div>
 
