@@ -10,7 +10,7 @@
                 <div class="row">
 
                     <!-- Image Column -->
-                    <div class="col-4 align-self-center">
+                    <div class="col-md-6 col-lg-4 align-self-center">
 
                         <!-- Portfolio Image -->
                         <img 
@@ -21,14 +21,16 @@
 
                     </div>
 
-                    <!-- Content Column -->
-                    <div class="col-8 align-self-center">
+                    <!-- Content Column 1 -->
+                    <div class="col-md-6 col-lg-8">
 
-                        <h3>More From The Developer</h3>
+                        <h3 class="d-none d-lg-block">More From The Developer</h3>
+
+                        <h5 class="d-block d-lg-none">More From The Developer</h5>
 
                         <hr>
 
-                        <p>
+                        <p class="d-none d-lg-block">
                             Hi I am Dallas the author of "Shrimp King"!
                             Interested in learning more about Shrimp King or seeing other projects I have worked on? 
                             This project along with many others can be found on my personal portfolio and github profile!
@@ -38,23 +40,38 @@
                         <div class="row" style="padding:0px 20px 0px 20px">
 
                             <!-- My Portfolio -->
-                            <strong class="mr-auto">
+                            <strong class="my-3 col-md-12 col-lg-4">
 
-                                <a class="text-white" href="http://dstearle.com/">my portfolio</a>
+                                <font-awesome-icon 
+                                    icon="globe" 
+                                    class="text-white"
+                                />
+
+                                <a class="text-white pl-2" href="http://dstearle.com/">my portfolio</a>
 
                             </strong>
 
                             <!-- Shrimp King Repo -->
-                            <strong class="mx-auto">
+                            <strong class="my-3 col-md-12 col-lg-4">
 
-                                <a class="text-white" href="https://github.com/dstearle/shrimp-king">shrimp king repo</a>
+                                <font-awesome-icon 
+                                    icon="crown" 
+                                    class="text-white"
+                                />
+
+                                <a class="text-white pl-2" href="https://github.com/dstearle/shrimp-king">project repo</a>
 
                             </strong>
 
                             <!-- Github Repo -->
-                            <strong class="ml-auto">
+                            <strong class="mt-3 col-md-12 col-lg-4">
 
-                                <a class="text-white" href="https://github.com/dstearle">github profile</a>
+                                <font-awesome-icon 
+                                    :icon="['fab', 'github-alt']" 
+                                    class="text-white"
+                                />
+
+                                <a class="text-white pl-2" href="https://github.com/dstearle">github profile</a>
 
                             </strong>
 
