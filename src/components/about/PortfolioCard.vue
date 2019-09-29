@@ -26,7 +26,7 @@
 
                         <h3 class="d-none d-lg-block">More From The Developer</h3>
 
-                        <h5 class="d-block d-lg-none">More From The Developer</h5>
+                        <h5 class="d-block d-lg-none mt-3">More From The Developer</h5>
 
                         <hr>
 
@@ -91,16 +91,12 @@
 
 <style scoped>
 
-    .leftRound
-    {
-        border-radius: 150px 10px 10px 150px;
-    }
+    .leftRound { border-radius: 150px 10px 150px 10px; }
 
     .portfolio-avatar {
         height: 250px;
         width: 250px;
         border-radius: 9999px;
-        display: block;
     }
 
 </style>
