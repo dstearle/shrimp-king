@@ -9,9 +9,6 @@
                 <!-- Links To Portfolio & Github -->
                 <app-portfolio-card class="mb-5"></app-portfolio-card>
 
-                <!-- Links To Portfolio & Github -->
-                <app-portfolio-card-mobile class="mb-5"></app-portfolio-card-mobile>
-
                 <!-- Welcome -->
                 <div class="my-5">
 
@@ -94,15 +91,12 @@
 <script>
 
     import PortfolioCard from "./PortfolioCard.vue"
-    import PortfolioCardMobile from "./PortfolioCardMobile.vue"
 
     export default {
 
         components: {
         
             appPortfolioCard: PortfolioCard,
-
-            appPortfolioCardMobile: PortfolioCardMobile,
             
         },
         
