@@ -10,12 +10,12 @@
                 <div class="row">
 
                     <!-- Image Column -->
-                    <div class="col align-self-center">
+                    <div class="col">
 
                         <!-- Portfolio Image -->
                         <img 
                             src="./../../assets/images/dallasPortrait.png" 
-                            class="portfolio-avatar" 
+                            class="portfolio-avatar-mobile mx-auto d-block" 
                             alt="Portfolio Picture Mobile"
                         >
 
@@ -36,43 +36,40 @@
                         <div class="row" style="padding:0px 20px 0px 20px">
 
                             <!-- My Portfolio -->
-                            <a class="mr-auto" href="http://dstearle.com/">
+                            <strong class="my-2 col-md-12 col-lg-4">
 
                                 <font-awesome-icon 
                                     icon="globe" 
                                     class="text-white"
-                                    @mouseover="activeInfo = true"
-                                    @mouseleave="activeInfo = false"
-                                    :class="{ active: activeInfo , 'inActiveHover': !activeInfo }"
                                 />
-                            
-                            </a>
+
+                                <a class="text-white pl-2" href="http://dstearle.com/">my portfolio</a>
+
+                            </strong>
 
                             <!-- Shrimp King Repo -->
-                            <a class="mx-auto" href="https://github.com/dstearle/shrimp-king">
+                            <strong class="my-2 col-md-12 col-lg-4">
 
                                 <font-awesome-icon 
                                     icon="crown" 
                                     class="text-white"
-                                    @mouseover="activeInfo = true"
-                                    @mouseleave="activeInfo = false"
-                                    :class="{ active: activeInfo , 'inActiveHover': !activeInfo }"
                                 />
-                            
-                            </a>
+
+                                <a class="text-white pl-2" href="https://github.com/dstearle/shrimp-king">project repo</a>
+
+                            </strong>
 
                             <!-- Github Repo -->
-                            <a class="ml-auto" href="https://github.com/dstearle">
+                            <strong class="mt-2 col-md-12 col-lg-4">
 
                                 <font-awesome-icon 
                                     :icon="['fab', 'github-alt']" 
                                     class="text-white"
-                                    @mouseover="activeInfo = true"
-                                    @mouseleave="activeInfo = false"
-                                    :class="{ active: activeInfo , 'inActiveHover': !activeInfo }"
                                 />
-                            
-                            </a>
+
+                                <a class="text-white pl-2" href="https://github.com/dstearle">github profile</a>
+
+                            </strong>
 
                         </div>
 
@@ -95,11 +92,10 @@
         border-radius: 150px 150px 10px 10px;
     }
 
-    .portfolio-avatar {
+    .portfolio-avatar-mobile {
         height: 250px;
         width: 250px;
         border-radius: 9999px;
-        display: block;
     }
 
 </style>
