@@ -10,13 +10,13 @@
 
 **What Is This Project? :**
 
-- Welcome to Shrimp King, an ecommerce website sim! In this simulator users can buy and sell fancy shrimp over a period of time. Starting with a set amount of funds the user can visit the "Market" page where various shrimps will be sold for varying prices. Each day the prices and available shrimp will randomly go up or down, so it is in the user's best interest to buy low then sell high to gain a profit. Every time a shrimp is purchased it is added to the user's inventory on the "Inventory" page where they will have the option to sell their available shrimps. Once the user has completed all transactions (sales/purchases) for that day they can then visit the "Dashboard" page where they can end the day, which will randomize both the prices and quantities for shrimp in the market. The "Dashboard" page will also have also has a save/load feature so that user's can save their current session and load it at a different time.
+- Shrimp King is an ecommerce website sim where you can buy or sell fancy shrimp.
 
 <br>
 
-**What Is The Purpose For This Project? :**
+**What Do I Do? :**
 
-- The purpose of Shrimp King is to show off my skills using the javascript framework Vue.js and other resources it can implement. A particular highlight would be the use of Vuex to keep track of data between the user's inventory and the market as well as saving/loading that data onto an actual database (I am currently using firebase for this project).
+- At the top right of your screen you can see your funds. Go ahead and visit the market page and purchase whatever you can. Once you have made your purchases or if you would rather wait and see how the prices change head over to the Dashboard and end your day. Each day will randomize the prices and available quantities of shrimp available for sale on the market page (Note: some shrimp might not be available on certain days). The prices of shrimp you have purchased will match that current day's market price, so try to buy then sell high to gain a profit!
 
 <br>
 
@@ -32,7 +32,7 @@ Inventory:
 
 Market:
 
-- The market is where you may buy new or more shirmp. Each day will have new prices and quantities. If you buy all of the available quantity for a particular shrimp its card will disappear until you either sell any amount of that type of shrimp or by ending the day (Note: Some shrimp might not always be available). 
+- The market is where you may buy shirmp. Each day will have new prices and quantities. If you buy all of the available quantity for a particular shrimp its card will disappear until you either sell any amount of that type of shrimp or by ending the day (Note: Some shrimp might not always be available). 
 
 <br>
 
@@ -52,7 +52,7 @@ The Favorite System:
 **To Do List:**
 
 - Navbar: 
-- About Section: style area
+- About Section:
 - Dashboard Section:
 - Inventory Section:
 - Market Section:
