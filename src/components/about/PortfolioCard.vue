@@ -14,7 +14,7 @@
 
                         <!-- Portfolio Image -->
                         <img 
-                            src="./../../assets/images/dallasPortrait.png" 
+                            src="./../../assets/images/dstearle.jpg" 
                             class="portfolio-avatar" 
                             alt="Portfolio Picture"
                         >
