@@ -11,7 +11,7 @@
 
                 <div class="card">
 
-                    <div class="card-body">
+                    <div class="card-body px-5 pb-5">
 
                         <app-dashboard-chart></app-dashboard-chart>
 

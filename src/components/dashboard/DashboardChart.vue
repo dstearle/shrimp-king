@@ -1,45 +1,22 @@
 <template>
 
-  <div class="container">
+    <div>
 
-      <div class="card bg-light">
+        <!-- Chart Title -->
+        <div class="row pb-3">
 
-            <!-- Card Title -->
-            <h5 class="card-header">Bi-Weekly Chart</h5>
+            <h1>Biweekly Stats</h1>
+            
+        </div>
 
-            <div class="card-body p-5">
+        <!-- Chart -->
+        <div class="row">
 
-                <div class="col">
+            <canvas id="myChart4" height="300px" width="800px"></canvas>
 
-                    <!-- Chart -->
-                    <div class="row">
+        </div>
 
-                        <canvas id="myChart4" height="300px" width="800px"></canvas>
-
-                    </div>
-
-                    <!-- Next Day Button -->
-                    <div class="row pt-5 justify-content-end">
-
-                        <button 
-                            type="button" 
-                            class="btn btn-outline-dark"
-                            @click="dayChange()"
-                        >
-                        
-                            Next Day
-                            
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-      
-        </div> 
-        
-  </div>
+    </div>
 
 </template>
 
@@ -218,18 +195,21 @@
                                 gridLines: {
                                     // Thickness and color for horizontal grid lines
                                     lineWidth: [
-                                        1, 1, 1, 1, 1,
+                                        1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                                        1, 1,
                                     ],
                                     color: [
-                                            '#73737a', '#73737a', '#73737a', '#73737a', '#73737a', 
+                                            '#73737a', '#73737a', '#73737a', '#73737a', '#73737a',
+                                            '#73737a', '#73737a', '#73737a', '#73737a', '#73737a',
+                                            '#73737a', '#73737a',
                                     ],
                                     tickMarkLength: 0,
                                 },
                                 ticks: {
                                     padding: 15,
-                                    max: 100,
+                                    max: 1200,
                                     min: 0,
-                                    stepSize: 20
+                                    stepSize: 100
                                 },
                             }]
                         }
