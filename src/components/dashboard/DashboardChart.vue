@@ -47,8 +47,6 @@
 
     // Imports the different types of charts from the package
     import Chart from "chart.js";
-    // Imports the data to be used in the chart
-    import DinoData from "./DinoData.js";
 
     export default {
 
@@ -57,7 +55,7 @@
             return {
 
                 // Array to hold values for the chart
-                dinoSightData: DinoData,
+                // dinoSightData: DinoData,
 
                 // Array to hold the labels for the chart
                 weekDayArray:  [
@@ -91,7 +89,16 @@
                     data: {
                         // Labels for the X axis
                         labels: this.weekDayArray,
-                        datasets: DinoData
+                        datasets: [{ 
+            id: 1, 
+            label: 'Nasutoceratops Sightings',
+            borderColor: 'rgb(0, 7, 112)',
+            backgroundColor: 'rgba(0, 7, 112, 0.3)',
+            data: [
+                null, null, null, null, null, null, null,
+                null, null, null, null, null, null, 20
+            ]
+        },]
                     },
 
                     // Configure your chart options here
