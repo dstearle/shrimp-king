@@ -5,7 +5,7 @@
         <!-- Chart Title -->
         <div class="row pb-3">
 
-            <h1>Biweekly Stats</h1>
+            <h1>Biweekly Prices</h1>
             
         </div>
 
@@ -24,6 +24,7 @@
 
     // Imports the different types of charts from the package
     import Chart from "chart.js";
+    import { mapGetters, } from 'vuex';
 
     export default {
 
@@ -42,6 +43,17 @@
 
             }
 
+        },
+
+        computed: {
+
+            ...mapGetters({
+                
+                // Retrieves the data for market from the store
+                shrimpMarket: 'shrimpMarketDataGet'
+                
+            }),
+                        
         },
 
         methods: {
@@ -66,16 +78,18 @@
                     data: {
                         // Labels for the X axis
                         labels: this.weekDayArray,
-                        datasets: [{ 
-            id: 1, 
-            label: 'Nasutoceratops Sightings',
-            borderColor: 'rgb(0, 7, 112)',
-            backgroundColor: 'rgba(0, 7, 112, 0.3)',
-            data: [
-                null, null, null, null, null, null, null,
-                null, null, null, null, null, null, 20
-            ]
-        },]
+                        // The data to be shown in the chart
+                        datasets: [
+                            { 
+                                label: this.shrimpMarket[0].name,
+                                borderColor: this.shrimpMarket[0].chartBorder,
+                                backgroundColor: this.shrimpMarket[0].chartColor,
+                                data: [
+                                    null, null, null, null, null, null, null,
+                                    null, null, null, null, null, null, 200
+                                ]
+                            },
+                        ]
                     },
 
                     // Configure your chart options here

@@ -33,7 +33,9 @@ export default [
             // Styling
             text: 'text-danger',
             button: 'btn-outline-danger',
-            border: 'border-danger'
+            border: 'border-danger',
+            chartBorder: 'rgb(235, 64, 52)',
+            chartColor: 'rgb(235, 64, 52, 0.5)',
         },
         
         // Lemon Shrimp
