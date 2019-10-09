@@ -52,8 +52,8 @@ The Favorite System:
 **To Do List:**
 
 - Navbar: 
-- About Section:
-- Dashboard Section:
+- About Section: update to inform user on chart functionality
+- Dashboard Section: get dashboard chart to display favorited items
 - Inventory Section:
 - Market Section:
 - Misc:
@@ -66,7 +66,6 @@ The Favorite System:
 - show sale/buy amount
 - Collapsable categories
 - Ghost shrimp for skeleton screen demo
-- Chart for dashboard showing prices for shrimp over a period of time
 
 <br>
 
@@ -75,3 +74,4 @@ The Favorite System:
 - vuex
 - vue-router
 - vue-resource
+- chart.js
