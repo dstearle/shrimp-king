@@ -26,7 +26,7 @@ export default [
             priceMax: 180,
             weeklyPrices: [
                 null, null, null, null, null, null, null,
-                null, null, null, null, null, null, 110
+                null, null, null, null, null, 200, 110
             ],
 
             // Quantity
