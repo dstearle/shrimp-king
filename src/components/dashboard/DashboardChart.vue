@@ -12,7 +12,7 @@
         <!-- Chart -->
         <div class="row">
 
-            <canvas id="myChart4" height="300px" width="800px"></canvas>
+            <canvas id="dashboardChart" height="300px" width="800px"></canvas>
 
         </div>
 
@@ -24,33 +24,18 @@
 
     // Imports the different types of charts from the package
     import Chart from "chart.js";
-    import { mapGetters, } from 'vuex';
+    import { mapGetters } from 'vuex';
 
     export default {
-
-        data() {
-
-            return {
-
-                // Array to hold values for the chart
-                // dinoSightData: DinoData,
-
-                // Array to hold the labels for the chart
-                weekDayArray:  [
-                    'Sunday', 'Monday', 'Tuesday', 'Wedsday', 'Thursday', 'Friday', 'Saturday',
-                    'Sunday', 'Monday', 'Tuesday', 'Wedsday', 'Thursday', 'Friday', 'Saturday',
-                ],
-
-            }
-
-        },
 
         computed: {
 
             ...mapGetters({
                 
                 // Retrieves the data for market from the store
-                shrimpMarket: 'shrimpMarketDataGet'
+                shrimpMarket: 'shrimpMarketDataGet',
+                // Retrieves the dashboard chart X axis labels
+                weekDayArray: 'weekDayArrayGet'
                 
             }),
 
@@ -72,7 +57,7 @@
             // All that jazz to make a new chart
             initializeChart() {
 
-                const ctx = document.getElementById('myChart4').getContext('2d');
+                const ctx = document.getElementById('dashboardChart').getContext('2d');
                 
                 // Creates the gradient for the fill background
                 let gradientStroke = ctx.createLinearGradient(0, 250, 0, 100);
@@ -261,23 +246,14 @@
             dayChange() {
 
                 // Retrieves the dataset values for each item
-                for(let i = 0; i < this.dinoSightData.length; i++) {
-
-                    // Randomizes the price for each available shrimp between their minimum and maximum prices
-                    let newDaySightings = Math.round((Math.random() * (100 - 0 + 1)) + 0);
+                for(let i = 0; i < this.shrimpMarket.length; i++) {
 
                     // Removes the first element in the dinoSightings array
                     this.chart.data.datasets[i].data.shift();
                     // Pushes a new element into the dinoSightings array
-                    this.chart.data.datasets[i].data.push(newDaySightings);
+                    this.chart.data.datasets[i].data.push(this.shrimpMarket[i].price);
                     
                 }
-
-                // Takes the first element from the labels array and pushes it to the end of the array
-                this.weekDayArray.push(this.weekDayArray.shift());
-
-                // Renders the chart again with new info
-                this.chart.update();
 
             },
 
@@ -289,6 +265,22 @@
             this.initializeChart();
             this.chartDatasets();
             
+        },
+
+        watch: {
+            
+            // Checks for new value for gaugeScore
+            weekDayArray: {
+
+                handler() {
+
+                    // Renders the chart again with new info
+                    this.chart.update();
+
+                }
+
+            },
+
         },
         
     };
