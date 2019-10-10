@@ -64,35 +64,6 @@
                 return arr.filter(shrimp => shrimp.favorited != false)
                 
             },
-
-            chartDatasets() {
-
-                // Empty array to hold the retrieved datasets
-                let newDataset = { data: [] };
-
-                // For every year in your data ...
-                for (let i = 0; i < this.favoritesMarket.length; i++) {
-
-                    let obj = {};
-                    
-                    obj['label'] = this.favoritesMarket[i].name;
-                    obj['borderColor'] = this.favoritesMarket[i].chartBorder;
-                    obj['backgroundColor']  = this.favoritesMarket[i].chartColor;
-                    obj['data'] = this.favoritesMarket[i].weeklyPrices;
-
-                    // You populate the newly created dataset
-                    newDataset.data.push(obj)
-
-                }
-
-                // Pushes the retrieved datasets into the chart
-                this.chart.config.data.datasets.push(newDataset);
-                console.log(newDataset)
-
-                // Finally, make sure you update your chart, to get the result on your screen
-                this.chart.update();
-
-            }
                         
         },
 
@@ -259,6 +230,38 @@
                         }
                     }
                 })
+            },
+
+            chartDatasets() {
+
+                // Empty array to hold the retrieved datasets
+                // let newDataset = { data: [] };
+
+                // For every year in your data ...
+                for (let i = 0; i < this.favoritesMarket.length; i++) {
+
+                    let obj = {};
+                    
+                    obj['label'] = this.favoritesMarket[i].name;
+                    obj['borderColor'] = this.favoritesMarket[i].chartBorder;
+                    obj['backgroundColor']  = this.favoritesMarket[i].chartColor;
+                    obj['data'] = this.favoritesMarket[i].weeklyPrices;
+
+                    // You populate the newly created dataset
+                    // newDataset.data.push(obj)
+                    // Pushes the retrieved datasets into the chart
+                    this.chart.data.datasets.push(obj);
+
+                }
+
+                // Pushes the retrieved datasets into the chart
+                // this.chart.data.datasets.push(newDataset);
+                // console.log(newDataset);
+                console.log(this.chart.data.datasets)
+
+                // Finally, make sure you update your chart, to get the result on your screen
+                this.chart.update();
+
             },
 
             // Method that changes the X axis labels and insert new data
