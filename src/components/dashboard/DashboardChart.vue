@@ -234,9 +234,6 @@
 
             chartDatasets() {
 
-                // Empty array to hold the retrieved datasets
-                // let newDataset = { data: [] };
-
                 // For every year in your data ...
                 for (let i = 0; i < this.favoritesMarket.length; i++) {
 
@@ -247,17 +244,10 @@
                     obj['backgroundColor']  = this.favoritesMarket[i].chartColor;
                     obj['data'] = this.favoritesMarket[i].weeklyPrices;
 
-                    // You populate the newly created dataset
-                    // newDataset.data.push(obj)
                     // Pushes the retrieved datasets into the chart
                     this.chart.data.datasets.push(obj);
 
                 }
-
-                // Pushes the retrieved datasets into the chart
-                // this.chart.data.datasets.push(newDataset);
-                // console.log(newDataset);
-                console.log(this.chart.data.datasets)
 
                 // Finally, make sure you update your chart, to get the result on your screen
                 this.chart.update();
