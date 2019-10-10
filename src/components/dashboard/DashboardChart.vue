@@ -53,6 +53,17 @@
                 shrimpMarket: 'shrimpMarketDataGet'
                 
             }),
+
+            // The filtered list for favorited shrimps
+            favoritesMarket() {
+                
+                // Array to hold available shrimp
+                const arr = this.shrimpMarket;
+
+                // Filters out shrimp that have not been favorited
+                return arr.filter(shrimp => shrimp.favorited != false)
+                
+            },
                         
         },
 
@@ -81,13 +92,10 @@
                         // The data to be shown in the chart
                         datasets: [
                             { 
-                                label: this.shrimpMarket[0].name,
-                                borderColor: this.shrimpMarket[0].chartBorder,
-                                backgroundColor: this.shrimpMarket[0].chartColor,
-                                data: [
-                                    null, null, null, null, null, null, null,
-                                    null, null, null, null, null, null, 200
-                                ]
+                                label: this.favoritesMarket[0].name,
+                                borderColor: this.favoritesMarket[0].chartBorder,
+                                backgroundColor: this.favoritesMarket[0].chartColor,
+                                data: this.favoritesMarket[0].weeklyPrices,
                             },
                         ]
                     },
