@@ -71,6 +71,7 @@
             ...mapActions({
 
                 randomizeStocks: 'randomizeStocks',
+                dayChange: 'dayChange',
                 fetchData: 'loadData'
 
             }),
@@ -80,6 +81,7 @@
 
                 // Randomizes prices of shrimp
                 this.randomizeStocks();
+                this.dayChange();
 
             },
 
