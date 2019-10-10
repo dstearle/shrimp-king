@@ -232,13 +232,16 @@
                 })
             },
 
+            // Retrieves the datasets to be used by the chart
             chartDatasets() {
 
-                // For every year in your data ...
+                // For loop to retrieve data objects from filtered favorites
                 for (let i = 0; i < this.favoritesMarket.length; i++) {
 
+                    // Creates an empty object to hold data
                     let obj = {};
                     
+                    // The items to be stored in the object
                     obj['label'] = this.favoritesMarket[i].name;
                     obj['borderColor'] = this.favoritesMarket[i].chartBorder;
                     obj['backgroundColor']  = this.favoritesMarket[i].chartColor;
