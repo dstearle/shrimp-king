@@ -64,6 +64,10 @@ export default [
             price: 200,
             priceMin: 120,
             priceMax: 230,
+            weeklyPrices: [
+                null, null, null, null, null, null, null,
+                null, null, null, null, null, null, 200
+            ],
 
             // Quantity
             quantity: 8,
@@ -73,7 +77,9 @@ export default [
             // Styling
             text: 'text-warning',
             button: 'btn-outline-warning',
-            border: 'border-warning'
+            border: 'border-warning',
+            chartBorder: 'rgb(255, 193, 7)',
+            chartColor: 'rgb(255, 193, 7, 0.5)',
         },
         
         // Blueberry Shrimp
@@ -98,6 +104,10 @@ export default [
             price: 250,
             priceMin: 145,
             priceMax: 320,
+            weeklyPrices: [
+                null, null, null, null, null, null, null,
+                null, null, null, null, null, null, 250
+            ],
 
             // Quantity
             quantity: 6,
@@ -107,7 +117,9 @@ export default [
             // Styling
             text: 'text-info',
             button: 'btn-outline-info',
-            border: 'border-info'
+            border: 'border-info',
+            chartBorder: 'rgb(23, 162, 184)',
+            chartColor: 'rgb(23, 162, 184, 0.5)',
         },
 
         // Kiwi Shrimp
@@ -132,6 +144,10 @@ export default [
             price: 240,
             priceMin: 160,
             priceMax: 350,
+            weeklyPrices: [
+                null, null, null, null, null, null, null,
+                null, null, null, null, null, null, 240
+            ],
 
             // Quantity
             quantity: 4,
@@ -141,7 +157,9 @@ export default [
             // Styling
             text: 'text-success',
             button: 'btn-outline-success',
-            border: 'border-success'
+            border: 'border-success',
+            chartBorder: 'rgb(40, 167, 70)',
+            chartColor: 'rgb(40, 167, 70, 0.5)',
         },
 
         // Coconut Shrimp
@@ -166,6 +184,10 @@ export default [
             price: 100,
             priceMin: 20,
             priceMax: 110,
+            weeklyPrices: [
+                null, null, null, null, null, null, null,
+                null, null, null, null, null, null, 100
+            ],
 
             // Quantity
             quantity: 12,
@@ -175,7 +197,9 @@ export default [
             // Styling
             text: 'text-dark',
             button: 'btn-outline-dark',
-            border: 'border-dark'
+            border: 'border-dark',
+            chartBorder: 'rgb(128, 90, 70)',
+            chartColor: 'rgb(128, 90, 70, 0.5)',
         },
 
         // Red Rili Shrimp
@@ -202,6 +226,10 @@ export default [
             price: 320,
             priceMin: 220,
             priceMax: 400,
+            weeklyPrices: [
+                null, null, null, null, null, null, null,
+                null, null, null, null, null, null, 320
+            ],
 
             // Quantity
             quantity: 3,
@@ -211,7 +239,9 @@ export default [
             // Styling
             text: 'text-danger',
             button: 'btn-outline-danger',
-            border: 'border-danger'
+            border: 'border-danger',
+            chartBorder: 'rgb(235, 64, 52)',
+            chartColor: 'rgb(23, 162, 184, 0.5)',
         },
 
     // ******* Caridina shrimp *******
@@ -240,6 +270,10 @@ export default [
             price: 400,
             priceMin: 260,
             priceMax: 500,
+            weeklyPrices: [
+                null, null, null, null, null, null, null,
+                null, null, null, null, null, null, 400
+            ],
 
             // Quantity
             quantity: 3,
@@ -249,7 +283,9 @@ export default [
             // Styling
             text: 'text-danger',
             button: 'btn-outline-danger',
-            border: 'border-danger'
+            border: 'border-danger',
+            chartBorder: 'rgb(235, 64, 52)',
+            chartColor: 'rgb(32, 201, 151, 0.5)',
         },
 
         // Black Crystal Shrimp
@@ -276,6 +312,10 @@ export default [
             price: 400,
             priceMin: 240,
             priceMax: 480,
+            weeklyPrices: [
+                null, null, null, null, null, null, null,
+                null, null, null, null, null, null, 400
+            ],
 
             // Quantity
             quantity: 3,
@@ -285,7 +325,9 @@ export default [
             // Styling
             text: 'text-dark',
             button: 'btn-outline-dark',
-            border: 'border-dark'
+            border: 'border-dark',
+            chartBorder: 'rgb(52, 58, 64)',
+            chartColor: 'rgb(32, 201, 151, 0.5)',
         },
 
         // Blue Bolt Shrimp
@@ -310,6 +352,10 @@ export default [
             price: 550,
             priceMin: 550,
             priceMax: 800,
+            weeklyPrices: [
+                null, null, null, null, null, null, null,
+                null, null, null, null, null, null, 550
+            ],
 
             // Quantity
             quantity: 1,
@@ -319,7 +365,9 @@ export default [
             // Styling
             text: 'text-info',
             button: 'btn-outline-info',
-            border: 'border-info'
+            border: 'border-info',
+            chartBorder: 'rgb(0, 123, 255)',
+            chartColor: 'rgb(32, 201, 151, 0.5)',
         },
 
         // Taiwan Tiger Shrimp
@@ -346,6 +394,10 @@ export default [
             price: 680,
             priceMin: 680,
             priceMax: 900,
+            weeklyPrices: [
+                null, null, null, null, null, null, null,
+                null, null, null, null, null, null, 680
+            ],
 
             // Quantity
             quantity: 1,
@@ -355,7 +407,9 @@ export default [
             // Styling
             text: 'text-danger',
             button: 'btn-outline-danger',
-            border: 'border-danger'
+            border: 'border-danger',
+            chartBorder: 'rgb(235, 64, 52)',
+            chartColor: 'rgb(52, 58, 64, 0.5)',
         },
 
         // OE Blue Tiger Shrimp
@@ -382,6 +436,10 @@ export default [
             price: 630,
             priceMin: 630,
             priceMax: 850,
+            weeklyPrices: [
+                null, null, null, null, null, null, null,
+                null, null, null, null, null, null, 630
+            ],
 
             // Quantity
             quantity: 1,
@@ -391,7 +449,9 @@ export default [
             // Styling
             text: 'text-info',
             button: 'btn-outline-info',
-            border: 'border-info'
+            border: 'border-info',
+            chartBorder: 'rgb(23, 162, 184)',
+            chartColor: 'rgb(253, 126, 20, 0.5)',
         },
 
         // Gold Bee Shrimp
@@ -416,6 +476,10 @@ export default [
             price: 800,
             priceMin: 800,
             priceMax: 1200,
+            weeklyPrices: [
+                null, null, null, null, null, null, null,
+                null, null, null, null, null, null, 800
+            ],
 
             // Quantity
             quantity: 1,
@@ -425,7 +489,9 @@ export default [
             // Styling
             text: 'text-warning',
             button: 'btn-outline-warning',
-            border: 'border-warning'
+            border: 'border-warning',
+            chartBorder: 'rgb(255, 193, 7)',
+            chartColor: 'rgb(32, 201, 151, 0.5)',
         },
         
 ];
