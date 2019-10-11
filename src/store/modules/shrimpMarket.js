@@ -28,6 +28,19 @@ const mutations = {
         
     },
 
+    // Randomizes the prices for each shrimp
+    'PRICE_TRACKER' (state) {
+        
+        state.shrimpMarketData.forEach(shrimp => {
+
+            // Randomizes the price for each available shrimp between their minimum and maximum prices
+            shrimp.weeklyPrices.shift();
+            shrimp.weeklyPrices.push(shrimp.price);
+
+        });
+        
+    },
+
     // Randomizes the quantities for each shrimp
     'RND_QUANTITY' (state) {
         
@@ -87,6 +100,8 @@ const actions = {
         commit('RND_PRICES', shrimpData);
 
         commit('RND_QUANTITY', shrimpData);
+
+        commit('PRICE_TRACKER', shrimpData)
         
     },
     
