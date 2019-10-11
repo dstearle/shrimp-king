@@ -108,6 +108,8 @@ const getters = {
                 
                 price: record.price,
 
+                weeklyPrices: record.weeklyPrices,
+
                 photo: record.photo,
 
                 alt: record.alt,
@@ -122,7 +124,11 @@ const getters = {
 
                 button: record.button,
 
-                border: record.border
+                border: record.border,
+
+                chartBorder: record.chartBorder,
+
+                chartColor: record.chartColor
                 
             }
             

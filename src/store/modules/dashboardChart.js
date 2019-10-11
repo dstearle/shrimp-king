@@ -2,13 +2,20 @@ const state = {
     
     // Array to hold the labels for the chart
     weekDayArray:  [
-        'Sunday', 'Monday', 'Tuesday', 'Wedsday', 'Thursday', 'Friday', 'Saturday',
-        'Sunday', 'Monday', 'Tuesday', 'Wedsday', 'Thursday', 'Friday', 'Saturday',
+        'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
+        'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
     ],
     
 };
 
 const mutations = {
+
+    // Mutation for loading saved X axis labels
+    'SET_LABELS' (state, portfolioLoad) {
+        
+        state.weekDayArray = portfolioLoad.weekDayArrayLoad;
+        
+    },
 
     // Mutation for updating the X axis labels
     'LABEL_CHANGE' (state) {
@@ -21,7 +28,7 @@ const mutations = {
 };
 
 const actions = {
-    
+
     // Action for when the user has ended the day
     dayChange({commit}) {
         

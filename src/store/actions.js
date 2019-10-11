@@ -13,11 +13,14 @@ export const loadData = ({commit}) => {
             // Checks if there is data to be extracted from the database
             if (data) { 
                 
+                // Stored data for User's funds
+                const fundsLoad = data.funds;
+
+                const weekDayArrayLoad = data.weekDayArray
+                
                 // Stored data for Market
                 const shrimpMarketDataLoad = data.shrimpMarketData;
                 
-                // Stored data for User's funds
-                const fundsLoad = data.funds;
                 // Stored data for User's Inventory
                 const shrimpInventoryDataLoad = data.shrimpInventoryData;
 
@@ -26,7 +29,10 @@ export const loadData = ({commit}) => {
 
                     fundsLoad,
 
+                    weekDayArrayLoad,
+
                     shrimpInventoryDataLoad,
+                    
 
                 };
 
@@ -34,6 +40,8 @@ export const loadData = ({commit}) => {
                 commit('SET_STOCKS', shrimpMarketDataLoad);
                 // Sets the stored data for the User's funds and inventory from the data base
                 commit('SET_PORTFOLIO', portfolioLoad);
+                // Sets the stored data for the User's funds and inventory from the data base
+                commit('SET_LABELS', portfolioLoad);
             
             }
 

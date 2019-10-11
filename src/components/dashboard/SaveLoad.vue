@@ -97,7 +97,9 @@
                     // User's inventory
                     shrimpInventoryData: this.$store.getters.shrimpInventoryDataGet,
                     // Market's inventory
-                    shrimpMarketData: this.$store.getters.shrimpMarketDataGet
+                    shrimpMarketData: this.$store.getters.shrimpMarketDataGet,
+                    // The X axis labels for the chart
+                    weekDayArray: this.$store.getters.weekDayArrayGet,
 
                 };
 
