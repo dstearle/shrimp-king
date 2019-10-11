@@ -31,10 +31,13 @@ const mutations = {
     // Randomizes the prices for each shrimp
     'PRICE_TRACKER' (state) {
         
+        // Foreach loop to update weeklyPrices for each item when a new day occurs
         state.shrimpMarketData.forEach(shrimp => {
 
-            // Randomizes the price for each available shrimp between their minimum and maximum prices
+            // Removes the oldest price from the array
             shrimp.weeklyPrices.shift();
+
+            // Sets the current day's price into the array
             shrimp.weeklyPrices.push(shrimp.price);
 
         });
@@ -79,10 +82,13 @@ const mutations = {
 
 const actions = {
     
+    // Action for buying shrimp
     buyShrimp: ({commit}, order) => {
         
+        // Commints the transaction
         commit('BUY_STOCK', order);
 
+        // Subtracts from market quantity
         commit('SUBTRACT_QUANTITY', order);
         
     },
@@ -97,10 +103,13 @@ const actions = {
     // Randomizes the prices and quantities for shrimp in the market
     randomizeStocks: ({commit}) => {
         
+        // Randomizes the prices for shrimp in the market
         commit('RND_PRICES', shrimpData);
 
+        // Randomizes quantities for shrimp in the market
         commit('RND_QUANTITY', shrimpData);
 
+        // Updates the data to be used by the dashboard chart
         commit('PRICE_TRACKER', shrimpData)
         
     },
