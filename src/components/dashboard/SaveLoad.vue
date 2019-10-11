@@ -81,6 +81,7 @@
 
                 // Randomizes prices of shrimp
                 this.randomizeStocks();
+                // Updates the labels for the X axis
                 this.dayChange();
 
             },

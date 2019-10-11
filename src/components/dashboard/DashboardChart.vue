@@ -242,21 +242,6 @@
 
             },
 
-            // Method that changes the X axis labels and insert new data
-            dayChange() {
-
-                // Retrieves the dataset values for each item
-                // for(let i = 0; i < this.shrimpMarket.length; i++) {
-
-                //     // Removes the first element in the dinoSightings array
-                //     this.chart.data.datasets[i].data.shift();
-                //     // Pushes a new element into the dinoSightings array
-                //     this.chart.data.datasets[i].data.push(shrimp.price);
-                    
-                // }
-
-            },
-
         },
 
         mounted() {
@@ -269,7 +254,7 @@
 
         watch: {
             
-            // Checks for new value for gaugeScore
+            // Checks for changes in the store for weekDayArray
             weekDayArray: {
 
                 handler() {
