@@ -25,8 +25,8 @@ export default [
             priceMin: 60,
             priceMax: 180,
             weeklyPrices: [
-                null, null, null, null, null, null, null,
-                null, null, null, null, null, 200, 110
+                74, 64, 105, 118, 175, 64, 70,
+                63, 79, 110, 159, 84, 174, 110
             ],
 
             // Quantity
@@ -65,8 +65,8 @@ export default [
             priceMin: 120,
             priceMax: 230,
             weeklyPrices: [
-                null, null, null, null, null, null, null,
-                null, null, null, null, null, null, 200
+                214, 218, 182, 212, 162, 184, 216,
+                164, 183, 184, 230, 204, 162, 200
             ],
 
             // Quantity
@@ -105,8 +105,8 @@ export default [
             priceMin: 145,
             priceMax: 320,
             weeklyPrices: [
-                null, null, null, null, null, null, null,
-                null, null, null, null, null, null, 250
+                169, 283, 303, 277, 287, 219, 294,
+                229, 285, 290, 273, 164, 217, 250
             ],
 
             // Quantity
@@ -145,8 +145,8 @@ export default [
             priceMin: 160,
             priceMax: 350,
             weeklyPrices: [
-                null, null, null, null, null, null, null,
-                null, null, null, null, null, null, 240
+                236, 266, 164, 162, 316, 240, 163,
+                237, 279, 349, 202, 317, 314, 240
             ],
 
             // Quantity
@@ -185,8 +185,8 @@ export default [
             priceMin: 20,
             priceMax: 110,
             weeklyPrices: [
-                null, null, null, null, null, null, null,
-                null, null, null, null, null, null, 100
+                83, 23, 83, 97, 56, 105, 31,
+                84, 87, 80, 33, 75, 55, 100
             ],
 
             // Quantity
@@ -227,8 +227,8 @@ export default [
             priceMin: 220,
             priceMax: 400,
             weeklyPrices: [
-                null, null, null, null, null, null, null,
-                null, null, null, null, null, null, 320
+                369, 306, 278, 229, 250, 368, 374,
+                242, 307, 312, 321, 297, 394, 320
             ],
 
             // Quantity
@@ -271,8 +271,8 @@ export default [
             priceMin: 260,
             priceMax: 500,
             weeklyPrices: [
-                null, null, null, null, null, null, null,
-                null, null, null, null, null, null, 400
+                451, 263, 495, 308, 449, 411, 320,
+                396, 481, 437, 477, 474, 471, 400
             ],
 
             // Quantity
@@ -313,8 +313,8 @@ export default [
             priceMin: 240,
             priceMax: 480,
             weeklyPrices: [
-                null, null, null, null, null, null, null,
-                null, null, null, null, null, null, 400
+                378, 368, 384, 300, 322, 351, 355,
+                308, 259, 259, 432, 414, 257, 400
             ],
 
             // Quantity
@@ -353,8 +353,8 @@ export default [
             priceMin: 550,
             priceMax: 800,
             weeklyPrices: [
-                null, null, null, null, null, null, null,
-                null, null, null, null, null, null, 550
+                690, 579, 790, 716, 750, 608, 710,
+                570, 573, 568, 585, 718, 789, 550
             ],
 
             // Quantity
@@ -395,8 +395,8 @@ export default [
             priceMin: 680,
             priceMax: 900,
             weeklyPrices: [
-                null, null, null, null, null, null, null,
-                null, null, null, null, null, null, 680
+                810, 762, 682, 696, 696, 762, 747,
+                684, 750, 899, 824, 710, 747, 680
             ],
 
             // Quantity
@@ -437,8 +437,8 @@ export default [
             priceMin: 630,
             priceMax: 850,
             weeklyPrices: [
-                null, null, null, null, null, null, null,
-                null, null, null, null, null, null, 630
+                833, 635, 634, 733, 799, 835, 675,
+                685, 802, 646, 640, 678, 665, 630
             ],
 
             // Quantity
@@ -477,8 +477,8 @@ export default [
             priceMin: 800,
             priceMax: 1200,
             weeklyPrices: [
-                null, null, null, null, null, null, null,
-                null, null, null, null, null, null, 800
+                1056, 935, 906, 1152, 1158, 827, 808,
+                1116, 1186, 876, 1106, 893, 1112, 800
             ],
 
             // Quantity
