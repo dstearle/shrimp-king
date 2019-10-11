@@ -246,14 +246,14 @@
             dayChange() {
 
                 // Retrieves the dataset values for each item
-                for(let i = 0; i < this.shrimpMarket.length; i++) {
+                // for(let i = 0; i < this.shrimpMarket.length; i++) {
 
-                    // Removes the first element in the dinoSightings array
-                    this.chart.data.datasets[i].data.shift();
-                    // Pushes a new element into the dinoSightings array
-                    this.chart.data.datasets[i].data.push(this.shrimpMarket[i].price);
+                //     // Removes the first element in the dinoSightings array
+                //     this.chart.data.datasets[i].data.shift();
+                //     // Pushes a new element into the dinoSightings array
+                //     this.chart.data.datasets[i].data.push(shrimp.price);
                     
-                }
+                // }
 
             },
 
