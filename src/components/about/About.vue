@@ -95,6 +95,37 @@
 
                 </div>
 
+                <!-- Notable Features -->
+                <div class="my-5">
+
+                    <h1 class="text-white">Notable Features</h1>
+
+                    <hr class="my-3">
+
+                    <div class="card text-white about-card">
+
+                        <div class="card-body">
+
+                            <!-- Dashboard Description -->
+                            <h5><u class="about-ul">The Favorites System</u></h5>
+
+                            <p>
+                                When exploring your Inventory or the Market page you will notice a star in the upper right corner of the image for each item.
+                                This star allows the user to mark that item as "favorited" and will immeadiately remove said item from its current category and add it to the favorites list at the top (or vice versa if it is already favorited).
+                                Favoriting an item on any page will correlate across the pages. 
+                                So if you favorite an item in your Inventory, said item will also be added to favorites on the Market page.
+                                This is because each item has a data object with a boolean of true or false.
+                                Through Vuex the boolean in said data object is toggled in the store so any page making use of the favorites system can correctly keep track of what items are currently being favorited.
+                            </p>
+
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
