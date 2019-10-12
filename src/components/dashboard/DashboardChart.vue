@@ -237,7 +237,7 @@
 
                 }
 
-                // Finally, make sure you update your chart, to get the result on your screen
+                // Renders the chart with new data
                 this.chart.update();
 
             },
@@ -248,6 +248,7 @@
 
             // Renders the chart on load
             this.initializeChart();
+            // Loads in the data for the chart
             this.chartDatasets();
             
         },
@@ -259,8 +260,22 @@
 
                 handler() {
 
-                    // Renders the chart again with new info
+                    // Renders the chart again with new data
                     this.chart.update();
+
+                }
+
+            },
+
+            // Checks for changes in the store for shrimpMarket
+            shrimpMarket: {
+
+                handler() {
+
+                    // Renders the chart on load
+                    this.initializeChart();
+                    // Loads in the data for the chart
+                    this.chartDatasets();
 
                 }
 
