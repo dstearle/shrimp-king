@@ -272,7 +272,9 @@
 
                 handler() {
 
-                    // Renders the chart on load
+                    // Removes the old chart
+                    this.chart.destroy();
+                    // Renders a new chart on load
                     this.initializeChart();
                     // Loads in the data for the chart
                     this.chartDatasets();
