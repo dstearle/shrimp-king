@@ -36,24 +36,23 @@ Market:
 
 <br>
 
-**The Item Cards :**
+**Notable Features :**
 
-The Data:
+The Favorites System:
 
-- The cards that display each shrimp come from two reusable components (One for inventory and one for the market). To generate the information for each card, data stored in a file is put into a for loop. Each shrimp has its own data object nested with elements such as a picture, name, and even the styling for the card. The data objects for each shrimp also store the maximum and minimum prices and quantites that are used in the market (and the inventory pricing as well).
+- When exploring your Inventory or the Market page you will notice a star in the upper right corner of the image for each item. This star allows the user to mark that item as "favorited" and will immeadiately remove said item from its current category and add it to the favorites list at the top (or vice versa if it is already favorited). Favoriting an item on any page will correlate across the pages. So if you favorite an item in your Inventory, said item will also be added to favorites on the Market page. This is because each item has a data object with a boolean of true or false. Through Vuex the boolean in said data object is toggled in the store so any page making use of the favorites system can correctly keep track of what items are currently being favorited.
 
-The Favorite System:
+The Dashboard Chart:
 
-- At the top right corner for each card is a star that will go from grey to yellow when you mouse over it (or yellow to grey depending if has been favorited or not). When the user clicks this star for a particular item said item will be sent to favorites (or removed from favorites if it has already been favorited). When a user favorites/unfavorites an item in either the Inventory or Market it will also match on the corresponding page (for instance if I favorite an item in Inventory, it will also be favorited on the Market page).
-- The way this is accomplished is first by using a computed method to filter out items that have been favorited. Each item has a an object in its data called "favorited" which has a boolean value. By default all shrimp (except Cherry Shrimp) have that value set to false. In order to get the items for each page to update with each other I simply used magGetter for the state of the available shrimp in the Market on the Inventory page.
+- On the Dashboard page you will see a large chart I made using a package called Chart.js (documentation here https://www.chartjs.org/). Building off of the favorites system, this chart displays the prices for favorited items over a period of two weeks. The idea being that when you hit the "End Day" button above the chart you can immeadiately see the current day's prices (located on the far right of the chart) for any favorited items and decide if it is a good time to buy or sell. The chart is dynamic and will move older prices (the data being shown) and day labels (on the X axis) to the left to make room for new data. Hovering over the data points on the chart will also bring up "tooltips" to display the name and price of said item..
 
 <br>
 
 **To Do List:**
 
 - Navbar: 
-- About Section: update to inform user on chart functionality
-- Dashboard Section: get dashboard chart to display favorited items
+- About Section:
+- Dashboard Section:
 - Inventory Section:
 - Market Section:
 - Misc:
@@ -62,6 +61,7 @@ The Favorite System:
 
 **Future Developments:**
 
+- Dashboard favorites list
 - Search filter for tags
 - show sale/buy amount
 - Collapsable categories
