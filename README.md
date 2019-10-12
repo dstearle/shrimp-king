@@ -52,7 +52,7 @@ The Dashboard Chart:
 
 - Navbar: 
 - About Section:
-- Dashboard Section:
+- Dashboard Section: dynamic Y axis for chart
 - Inventory Section:
 - Market Section:
 - Misc:
@@ -63,9 +63,10 @@ The Dashboard Chart:
 
 - Dashboard favorites list
 - Search filter for tags
-- show sale/buy amount
 - Collapsable categories
 - Ghost shrimp for skeleton screen demo
+- Mark up/down sales?
+- Show sale/buy amount
 
 <br>
 
