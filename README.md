@@ -66,6 +66,7 @@ The Dashboard Chart:
 - Collapsable categories
 - Ghost shrimp for skeleton screen demo
 - Mark up/down sales?
+- New categories for snails/plants
 - Show sale/buy amount
 
 <br>
