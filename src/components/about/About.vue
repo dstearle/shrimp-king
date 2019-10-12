@@ -106,7 +106,7 @@
 
                         <div class="card-body">
 
-                            <!-- Dashboard Description -->
+                            <!-- Favorites System Description -->
                             <h5><u class="about-ul">The Favorites System</u></h5>
 
                             <p>
@@ -118,7 +118,17 @@
                                 Through Vuex the boolean in said data object is toggled in the store so any page making use of the favorites system can correctly keep track of what items are currently being favorited.
                             </p>
 
-                            
+                            <!-- Dashboard Chart Description -->
+                            <h5><u class="about-ul">The Dashboard Chart</u></h5>
+
+                            <p>
+                                On the Dashboard page you will see a large chart I made using a package called Chart.js (documentation here https://www.chartjs.org/).
+                                Building off of the favorites system, this chart displays the prices for favorited items over a period of two weeks.
+                                The idea being that when you hit the "End Day" button above the chart you can immeadiately see the current day's prices (located on the far right of the chart) for any favorited items and decide if it is a good time to buy or sell.
+                                The chart is dynamic and will move older prices (the data being shown) and day labels (on the X axis) to the left to make room for new data.
+                                Hovering over the data points on the chart will also bring up "tooltips" to display the name and price of said item.
+
+                            </p>
 
                         </div>
 
