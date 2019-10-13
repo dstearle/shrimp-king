@@ -89,7 +89,7 @@
             // Saves user's session
             saveData() {
 
-                // Stores both the user's and market's current funds and inventory.
+                // Stores the user's information to be saved.
                 const data = {
 
                     // User's funds
@@ -100,6 +100,8 @@
                     shrimpMarketData: this.$store.getters.shrimpMarketDataGet,
                     // The X axis labels for the chart
                     weekDayArray: this.$store.getters.weekDayArrayGet,
+                    // The current number of favorited items
+                    favoritesCounter: this.$store.getters.favoritesCounterGet,
 
                 };
 

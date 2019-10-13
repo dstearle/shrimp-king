@@ -28,6 +28,13 @@ const mutations = {
 
     },
 
+    // Mutation for loading saved X axis labels
+    'SET_FAV_COUNTER' (state, portfolioLoad) {
+        
+        state.favoritesCounter = portfolioLoad.favoritesCounterLoad;
+        
+    },
+
     // Mutation for bumping the counter up
     'FAV_UP' (state) {
 
