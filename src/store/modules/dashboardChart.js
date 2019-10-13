@@ -7,7 +7,7 @@ const state = {
     ],
 
     // Counter for keeping track of favorited items
-    favoritesMax: 1
+    favoritesCounter: 1
     
 };
 
@@ -32,7 +32,7 @@ const mutations = {
     'FAV_UP' (state) {
 
         // Takes the first element from the labels array and pushes it to the end of the array
-        state.favoritesMax++;
+        state.favoritesCounter++;
 
     },
 
@@ -40,7 +40,7 @@ const mutations = {
     'FAV_DOWN' (state) {
 
         // Takes the first element from the labels array and pushes it to the end of the array
-        state.favoritesMax--;
+        state.favoritesCounter--;
 
     },
     
@@ -83,10 +83,10 @@ const getters = {
         
     },
 
-    // Getter for dashboard chart X axis labels
-    favoritesMaxGet: state => {
+    // Getter for amount of favorited items
+    favoritesCounterGet: state => {
         
-        return state.favoritesMax;
+        return state.favoritesCounter;
         
     }
     
