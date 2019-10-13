@@ -16,7 +16,11 @@ export const loadData = ({commit}) => {
                 // Stored data for User's funds
                 const fundsLoad = data.funds;
 
-                const weekDayArrayLoad = data.weekDayArray
+                // Stored data for the chart's labels
+                const weekDayArrayLoad = data.weekDayArray;
+
+                // Stored data for the chart's labels
+                const favoritesCounterLoad = data.favoritesCounter;
                 
                 // Stored data for Market
                 const shrimpMarketDataLoad = data.shrimpMarketData;
@@ -30,6 +34,8 @@ export const loadData = ({commit}) => {
                     fundsLoad,
 
                     weekDayArrayLoad,
+                    
+                    favoritesCounterLoad,
 
                     shrimpInventoryDataLoad,
                     
@@ -40,8 +46,10 @@ export const loadData = ({commit}) => {
                 commit('SET_STOCKS', shrimpMarketDataLoad);
                 // Sets the stored data for the User's funds and inventory from the data base
                 commit('SET_PORTFOLIO', portfolioLoad);
-                // Sets the stored data for the User's funds and inventory from the data base
+                // Sets the stored data for the User's chart X axis labels
                 commit('SET_LABELS', portfolioLoad);
+                // Sets the stored data for the User's current count of favorited items
+                commit('SET_FAV_COUNTER', portfolioLoad);
             
             }
 
