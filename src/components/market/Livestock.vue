@@ -53,10 +53,22 @@
             <div 
                 class="text-white" 
                 style="margin-top: 30%;"
-                v-show="activeStar && !shrimp.favorited"
+                v-show="activeStar && !shrimp.favorited && this.favoritesCounterGet <= 5"
             >
 
                 {{ 'Click to add to favorites' }}
+
+            </div>
+
+            <!-- Star Overlay Text -->
+            <!-- Favorites Full -->
+            <div 
+                class="text-white" 
+                style="margin-top: 30%;"
+                v-show="activeStar && !shrimp.favorited && this.favoritesCounterGet >= 6"
+            >
+
+                {{ 'Favorites List Full' }}
 
             </div>
 
@@ -103,15 +115,28 @@
             <!-- Star Icon -->
             <div class="col-6 d-flex justify-content-end pr-2 pt-2">
 
-                <!-- Add to Favorites -->
-                <font-awesome-icon 
-                    icon="star"
-                    @click="favoriteItem"
-                    @mouseover="activeStar = true"
-                    @mouseleave="activeStar = false"
-                    :class="{ 'text-warning' : activeStar , 'text-light inActiveHover': !activeStar }"
-                    v-show="!shrimp.favorited"
-                />
+                <div v-show="!shrimp.favorited">
+
+                    <!-- Add to Favorites -->
+                    <font-awesome-icon 
+                        icon="star"
+                        @click="favoriteItem"
+                        @mouseover="activeStar = true"
+                        @mouseleave="activeStar = false"
+                        :class="{ 'text-warning' : activeStar , 'text-light inActiveHover': !activeStar }"
+                        v-show="this.favoritesCounterGet <= 5"
+                    />
+
+                    <!-- Favorites Full -->
+                    <font-awesome-icon 
+                        icon="star"
+                        @mouseover="activeStar = true"
+                        @mouseleave="activeStar = false"
+                        class="text-light inActiveHover"
+                        v-show="this.favoritesCounterGet >= 6"
+                    />
+
+                </div>
 
                 <!-- Remove From Favorites -->
                 <font-awesome-icon 
@@ -183,7 +208,7 @@
 
 <script>
 
-    import {mapActions} from 'vuex';
+    import {mapGetters, mapActions} from 'vuex';
 
     export default {
         
@@ -206,6 +231,14 @@
         },
         
         computed: {
+
+            ...mapGetters({
+                
+                // Retrieves the counter for favorited items
+                favoritesCounterGet: 'favoritesCounterGet'
+                
+            }),
+            
             
             funds() {
                 
