@@ -5,6 +5,9 @@ const state = {
         'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
         'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
     ],
+
+    // Counter for keeping track of favorited items
+    favoritesMax: 1
     
 };
 
@@ -23,7 +26,23 @@ const mutations = {
         // Takes the first element from the labels array and pushes it to the end of the array
         state.weekDayArray.push(state.weekDayArray.shift());
 
-    }
+    },
+
+    // Mutation for bumping the counter up
+    'FAV_UP' (state) {
+
+        // Takes the first element from the labels array and pushes it to the end of the array
+        state.favoritesMax++;
+
+    },
+
+    // Mutation for bumping the counter up
+    'FAV_DOWN' (state) {
+
+        // Takes the first element from the labels array and pushes it to the end of the array
+        state.favoritesMax--;
+
+    },
     
 };
 
@@ -35,7 +54,23 @@ const actions = {
         // Updates X axis labels
         commit('LABEL_CHANGE');
 
-    }
+    },
+
+    // Action adding plus one to the favoritesMax
+    favUp({commit}) {
+        
+        // Bumps the counter up by one
+        commit('FAV_UP');
+
+    },
+
+    // Action adding plus one to the favoritesMax
+    favDown({commit}) {
+        
+        // Bumps the counter up by one
+        commit('FAV_DOWN');
+
+    },
     
 };
 
@@ -45,6 +80,13 @@ const getters = {
     weekDayArrayGet: state => {
         
         return state.weekDayArray;
+        
+    },
+
+    // Getter for dashboard chart X axis labels
+    favoritesMaxGet: state => {
+        
+        return state.favoritesMax;
         
     }
     
