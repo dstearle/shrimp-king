@@ -58,6 +58,10 @@
 
                 {{ 'Click to add to favorites' }}
 
+                <br>
+
+                {{ this.favoritesCounterGet + '/6' }}
+
             </div>
 
             <!-- Star Overlay Text -->
