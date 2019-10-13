@@ -96,7 +96,6 @@
                 favoritesCounterGet: 'favoritesCounterGet'
                 
             }),
-            
 
             // The filtered list for favorited shrimps
             favoritesMarket() {
