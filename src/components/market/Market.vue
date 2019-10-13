@@ -93,7 +93,7 @@
                 // Retrieves the data for market from the store
                 shrimpMarket: 'shrimpMarketDataGet',
                 // Retrieves the counter for favorited items
-                favoritesMaxGet: 'favoritesMaxGet'
+                favoritesCounterGet: 'favoritesCounterGet'
                 
             }),
             

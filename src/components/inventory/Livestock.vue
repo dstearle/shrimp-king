@@ -228,8 +228,10 @@
             ...mapActions({ 
                 
                 // Vuex action for selling shrimps
-                placeSellOrder: 'sellShrimp' 
-                
+                placeSellOrder: 'sellShrimp',
+                favUp: 'favUp',
+                favDown: 'favDown'
+
             }),
             
             // Method for selling shrimp
@@ -259,6 +261,11 @@
 
                 // Matches the id of the item to its corresponding item in the store
                 const record = this.shrimpMarket.find(element => element.id == this.shrimp.id);
+
+                // Check to see if item is favorited and adds to the counter
+                if(!this.shrimp.favorited) {this.favUp();}
+                // Detracts from the counter if unfavorited
+                else {this.favDown();}
 
                 // Toggles the store from true to false
                 record.favorited = !record.favorited
