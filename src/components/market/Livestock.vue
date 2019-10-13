@@ -183,6 +183,8 @@
 
 <script>
 
+    import {mapActions} from 'vuex';
+
     export default {
         
         props: ['shrimp'],
@@ -228,6 +230,13 @@
         },
         
         methods: {
+
+            ...mapActions({
+
+                favUp: 'favUp',
+                favDown: 'favDown'
+
+            }),
             
             buyShrimp() {
                 
@@ -252,7 +261,13 @@
             // Method for favoriting an item
             favoriteItem() {
 
+                // Toggles the item from true to false (or vice versa)
                 this.shrimp.favorited = !this.shrimp.favorited;
+                
+                // Check to see if item is favorited and adds to the counter
+                if(this.shrimp.favorited) {this.favUp();}
+                // Detracts from the counter if unfavorited
+                else {this.favDown();}
 
             },
 

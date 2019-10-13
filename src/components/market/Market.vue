@@ -91,9 +91,12 @@
             ...mapGetters({
                 
                 // Retrieves the data for market from the store
-                shrimpMarket: 'shrimpMarketDataGet'
+                shrimpMarket: 'shrimpMarketDataGet',
+                // Retrieves the counter for favorited items
+                favoritesMaxGet: 'favoritesMaxGet'
                 
             }),
+            
 
             // The filtered list for favorited shrimps
             favoritesMarket() {
