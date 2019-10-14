@@ -27,11 +27,15 @@
         <!-- Chart Favorites -->
         <div class="row py-3">
 
-            <div class="col">
+            <div class="col-4">
 
                 <div class="card">
 
-                    <div class="card-body px-5 pb-5">
+                    <div class="card-body">
+
+                        <h3>Current Favorites</h3>
+
+                        <hr>
 
                         <app-chart-favorites></app-chart-favorites>
 
