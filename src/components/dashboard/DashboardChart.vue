@@ -107,6 +107,7 @@
                                     tooltipEl.style.opacity = 0;
                                     return;
                                 }
+                                
                                 // Set caret Position
                                 tooltipEl.classList.remove('above', 'below', 'no-transform');
                                 if (tooltipModel.yAlign) {
@@ -138,6 +139,7 @@
                                     // Sets the html for body
                                     bodyLines.forEach(function(body, i) {
                                         var colors = tooltipModel.labelColors[i];
+                                        // Styling for the tooltips items
                                         var style = 'background: ' + colors.backgroundColor;
                                         style += '; border-color: ' + colors.borderColor;
                                         style += '; border-width: 2px';
@@ -241,10 +243,17 @@
                     // Creates an empty object to hold data
                     let obj = {};
                     
-                    // The items to be stored in the object
+                    // The information of the data to be stored in the object
+
+                    // The name of the item to be shown in tooltips
                     obj['label'] = this.favoritesMarket[i].name;
+                    // The text styling of the item to be shown in tooltips
+                    obj['text'] = this.favoritesMarket[i].text;
+                    // The color for that items line on the line chart
                     obj['borderColor'] = this.favoritesMarket[i].chartBorder;
+                    // The color for that items background color on the line chart
                     obj['backgroundColor']  = this.favoritesMarket[i].chartColor;
+                    // The stored prices for that item to be used as data on the chart
                     obj['data'] = this.favoritesMarket[i].weeklyPrices;
 
                     // Pushes the retrieved datasets into the chart
