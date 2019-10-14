@@ -86,6 +86,7 @@
                         legend: {
                             display: false
                         },
+
                         // Configures settings for the hover tooltips
                         tooltips: {
                             // Disable the on-canvas tooltip
@@ -116,17 +117,24 @@
                                 function getBody(bodyItem) {
                                     return bodyItem.lines;
                                 }
-                                // Set Text
-                                // You can add css/bootstrap to any of the tags for better styling
+
+                                // Tooltips HTML
+                                // For setting the html of the tooltips area
                                 if (tooltipModel.body) {
                                     var titleLines = tooltipModel.title || [];
                                     var bodyLines = tooltipModel.body.map(getBody);
+
+                                    // Starting tag for table header
                                     var innerHtml = '<thead>';
+
                                     // Sets the html for the title
                                     titleLines.forEach(function(title) {
                                         innerHtml += '<div class="m-1"><h4>' + title + '</h4></div>';
                                     });
+
+                                    // End tag for table header and start tag for table body header
                                     innerHtml += '</thead><tbody>';
+
                                     // Sets the html for body
                                     bodyLines.forEach(function(body, i) {
                                         var colors = tooltipModel.labelColors[i];
@@ -136,13 +144,19 @@
                                         var span = '<span style="' + style + '"></span>';
                                         innerHtml += '<div class="m-1">' + span + body + '</div>';
                                     });
+
+                                    // End tag for the table body
                                     innerHtml += '</tbody>';
+
                                     var tableRoot = tooltipEl.querySelector('table');
                                     tableRoot.innerHTML = innerHtml;
                                 }
+
                                 // `this` will be the overall tooltip
                                 var position = this._chart.canvas.getBoundingClientRect();
+
                                 // This is where you will do most of the styling for the tooltips
+
                                 // Sets opacity for the whole tooltip area
                                 tooltipEl.style.opacity = 1;
                                 // Helps set position for tooltip area
@@ -167,6 +181,7 @@
                                 tooltipEl.style.borderRadius = "20px";
                             }
                         },
+                        
                         // Configures the X and Y axes
                         scales:{
                             // Allows you to customize the X axis
