@@ -129,11 +129,11 @@
 
                                     // Sets the html for the title
                                     titleLines.forEach(function(title) {
-                                        innerHtml += '<div class="m-1"><h4>' + title + '</h4></div>';
+                                        innerHtml += '<div class="m-1 text-white"><h5>' + title + '</h5></div>';
                                     });
 
                                     // End tag for table header and start tag for table body header
-                                    innerHtml += '</thead><tbody>';
+                                    innerHtml += '</thead><hr class="mt-0" style="border-color:#96d0f7"><tbody>';
 
                                     // Sets the html for body
                                     bodyLines.forEach(function(body, i) {
@@ -142,7 +142,7 @@
                                         style += '; border-color: ' + colors.borderColor;
                                         style += '; border-width: 2px';
                                         var span = '<span style="' + style + '"></span>';
-                                        innerHtml += '<div class="m-1">' + span + body + '</div>';
+                                        innerHtml += '<h6 class="m-1 text-white">' + span + body + '</h6>';
                                     });
 
                                     // End tag for the table body
@@ -162,7 +162,7 @@
                                 // Helps set position for tooltip area
                                 tooltipEl.style.position = "absolute";
                                 // Sets background color for the tooltip area
-                                tooltipEl.style.backgroundColor = "white";
+                                tooltipEl.style.backgroundColor = "rgba(0,0,0,0.7)";
                                 // Settings for caret position?
                                 tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
                                 tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
@@ -176,12 +176,12 @@
                                 // Needs documentation
                                 tooltipEl.style.pointerEvents = "none";
                                 // Sets the width and color of the toolips border
-                                tooltipEl.style.border = "3px solid rgb(0, 7, 112)";
+                                tooltipEl.style.border = "1px solid rgba(195, 197, 199)";
                                 // Rounds the corners of the tooltip area
-                                tooltipEl.style.borderRadius = "20px";
+                                tooltipEl.style.borderRadius = "0px";
                             }
                         },
-                        
+
                         // Configures the X and Y axes
                         scales:{
                             // Allows you to customize the X axis
