@@ -1,24 +1,19 @@
 <template>
     
-    <div>
+    <!-- Favorites List -->
+    <div v-show="favoritesMarket.length > 0">
 
-        <!-- Favorites List -->
-        <div class="mb-5" v-show="favoritesMarket.length > 0">
-
-            <!-- Shrimp List -->
-            <div class="card-columns">
-                
-                <app-favorite-slots 
-                    v-for="shrimp in favoritesMarket" 
-                    :shrimp="shrimp" 
-                    v-bind:key="shrimp.id" 
-                    v-show="shrimp.quantity > 0"
-                ></app-favorite-slots>
-                
-            </div>
-
+        <!-- Shrimp List -->
+        <div class="col">
+            
+            <app-favorite-slots 
+                v-for="shrimp in favoritesMarket"
+                :shrimp="shrimp" 
+                v-bind:key="shrimp.id" 
+            ></app-favorite-slots>
+            
         </div>
-        
+
     </div>
     
 </template>
