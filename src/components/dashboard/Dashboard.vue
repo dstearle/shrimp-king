@@ -24,7 +24,7 @@
 
         </div>
 
-        <!-- Chart Favorites -->
+        <!-- Dashboard Favorites -->
         <div class="row py-3">
 
             <div class="col-4">
@@ -37,7 +37,7 @@
 
                         <hr>
 
-                        <app-chart-favorites></app-chart-favorites>
+                        <app-dashboard-favorites></app-dashboard-favorites>
 
                     </div>
 
@@ -55,7 +55,7 @@
 
     import SaveLoad from "./SaveLoad.vue"
     import DashboardChart from "./DashboardChart.vue"
-    import ChartFavorites from "./ChartFavorites.vue"
+    import DashboardFavorites from "./dbFavorites/DashBoardFavorites.vue"
 
     export default {
 
@@ -63,7 +63,7 @@
             
             appSaveLoad: SaveLoad,
             appDashboardChart: DashboardChart,
-            appChartFavorites: ChartFavorites,
+            appDashboardFavorites: DashboardFavorites,
             
         },
         
