@@ -1,10 +1,10 @@
 <template>
     
     <div class="row mb-3" :class="shrimp.text">
-           
+
+        <!-- Shrimp Photo --> 
         <div class="mr-4">
 
-            <!-- Shrimp Photo -->
             <img 
                 :src="shrimp.photo" 
                 class="shrimp-photo"
@@ -13,19 +13,36 @@
 
         </div>
 
-        <div class="">
+        <div>
 
+            <!-- Title -->
             <div class="row m-0">
 
-                <!-- Title -->
-                <h6 class="align-self-center m-0"> {{ shrimp.name }} </h6>
+                <h6 class="align-self-center m-0">
+
+                    <u>{{ shrimp.name }}</u>
+
+                </h6>
 
             </div>
 
-            <div class="row m-0">
+            <!-- Remove From Favorites -->
+            <div 
+                @click="favoriteItem"
+                @mouseover="activeStar = true"
+                @mouseleave="activeStar = false"
+                class="row pt-1 m-0"
+            >
 
-                <!-- Title -->
-                <p class="align-self-center m-0"> remove </p>
+                <!-- Star Icon -->
+                <font-awesome-icon 
+                    icon="star"
+                    class="align-self-center m-0"
+                    :class="{ 'text-secondary inActiveHover' : activeStar , 'text-warning': !activeStar }"
+                />
+
+                <!-- Remove Text -->
+                <p class="align-self-center m-0">  remove </p>
 
             </div>
 
@@ -42,6 +59,16 @@
     export default {
         
         props: ['shrimp'],
+
+        data() {
+            
+            return {
+
+                activeStar: false,
+                
+            }
+            
+        },
         
         computed: {
 
@@ -62,26 +89,6 @@
                 favDown: 'favDown'
 
             }),
-            
-            buyShrimp() {
-                
-                const order = {
-                    
-                    shrimpId: this.shrimp.id,
-                        
-                    shrimpPrice: this.shrimp.price,
-                        
-                    quantity: this.quantity
-                    
-                };
-                
-                // Action from shrimpMarket.js
-                this.$store.dispatch('buyShrimp', order);
-                
-                // Sets input for quantity back to zero after purchase
-                this.quantity = 0;
-                
-            },
 
             // Method for favoriting an item
             favoriteItem() {
@@ -99,12 +106,8 @@
             // Method for icon hover toggles
             mouseOver() {
 
-                // Toggles info icon classes
-                this.activeInfo = !this.activeInfo;
                 // Toggles star classes
                 this.activeStar = !this.activeStar;
-                // Toggles tags classes
-                this.activeTags = !this.activeTags;
 
             },
             
