@@ -35,7 +35,9 @@
                 // Retrieves the data for market from the store
                 shrimpMarket: 'shrimpMarketDataGet',
                 // Retrieves the dashboard chart X axis labels
-                weekDayArray: 'weekDayArrayGet'
+                weekDayArray: 'weekDayArrayGet',
+                // Retrieves the counter for favorited items
+                favoritesCounterGet: 'favoritesCounterGet'
                 
             }),
 
@@ -293,6 +295,22 @@
 
             // Checks for changes in the store for shrimpMarket
             shrimpMarket: {
+
+                handler() {
+
+                    // Removes the old chart
+                    this.chart.destroy();
+                    // Renders a new chart on load
+                    this.initializeChart();
+                    // Loads in the data for the chart
+                    this.chartDatasets();
+
+                }
+
+            },
+
+            // Checks for changes in the store for favoritesCounter
+            favoritesCounterGet: {
 
                 handler() {
 
