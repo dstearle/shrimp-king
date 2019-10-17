@@ -52,7 +52,7 @@ The Dashboard Chart:
 
 - Navbar: 
 - About Section:
-- Dashboard Section: dynamic Y axis for chart
+- Dashboard Section: dynamic Y axis for chart, finish dashboard favorites list, make chart mobile friendly
 - Inventory Section:
 - Market Section:
 - Misc:
@@ -61,7 +61,6 @@ The Dashboard Chart:
 
 **Future Developments:**
 
-- Dashboard favorites list
 - Search filter for tags
 - Collapsable categories
 - Ghost shrimp for skeleton screen demo
