@@ -14,7 +14,24 @@
 
                     <div class="card-body px-5 pb-5">
 
-                        <!-- <app-bi-weekly-chart></app-bi-weekly-chart> -->
+                        <app-bi-weekly-chart></app-bi-weekly-chart>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Dashboard Chart -->
+        <div class="row py-3">
+
+            <div class="col">
+
+                <div class="card">
+
+                    <div class="card-body px-5 pb-5">
 
                         <app-current-week-chart></app-current-week-chart>
 
@@ -56,10 +73,8 @@
 <script>
 
     import SaveLoad from "./SaveLoad.vue"
-
     import BiWeeklyChart from "./dbCharts/BiWeeklyChart.vue"
     import CurrentWeekChart from "./dbCharts/CurrentWeekChart.vue"
-
     import DashboardFavorites from "./dbFavorites/DashBoardFavorites.vue"
 
     export default {

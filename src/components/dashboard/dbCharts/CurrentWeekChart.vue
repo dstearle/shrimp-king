@@ -12,7 +12,7 @@
         <!-- Chart -->
         <div class="row">
 
-            <canvas id="dashboardChart" height="300px" width="800px"></canvas>
+            <canvas id="currentWeekChart" height="300px" width="800px"></canvas>
 
         </div>
 
@@ -59,7 +59,7 @@
             // All that jazz to make a new chart
             initializeChart() {
 
-                const ctx = document.getElementById('dashboardChart').getContext('2d');
+                const ctx = document.getElementById('currentWeekChart').getContext('2d');
                 
                 // Creates the gradient for the fill background
                 let gradientStroke = ctx.createLinearGradient(0, 250, 0, 100);
@@ -75,7 +75,7 @@
                     // The data for our dataset
                     data: {
                         // Labels for the X axis
-                        labels: this.weekDayArray.slice(0, 7),
+                        labels: this.weekDayArray.slice(7, 14),
                         // The data to be shown in the chart
                         datasets: []
                     },
@@ -256,7 +256,7 @@
                     // The color for that items background color on the line chart
                     obj['backgroundColor']  = this.favoritesMarket[i].chartColor;
                     // The stored prices for that item to be used as data on the chart
-                    obj['data'] = this.favoritesMarket[i].weeklyPrices;
+                    obj['data'] = this.favoritesMarket[i].weeklyPrices.slice(7, 14);
 
                     // Pushes the retrieved datasets into the chart
                     this.chart.data.datasets.push(obj);
@@ -265,6 +265,7 @@
 
                 // Renders the chart with new data
                 this.chart.update();
+                console.log("lool")
 
             },
 
@@ -286,8 +287,18 @@
 
                 handler() {
 
+                    // Note: This is a work around till I can figure out why update() doesnt work when using 
+                    // .slice(7, 14); on the labels and data (at lines 78 & 259)
+                    
+                    // Removes the old chart
+                    this.chart.destroy();
+                    // Renders a new chart on load
+                    this.initializeChart();
+                    // Loads in the data for the chart
+                    this.chartDatasets();
+
                     // Renders the chart again with new data
-                    this.chart.update();
+                    // this.chart.update();
 
                 }
 
