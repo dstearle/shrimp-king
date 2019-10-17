@@ -5,14 +5,14 @@
         <!-- Chart Title -->
         <div class="row pb-3">
 
-            <h6>Current Week's Prices</h6>
+            <h6>Previous Week's Prices</h6>
             
         </div>
 
         <!-- Chart -->
         <div class="row">
 
-            <canvas id="currentWeekChart" height="300px" width="800px"></canvas>
+            <canvas id="previousWeekChart" height="300px" width="800px"></canvas>
 
         </div>
 
@@ -59,7 +59,7 @@
             // All that jazz to make a new chart
             initializeChart() {
 
-                const ctx = document.getElementById('currentWeekChart').getContext('2d');
+                const ctx = document.getElementById('previousWeekChart').getContext('2d');
                 
                 // Creates the gradient for the fill background
                 let gradientStroke = ctx.createLinearGradient(0, 250, 0, 100);
@@ -75,7 +75,7 @@
                     // The data for our dataset
                     data: {
                         // Labels for the X axis
-                        labels: this.weekDayArray.slice(7, 14),
+                        labels: this.weekDayArray.slice(0, 7),
                         // The data to be shown in the chart
                         datasets: []
                     },
@@ -256,7 +256,7 @@
                     // The color for that items background color on the line chart
                     obj['backgroundColor']  = this.favoritesMarket[i].chartColor;
                     // The stored prices for that item to be used as data on the chart
-                    obj['data'] = this.favoritesMarket[i].weeklyPrices.slice(7, 14);
+                    obj['data'] = this.favoritesMarket[i].weeklyPrices.slice(0, 7);
 
                     // Pushes the retrieved datasets into the chart
                     this.chart.data.datasets.push(obj);
@@ -287,8 +287,8 @@
                 handler() {
 
                     // Note: This is a work around till I can figure out why update() doesnt work when using 
-                    // .slice(7, 14); on the labels and data (at lines 78 & 259)
-
+                    // .slice(0, 7); on the labels and data (at lines 78 & 259)
+                    
                     // Removes the old chart
                     this.chart.destroy();
                     // Renders a new chart on load
