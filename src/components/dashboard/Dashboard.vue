@@ -14,7 +14,9 @@
 
                     <div class="card-body px-5 pb-5">
 
-                        <app-dashboard-chart></app-dashboard-chart>
+                        <!-- <app-bi-weekly-chart></app-bi-weekly-chart> -->
+
+                        <app-current-week-chart></app-current-week-chart>
 
                     </div>
 
@@ -27,7 +29,7 @@
         <!-- Dashboard Favorites -->
         <div class="row py-3">
 
-            <div class="col-4">
+            <div class="col-md-12 col-lg-4">
 
                 <div class="card">
 
@@ -54,7 +56,10 @@
 <script>
 
     import SaveLoad from "./SaveLoad.vue"
-    import DashboardChart from "./DashboardChart.vue"
+
+    import BiWeeklyChart from "./dbCharts/BiWeeklyChart.vue"
+    import CurrentWeekChart from "./dbCharts/CurrentWeekChart.vue"
+
     import DashboardFavorites from "./dbFavorites/DashBoardFavorites.vue"
 
     export default {
@@ -62,7 +67,8 @@
         components: {
             
             appSaveLoad: SaveLoad,
-            appDashboardChart: DashboardChart,
+            appBiWeeklyChart: BiWeeklyChart,
+            appCurrentWeekChart: CurrentWeekChart,
             appDashboardFavorites: DashboardFavorites,
             
         },
