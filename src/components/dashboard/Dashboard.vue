@@ -5,7 +5,7 @@
         <!-- Save & Load Buttons -->
         <app-save-load></app-save-load>
         
-        <!-- Dashboard Chart -->
+        <!-- BiWeekly Chart -->
         <div class="row py-3">
 
             <div class="col">
@@ -24,7 +24,7 @@
 
         </div>
 
-        <!-- Dashboard Chart -->
+        <!-- Current Week Chart -->
         <div class="row py-3">
 
             <div class="col">
@@ -34,6 +34,25 @@
                     <div class="card-body px-5 pb-5">
 
                         <app-current-week-chart></app-current-week-chart>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Previous Week Chart -->
+        <div class="row py-3">
+
+            <div class="col">
+
+                <div class="card">
+
+                    <div class="card-body px-5 pb-5">
+
+                        <app-previous-week-chart></app-previous-week-chart>
 
                     </div>
 
@@ -75,6 +94,7 @@
     import SaveLoad from "./SaveLoad.vue"
     import BiWeeklyChart from "./dbCharts/BiWeeklyChart.vue"
     import CurrentWeekChart from "./dbCharts/CurrentWeekChart.vue"
+    import PreviousWeekChart from "./dbCharts/PreviousWeekChart.vue"
     import DashboardFavorites from "./dbFavorites/DashBoardFavorites.vue"
 
     export default {
@@ -84,6 +104,7 @@
             appSaveLoad: SaveLoad,
             appBiWeeklyChart: BiWeeklyChart,
             appCurrentWeekChart: CurrentWeekChart,
+            appPreviousWeekChart: PreviousWeekChart,
             appDashboardFavorites: DashboardFavorites,
             
         },
