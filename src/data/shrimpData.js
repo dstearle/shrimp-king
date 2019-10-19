@@ -412,12 +412,12 @@ export default [
             chartColor: 'rgb(52, 58, 64, 0.5)',
         },
 
-        // OE Blue Tiger Shrimp
+        // Blue Tiger Shrimp
         { 
             id: 11, 
-            name: 'OE Blue Tiger Shrimp',
+            name: 'Blue Tiger Shrimp',
             photo: require("./../assets/images/shrimpPhotos/oeBlueTiger.jpg"),
-            alt: 'OE Blue Tiger Shrimp Image',
+            alt: 'Blue Tiger Shrimp Image',
 
             // Icons
             overlayText: 'A dark blue tiger shrimp with glowing orange eyes.',

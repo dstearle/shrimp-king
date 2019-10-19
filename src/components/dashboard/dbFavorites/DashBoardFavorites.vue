@@ -1,17 +1,37 @@
 <template>
-    
-    <!-- Favorites List -->
-    <div v-show="favoritesMarket.length > 0">
 
-        <!-- Shrimp List -->
-        <div class="col">
-            
-            <app-favorite-slots 
-                v-for="shrimp in favoritesMarket"
-                :shrimp="shrimp" 
-                v-bind:key="shrimp.id" 
-            ></app-favorite-slots>
-            
+    <div class="row pt-2">
+
+        <div class="col-md-12 col-lg-4">
+
+            <div class="card dbFavHeight">
+
+                <div class="card-body">
+
+                    <h3>Current Favorites</h3>
+
+                    <hr>
+
+                    <!-- Favorites List -->
+                    <div v-show="favoritesMarket.length > 0">
+
+                        <!-- Shrimp List -->
+                        <div class="col">
+                            
+                            <app-favorite-slots 
+                                v-for="shrimp in favoritesMarket"
+                                :shrimp="shrimp" 
+                                v-bind:key="shrimp.id" 
+                            ></app-favorite-slots>
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
     </div>
@@ -58,3 +78,9 @@
     }
 
 </script>
+
+<style scoped>
+
+    .dbFavHeight { height: 590px;}
+
+</style>
