@@ -1,6 +1,6 @@
 <template>
 
-    <div class="row py-3">
+    <div class="row pt-2 pb-3">
 
         <div class="col">
 

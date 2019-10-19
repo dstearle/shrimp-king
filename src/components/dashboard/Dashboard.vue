@@ -24,7 +24,7 @@
         </div>
 
         <!-- Dashboard Favorites -->
-        <div class="row py-3">
+        <div class="row pt-2">
 
             <div class="col-md-12 col-lg-4">
 
@@ -63,9 +63,13 @@
         components: {
             
             appSaveLoad: SaveLoad,
+
             appBiWeeklyChart: BiWeeklyChart,
+
             appCurrentWeekChart: CurrentWeekChart,
+
             appPreviousWeekChart: PreviousWeekChart,
+            
             appDashboardFavorites: DashboardFavorites,
             
         },
