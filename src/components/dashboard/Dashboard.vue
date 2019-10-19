@@ -6,59 +6,20 @@
         <app-save-load></app-save-load>
         
         <!-- BiWeekly Chart -->
-        <div class="row py-3">
+        <div class="regularChart">
 
-            <div class="col">
-
-                <div class="card">
-
-                    <div class="card-body px-5 pb-5">
-
-                        <app-bi-weekly-chart></app-bi-weekly-chart>
-
-                    </div>
-
-                </div>
-
-            </div>
+            <app-bi-weekly-chart></app-bi-weekly-chart>
 
         </div>
 
-        <!-- Current Week Chart -->
-        <div class="row py-3">
+        <!-- Charts For Mobile Views -->
+        <div class="mobileCharts">
 
-            <div class="col">
+            <!-- Current Week Chart -->
+            <app-current-week-chart></app-current-week-chart>
 
-                <div class="card">
-
-                    <div class="card-body px-5 pb-5">
-
-                        <app-current-week-chart></app-current-week-chart>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Previous Week Chart -->
-        <div class="row py-3">
-
-            <div class="col">
-
-                <div class="card">
-
-                    <div class="card-body px-5 pb-5">
-
-                        <app-previous-week-chart></app-previous-week-chart>
-
-                    </div>
-
-                </div>
-
-            </div>
+            <!-- Previous Week Chart -->
+            <app-previous-week-chart></app-previous-week-chart>
 
         </div>
 
@@ -112,3 +73,58 @@
     }
 
 </script>
+
+<style scoped>
+
+    @media (max-width: 575px) {
+        .regularChart {
+            height:0;
+            overflow:hidden;
+        }
+        .mobileCharts {
+            height:auto;
+            overflow:inherit;
+        }
+    }
+    @media (min-width: 576px) {
+        .regularChart {
+            height:0;
+            overflow:hidden;
+        }
+        .mobileCharts {
+            height:auto;
+            overflow:inherit;
+        }
+    }
+    @media (min-width: 768px) {
+        .regularChart {
+            height:0;
+            overflow:hidden;
+        }
+        .mobileCharts {
+            height:auto;
+            overflow:inherit;
+        }
+    }
+    @media (min-width: 992px) {
+        .regularChart {
+            height:auto;
+            overflow:inherit;
+        }
+        .mobileCharts {
+            height:0;
+            overflow:hidden;
+        }
+    }
+    @media (min-width: 1200px) {
+        .regularChart {
+            height:auto;
+            overflow:inherit;
+        }
+        .mobileCharts {
+            height:0;
+            overflow:hidden;
+        }
+    }
+
+</style>
