@@ -1,18 +1,30 @@
 <template>
 
-    <div>
+    <div class="row py-3">
 
-        <!-- Chart Title -->
-        <div class="row pb-3">
+        <div class="col">
 
-            <h6>Previous Week's Prices</h6>
-            
-        </div>
+            <div class="card">
 
-        <!-- Chart -->
-        <div class="row">
+                <div class="card-body px-5 pb-5">
 
-            <canvas id="previousWeekChart" height="300px" width="800px"></canvas>
+                    <!-- Chart Title -->
+                    <div class="row pb-3">
+
+                        <h6>Previous Week's Prices</h6>
+                        
+                    </div>
+
+                    <!-- Chart -->
+                    <div class="row">
+
+                        <canvas id="previousWeekChart" height="300px" width="800px"></canvas>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 

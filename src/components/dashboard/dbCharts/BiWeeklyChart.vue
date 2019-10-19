@@ -1,22 +1,34 @@
 <template>
 
-    <div>
+    <div class="row py-3">
 
-        <!-- Chart Title -->
-        <div class="row pb-3">
+            <div class="col">
 
-            <h1>Biweekly Prices</h1>
-            
+                <div class="card">
+
+                    <div class="card-body px-5 pb-5">
+
+                        <!-- Chart Title -->
+                        <div class="row pb-3">
+
+                            <h1>Biweekly Prices</h1>
+                            
+                        </div>
+
+                        <!-- Chart -->
+                        <div class="row">
+
+                            <canvas id="dashboardChart" height="300px" width="800px"></canvas>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-
-        <!-- Chart -->
-        <div class="row">
-
-            <canvas id="dashboardChart" height="300px" width="800px"></canvas>
-
-        </div>
-
-    </div>
 
 </template>
 
