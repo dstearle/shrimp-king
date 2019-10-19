@@ -24,27 +24,7 @@
         </div>
 
         <!-- Dashboard Favorites -->
-        <div class="row pt-2">
-
-            <div class="col-md-12 col-lg-4">
-
-                <div class="card">
-
-                    <div class="card-body">
-
-                        <h3>Current Favorites</h3>
-
-                        <hr>
-
-                        <app-dashboard-favorites></app-dashboard-favorites>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
+        <app-dashboard-favorites></app-dashboard-favorites>
         
     </div>
     
@@ -69,7 +49,7 @@
             appCurrentWeekChart: CurrentWeekChart,
 
             appPreviousWeekChart: PreviousWeekChart,
-            
+
             appDashboardFavorites: DashboardFavorites,
             
         },
