@@ -52,7 +52,7 @@ The Dashboard Chart:
 
 - Navbar: 
 - About Section:
-- Dashboard Section: dynamic Y axis for chart, finish dashboard favorites list, make chart mobile friendly
+- Dashboard Section: dynamic Y axis for chart
 - Inventory Section:
 - Market Section:
 - Misc:
