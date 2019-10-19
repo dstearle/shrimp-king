@@ -11,7 +11,7 @@
                         <!-- Chart Title -->
                         <div class="row pb-3">
 
-                            <h6>Current Week's Prices</h6>
+                            <h3>Current Prices</h3>
                             
                         </div>
 
@@ -205,14 +205,14 @@
                                 
                                 gridLines: {
                                     lineWidth: [
-                                        1, 1, 1, 1, 1,
+                                        3, 1, 1, 1, 1,
                                         1, 3, 1, 1, 1,
                                         1, 1, 1, 3,
                                     ],
                                     color: [
-                                            '#73737a', '#73737a', '#73737a', '#73737a', '#73737a', 
-                                            '#73737a', '#73737a', '#73737a', '#73737a', '#73737a', 
-                                            '#73737a', '#73737a', '#73737a', '#73737a', '#73737a',
+                                            '#73737a', '#bdbdc1', '#bdbdc1', '#bdbdc1', '#bdbdc1', 
+                                            '#bdbdc1', '#73737a', '#73737a', '#bdbdc1', '#bdbdc1', 
+                                            '#bdbdc1', '#bdbdc1', '#bdbdc1', '#73737a', '#73737a',
                                     ],
                                     tickMarkLength: 0,
                                 },

@@ -2,8 +2,8 @@ const state = {
     
     // Array to hold the labels for the chart
     weekDayArray:  [
-        'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
-        'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
+        'SUN', 'MON', 'TUES', 'WEDS', 'THUR', 'FRI', 'SAT',
+        'SUN', 'MON', 'TUES', 'WEDS', 'THUR', 'FRI', 'SAT',
     ],
 
     // Counter for keeping track of favorited items

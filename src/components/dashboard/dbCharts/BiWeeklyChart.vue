@@ -11,7 +11,7 @@
                         <!-- Chart Title -->
                         <div class="row pb-3">
 
-                            <h1>Biweekly Prices</h1>
+                            <h3>Biweekly Prices</h3>
                             
                         </div>
 
@@ -205,14 +205,14 @@
                                 
                                 gridLines: {
                                     lineWidth: [
-                                        1, 1, 1, 1, 1,
-                                        1, 3, 1, 1, 1,
+                                        3, 1, 1, 1, 1,
+                                        1, 3, 3, 1, 1,
                                         1, 1, 1, 3,
                                     ],
                                     color: [
-                                            '#73737a', '#73737a', '#73737a', '#73737a', '#73737a', 
-                                            '#73737a', '#73737a', '#73737a', '#73737a', '#73737a', 
-                                            '#73737a', '#73737a', '#73737a', '#73737a', '#73737a',
+                                            '#73737a', '#bdbdc1', '#bdbdc1', '#bdbdc1', '#bdbdc1', 
+                                            '#bdbdc1', '#73737a', '#73737a', '#bdbdc1', '#bdbdc1', 
+                                            '#bdbdc1', '#bdbdc1', '#bdbdc1', '#73737a', '#73737a',
                                     ],
                                     tickMarkLength: 0,
                                 },
