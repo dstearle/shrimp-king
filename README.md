@@ -55,7 +55,7 @@ The Dashboard Chart:
 - Dashboard Section: dynamic Y axis for chart
 - Inventory Section:
 - Market Section:
-- Misc:
+- Misc: solve issue with responsiveness
 
 <br>
 
