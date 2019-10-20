@@ -64,6 +64,7 @@
         .regularChart {
             height:0;
             overflow:hidden;
+            width: 0;
         }
         .mobileCharts {
             height:auto;
@@ -74,6 +75,7 @@
         .regularChart {
             height:0;
             overflow:hidden;
+            width: 0;
         }
         .mobileCharts {
             height:auto;
@@ -84,6 +86,7 @@
         .regularChart {
             height:0;
             overflow:hidden;
+            width: 0;
         }
         .mobileCharts {
             height:auto;
@@ -94,6 +97,7 @@
         .regularChart {
             height:auto;
             overflow:inherit;
+            width: auto;
         }
         .mobileCharts {
             height:0;
@@ -104,6 +108,7 @@
         .regularChart {
             height:auto;
             overflow:inherit;
+            width: auto;
         }
         .mobileCharts {
             height:0;
