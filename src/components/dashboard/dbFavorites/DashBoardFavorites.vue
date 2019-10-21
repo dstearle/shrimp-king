@@ -25,7 +25,8 @@
                             ></app-favorite-slots>
 
                             <app-empty-slots 
-                                 
+                                v-for="n in emptySlotsLength"
+                                v-bind:key="n"
                             ></app-empty-slots>
                             
                         </div>
@@ -79,6 +80,12 @@
                 return arr.filter(shrimp => shrimp.favorited != false)
                 
             },
+
+            emptySlotsLength() {
+
+                return 6 - this.favoritesMarket.length;
+
+            }
             
         }
         
