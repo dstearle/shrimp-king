@@ -23,6 +23,10 @@
                                 :shrimp="shrimp" 
                                 v-bind:key="shrimp.id" 
                             ></app-favorite-slots>
+
+                            <app-empty-slots 
+                                 
+                            ></app-empty-slots>
                             
                         </div>
 
@@ -42,12 +46,15 @@
 
     import {mapGetters} from 'vuex';
     import FavoriteSlots from './FavoriteSlots.vue';
+    import EmptySlots from './EmptySlots.vue';
 
     export default {
 
         components: {
             
-            appFavoriteSlots: FavoriteSlots
+            appFavoriteSlots: FavoriteSlots,
+
+            appEmptySlots: EmptySlots
             
         },
         
