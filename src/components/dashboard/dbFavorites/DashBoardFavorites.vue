@@ -13,7 +13,7 @@
                     <hr>
 
                     <!-- Favorites List -->
-                    <div v-show="favoritesMarket.length > 0">
+                    <div>
 
                         <!-- Shrimp List -->
                         <div class="col">
@@ -21,12 +21,12 @@
                             <app-favorite-slots 
                                 v-for="shrimp in favoritesMarket"
                                 :shrimp="shrimp" 
-                                v-bind:key="shrimp.id" 
+                                v-bind:key="shrimp.name" 
                             ></app-favorite-slots>
 
                             <app-empty-slots 
-                                v-for="n in emptySlotsLength"
-                                v-bind:key="n"
+                                v-for="(item, index) in emptySlotsLength"
+                                v-bind:key="index"
                             ></app-empty-slots>
                             
                         </div>
@@ -81,9 +81,18 @@
                 
             },
 
+            // Figures out the amount of empty slots for the dashboard favorites list
             emptySlotsLength() {
 
-                return 6 - this.favoritesMarket.length;
+                // If there are no favorited items fill the list with empty slots
+                if(this.favoritesMarket.length == 0) {
+
+                    return 6;
+
+                }
+
+                // Returns the number of empty slots if there are favorited items
+                else { return 6 - this.favoritesMarket.length; }
 
             }
             
