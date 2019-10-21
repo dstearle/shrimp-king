@@ -42,7 +42,7 @@
                 />
 
                 <!-- Remove Text -->
-                <p class="align-self-center m-0">  remove </p>
+                <p class="align-self-center m-0 ml-1"> Remove </p>
 
             </div>
 
