@@ -69,6 +69,8 @@
                                 The dashboard page is where the user can save their current progress, load a previously saved game or end they fiscal day. 
                                 Ending the day will randomize the prices and available quantities for shrimp in the market. 
                                 The prices for shrimp you purchased in your inventory will also match their current market prices.
+                                The dashboard also showcases a line chart displaying the prices of favorited shrimp over a period of two weeks.
+                                Adding or removing shrimp to your favorites list will add or remove them from the chart regardless what page you are on.
                             </p>
 
                             <!-- Inventory Description -->
@@ -116,6 +118,8 @@
                                 So if you favorite an item in your Inventory, said item will also be added to favorites on the Market page.
                                 This is because each item has a data object with a boolean of true or false.
                                 Through Vuex the boolean in said data object is toggled in the store so any page making use of the favorites system can correctly keep track of what items are currently being favorited.
+                                You are allowed to favorite up to six items, as you add items to your favorites list a counter showing your current amount of available slots will apear when you hover over the star icon.
+                                If your favorites list is full hovering over the star icon will inform you that you must remove items from favorites in order to add new ones.
                             </p>
 
                             <!-- Dashboard Chart Description -->
