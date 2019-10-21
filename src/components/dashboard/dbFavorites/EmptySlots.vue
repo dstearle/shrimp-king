@@ -37,7 +37,7 @@
                 />
 
                 <!-- Remove Text -->
-                <p class="align-self-center m-0"> Add</p>
+                <p class="align-self-center m-0 ml-1"> Add </p>
 
             </div>
 
