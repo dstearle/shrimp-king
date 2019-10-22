@@ -25,6 +25,11 @@
 
         <!-- Dashboard Favorites -->
         <app-dashboard-favorites></app-dashboard-favorites>
+
+        <app-favorites-modal
+            v-show="isFavModalVisible"
+            @close="closeFavModal">
+        </app-favorites-modal>
         
     </div>
     
@@ -37,6 +42,7 @@
     import CurrentWeekChart from "./dbCharts/CurrentWeekChart.vue"
     import PreviousWeekChart from "./dbCharts/PreviousWeekChart.vue"
     import DashboardFavorites from "./dbFavorites/DashBoardFavorites.vue"
+    import FavoritesModal from "./dbFavorites/FavoritesModal.vue"
 
     export default {
 
@@ -51,6 +57,8 @@
             appPreviousWeekChart: PreviousWeekChart,
 
             appDashboardFavorites: DashboardFavorites,
+
+            appFavoritesModal: FavoritesModal
             
         },
         

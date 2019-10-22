@@ -7,7 +7,10 @@ const state = {
     ],
 
     // Counter for keeping track of favorited items
-    favoritesCounter: 1
+    favoritesCounter: 1,
+
+    // Determines if favorites modal for dashboard is visible
+    isFavModalVisible: false,
     
 };
 
@@ -50,6 +53,14 @@ const mutations = {
         state.favoritesCounter--;
 
     },
+
+    // Mutation for toggling the state of the dashboard favorites modal
+    'FAV_MODAL' (state) {
+
+        // Takes the first element from the labels array and pushes it to the end of the array
+        state.isFavModalVisible = !state.isFavModalVisible;
+
+    },
     
 };
 
@@ -78,6 +89,14 @@ const actions = {
         commit('FAV_DOWN');
 
     },
+
+    // Action adding plus one to the favoritesMax
+    favModalToggle({commit}) {
+        
+        // Bumps the counter up by one
+        commit('FAV_MODAL');
+
+    },
     
 };
 
@@ -95,7 +114,14 @@ const getters = {
         
         return state.favoritesCounter;
         
-    }
+    },
+
+    // Getter for the state of the dashboard favorites modal
+    isFavModalVisibleGet: state => {
+        
+        return state.isFavModalVisible;
+        
+    },
     
 };
 

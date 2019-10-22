@@ -24,7 +24,7 @@
                                 v-bind:key="shrimp.name" 
                             ></app-favorite-slots>
 
-                            <app-empty-slots 
+                            <app-empty-slots
                                 v-for="(item, index) in emptySlotsLength"
                                 v-bind:key="index"
                             ></app-empty-slots>
