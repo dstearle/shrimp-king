@@ -3,10 +3,7 @@
     <div class="row mb-3 text-secondary">
 
         <!-- Empty Photo --> 
-        <div class="mr-4 empty-photo">
-
-
-        </div>
+        <div class="mr-4 empty-photo"></div>
 
         <div>
 
@@ -21,9 +18,9 @@
 
             </div>
 
-            <!-- Remove From Favorites -->
+            <!-- Select From Favorites (Opens Modal) -->
             <div 
-                @click="this.showFavModal"
+                @click="favModalToggle"
                 @mouseover="activeStar = true"
                 @mouseleave="activeStar = false"
                 class="row pt-1 m-0"
@@ -36,7 +33,7 @@
                     :class="{ 'text-secondary inActiveHover' : !activeStar , 'text-warning': activeStar }"
                 />
 
-                <!-- Remove Text -->
+                <!-- Add Text -->
                 <p class="align-self-center m-0 ml-1"> Add </p>
 
             </div>
@@ -80,8 +77,11 @@
 
             ...mapActions({
 
+                // Actions for bumping up/down the favorites counter
                 favUp: 'favUp',
-                favDown: 'favDown'
+                favDown: 'favDown',
+                // Toggles the boolean for the dashboard favorites modal
+                favModalToggle: 'favModalToggle'
 
             }),
 
@@ -105,14 +105,6 @@
                 this.activeStar = !this.activeStar;
 
             },
-
-            // Shows the modal for picking new items for the favorites list
-            showFavModal() {
-
-                this.isFavModalVisible = true;
-
-            },
-
             
         }
         
