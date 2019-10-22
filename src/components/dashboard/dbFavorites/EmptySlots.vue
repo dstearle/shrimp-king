@@ -23,7 +23,7 @@
 
             <!-- Remove From Favorites -->
             <div 
-                @click="favoriteItem"
+                @click="isFavModalVisible"
                 @mouseover="activeStar = true"
                 @mouseleave="activeStar = false"
                 class="row pt-1 m-0"
@@ -60,6 +60,8 @@
             return {
 
                 activeStar: false,
+                // Determines if the modal for picking new items for the favorites list is visible
+                isFavModalVisible: false,
                 
             }
             
@@ -105,6 +107,20 @@
                 this.activeStar = !this.activeStar;
 
             },
+
+            // Shows the modal for picking new items for the favorites list
+            showFavModal() {
+
+                this.isFavModalVisible = true;
+
+            },
+
+            // Closes the modal for picking new items for the favorites list
+            closeFavModal() {
+
+                this.isFavModalVisible = false;
+
+            }
             
         }
         
