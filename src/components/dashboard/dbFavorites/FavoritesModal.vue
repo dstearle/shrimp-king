@@ -4,66 +4,54 @@
 
     <div class="modal-backdrop">
 
-      <div class="modal"
-        role="dialog"
-        aria-labelledby="modalTitle"
-        aria-describedby="modalDescription"
-      >
+      <div class="card dbFavHeight">
 
-        <header
-          class="modal-header"
-          id="modalTitle"
-        >
+        <div class="card-body">
 
-          <slot name="header">
+            <!-- Modal Title -->
+            <h3>Add Items To Favorites</h3>
 
-            This is the default tile!
+            <hr>
 
-            <button
-              type="button"
-              class="btn-close"
-              @click="favModalToggle"
-              aria-label="Close modal"
-            >
-              x
-            </button>
+            <!-- Shrimp List -->
+            <div class="col">
+                
+                <!-- <app-favorite-slots 
+                    v-for="shrimp in favoritesMarket"
+                    :shrimp="shrimp" 
+                    v-bind:key="shrimp.name" 
+                ></app-favorite-slots> -->hi
+                
+            </div>
 
-          </slot>
+            <hr>
 
-        </header>
+            <div class="row">
 
-        <section
-          class="modal-body"
-          id="modalDescription"
-        >
-          <slot name="body">
+                <div class="col-6"></div>
 
-            I'm the default body!
+                <!-- Clost Modal Button -->
+                <div class="col-6">
 
-          </slot>
+                    <button 
+                        type="button" 
+                        class="btn btn-block btn-outline-success"
+                        @click="favModalToggle"
+                    >
+                        
+                        Close
 
-        </section>
+                    </button>
 
-        <footer class="modal-footer">
+                </div>
 
-          <slot name="footer">
+            </div>
 
-            I'm the default footer!
 
-            <button
-              type="button"
-              class="btn-green"
-              @click="favModalToggle"
-              aria-label="Close modal"
-            >
-              Close me!
-            </button>
 
-          </slot>
+        </div>
 
-        </footer>
-
-      </div>
+    </div>
 
     </div>
 
@@ -83,16 +71,10 @@
 
             ...mapActions({
 
+                // Closes the favorites modal by toggling to false
                 favModalToggle: 'favModalToggle'
 
             }),
-
-            // Closes the modal for picking new items for the favorites list
-            closeFavModal() {
-
-                this.isFavModalVisible = false;
-
-            }
 
         },
         
