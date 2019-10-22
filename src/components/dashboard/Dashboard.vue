@@ -26,9 +26,9 @@
         <!-- Dashboard Favorites -->
         <app-dashboard-favorites></app-dashboard-favorites>
 
+        <!-- Dashboard Favorites Modal -->
         <app-favorites-modal
-            v-show="isFavModalVisible"
-            @close="closeFavModal">
+            v-show="isFavModalVisibleGet">
         </app-favorites-modal>
         
     </div>
@@ -37,10 +37,13 @@
 
 <script>
 
+    import {mapGetters} from 'vuex';
     import SaveLoad from "./SaveLoad.vue"
+
     import BiWeeklyChart from "./dbCharts/BiWeeklyChart.vue"
     import CurrentWeekChart from "./dbCharts/CurrentWeekChart.vue"
     import PreviousWeekChart from "./dbCharts/PreviousWeekChart.vue"
+
     import DashboardFavorites from "./dbFavorites/DashBoardFavorites.vue"
     import FavoritesModal from "./dbFavorites/FavoritesModal.vue"
 
@@ -61,6 +64,19 @@
             appFavoritesModal: FavoritesModal
             
         },
+
+        computed: {
+
+            ...mapGetters({
+                
+                // Retrieves the data for market from the store
+                shrimpMarket: 'shrimpMarketDataGet',
+                // Retrieves the counter for favorited items
+                isFavModalVisibleGet: 'isFavModalVisibleGet'
+                
+            }),
+
+        }
         
     }
 

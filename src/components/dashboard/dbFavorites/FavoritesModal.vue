@@ -22,7 +22,7 @@
             <button
               type="button"
               class="btn-close"
-              @click="close"
+              @click="favModalToggle"
               aria-label="Close modal"
             >
               x
@@ -53,7 +53,7 @@
             <button
               type="button"
               class="btn-green"
-              @click="this.closeFavModal"
+              @click="favModalToggle"
               aria-label="Close modal"
             >
               Close me!
@@ -73,11 +73,19 @@
 
 <script>
 
+    import { mapActions } from 'vuex';
+
     export default {
 
         name: 'modal',
 
         methods: {
+
+            ...mapActions({
+
+                favModalToggle: 'favModalToggle'
+
+            }),
 
             // Closes the modal for picking new items for the favorites list
             closeFavModal() {
