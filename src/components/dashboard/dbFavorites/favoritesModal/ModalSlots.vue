@@ -38,11 +38,11 @@
                 <font-awesome-icon 
                     icon="star"
                     class="align-self-center m-0"
-                    :class="{ 'text-secondary inActiveHover' : activeStar , 'text-warning': !activeStar }"
+                    :class="{ 'text-secondary inActiveHover' : !activeStar , 'text-warning': activeStar }"
                 />
 
                 <!-- Remove Text -->
-                <p class="align-self-center m-0 ml-1"> Remove </p>
+                <p class="align-self-center m-0 ml-1"> Add </p>
 
             </div>
 
