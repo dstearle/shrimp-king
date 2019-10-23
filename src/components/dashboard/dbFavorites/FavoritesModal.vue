@@ -61,11 +61,50 @@
 
 <script>
 
-    import { mapActions } from 'vuex';
+    import { mapGetters, mapActions } from 'vuex';
 
     export default {
 
         name: 'modal',
+
+        computed: {
+
+            ...mapGetters({
+                
+                // Retrieves the data for market from the store
+                shrimpMarket: 'shrimpMarketDataGet'
+                
+            }), 
+            
+            // The filtered list for neocaridina shrimps
+            neocaridinaMarket() {
+                
+                // Array to hold available shrimp
+                const arr = this.shrimpMarket;
+
+                // Filters out shrimp based off id
+                const range = arr.filter(element => element.id < 7 );
+
+                // Filters out shrimp that have been favorited
+                return range.filter(shrimp => shrimp.favorited != true)
+                
+            },
+
+            // The filtered list for ccaridina shrimps
+            caridinaMarket() {
+                
+                // Array to hold available shrimp
+                const arr = this.shrimpMarket;
+
+                // Filters out shrimp based off id
+                const range = arr.filter(element => element.id > 6 );
+
+                // Filters out shrimp that have been favorited
+                return range.filter(shrimp => shrimp.favorited != true)
+                
+            },
+
+        },
 
         methods: {
 

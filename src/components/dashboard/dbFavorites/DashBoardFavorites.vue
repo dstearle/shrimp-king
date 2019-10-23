@@ -45,7 +45,7 @@
 
 <script>
 
-    import {mapGetters} from 'vuex';
+    import { mapGetters } from 'vuex';
     import FavoriteSlots from './FavoriteSlots.vue';
     import EmptySlots from './EmptySlots.vue';
 
