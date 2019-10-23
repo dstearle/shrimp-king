@@ -13,19 +13,51 @@
 
             <hr>
 
-            <!-- Shrimp List -->
-            <div class="col">
-                
-                <!-- <app-favorite-slots 
-                    v-for="shrimp in favoritesMarket"
-                    :shrimp="shrimp" 
-                    v-bind:key="shrimp.name" 
-                ></app-favorite-slots> -->hi
-                
+            <!-- Neocaridina List -->
+            <div class="my-5" v-show="neocaridinaMarket.length > 0">
+
+                <!-- Shrimp Category Title -->
+                <h1 class="text-white pb-3">Neocaridina</h1>
+
+                <!-- Shrimp List -->
+                <div class="card-columns">
+                    
+                    <app-modal-slots 
+                        v-for="shrimp in neocaridinaMarket" 
+                        :shrimp="shrimp" 
+                        v-bind:key="shrimp.id" 
+                        v-show="shrimp.quantity > 0"
+                    ></app-modal-slots>
+                    
+                </div>
+
+                <hr>
+
             </div>
 
-            <hr>
+            <!-- Caridina List -->
+            <div class="my-5" v-show="caridinaMarket.length > 0">
 
+                <!-- Shrimp Category Title -->
+                <h1 class="text-white pb-3">Caridina</h1>
+
+                <!-- Shrimp List -->
+                <div class="card-columns">
+                    
+                    <app-modal-slots 
+                        v-for="shrimp in caridinaMarket" 
+                        :shrimp="shrimp" 
+                        v-bind:key="shrimp.id" 
+                        v-show="shrimp.quantity > 0"
+                    ></app-modal-slots>
+                    
+                </div>
+
+                <hr>
+
+            </div>
+
+            <!-- Footer Area -->
             <div class="row">
 
                 <div class="col-6"></div>
@@ -47,8 +79,6 @@
 
             </div>
 
-
-
         </div>
 
     </div>
@@ -62,10 +92,15 @@
 <script>
 
     import { mapGetters, mapActions } from 'vuex';
+    import ModalSlots from './ModalSlots.vue';
 
     export default {
 
-        name: 'modal',
+        components: {
+            
+            appModalSlots: ModalSlots
+            
+        },
 
         computed: {
 
