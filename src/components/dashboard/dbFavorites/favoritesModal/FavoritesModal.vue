@@ -6,7 +6,7 @@
 
       <div class="card dbFavHeight">
 
-        <div class="card-body">
+        <div class="card-body overflow-auto" style="height: 590px;">
 
             <!-- Modal Title -->
             <h3>Add Items To Favorites</h3>
@@ -17,10 +17,10 @@
             <div class="my-5" v-show="neocaridinaMarket.length > 0">
 
                 <!-- Shrimp Category Title -->
-                <h1 class="text-white pb-3">Neocaridina</h1>
+                <h5 class="pb-3">Neocaridina</h5>
 
                 <!-- Shrimp List -->
-                <div class="card-columns">
+                <div class="col">
                     
                     <app-modal-slots 
                         v-for="shrimp in neocaridinaMarket" 
@@ -39,10 +39,10 @@
             <div class="my-5" v-show="caridinaMarket.length > 0">
 
                 <!-- Shrimp Category Title -->
-                <h1 class="text-white pb-3">Caridina</h1>
+                <h5 class="pb-3">Caridina</h5>
 
                 <!-- Shrimp List -->
-                <div class="card-columns">
+                <div class="col">
                     
                     <app-modal-slots 
                         v-for="shrimp in caridinaMarket" 
