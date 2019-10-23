@@ -45,7 +45,7 @@
     import PreviousWeekChart from "./dbCharts/PreviousWeekChart.vue"
 
     import DashboardFavorites from "./dbFavorites/DashBoardFavorites.vue"
-    import FavoritesModal from "./dbFavorites/FavoritesModal.vue"
+    import FavoritesModal from "./dbFavorites/favoritesModal/FavoritesModal.vue"
 
     export default {
 
