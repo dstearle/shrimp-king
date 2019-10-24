@@ -4,7 +4,7 @@
 
         <div class="col-md-12 col-lg-4">
 
-            <div class="card dbFavHeight">
+            <div class="card" style="min-width: 280px; height: 590px;">
 
                 <div class="card-body">
 
@@ -101,9 +101,3 @@
     }
 
 </script>
-
-<style scoped>
-
-    .dbFavHeight { height: 590px;}
-
-</style>
