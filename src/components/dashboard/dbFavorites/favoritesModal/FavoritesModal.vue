@@ -6,59 +6,67 @@
 
       <div class="card dbFavHeight">
 
-        <div class="card-body overflow-auto" style="height: 590px;">
+        <div class="card-body" style="height: 590px;">
 
-            <!-- Modal Title -->
-            <h3>Add Items To Favorites</h3>
+            <div>
 
-            <hr>
-
-            <!-- Neocaridina List -->
-            <div class="my-5" v-show="neocaridinaMarket.length > 0">
-
-                <!-- Shrimp Category Title -->
-                <h5 class="pb-3">Neocaridina</h5>
-
-                <!-- Shrimp List -->
-                <div class="col">
-                    
-                    <app-modal-slots 
-                        v-for="shrimp in neocaridinaMarket" 
-                        :shrimp="shrimp" 
-                        v-bind:key="shrimp.id" 
-                        v-show="shrimp.quantity > 0"
-                    ></app-modal-slots>
-                    
-                </div>
+                <!-- Modal Title -->
+                <h3>Add Items To Favorites</h3>
 
                 <hr>
 
             </div>
 
-            <!-- Caridina List -->
-            <div class="my-5" v-show="caridinaMarket.length > 0">
+            <div class="scroll">
 
-                <!-- Shrimp Category Title -->
-                <h5 class="pb-3">Caridina</h5>
+                <!-- Neocaridina List -->
+                <div class="my-5" v-show="neocaridinaMarket.length > 0">
 
-                <!-- Shrimp List -->
-                <div class="col">
-                    
-                    <app-modal-slots 
-                        v-for="shrimp in caridinaMarket" 
-                        :shrimp="shrimp" 
-                        v-bind:key="shrimp.id" 
-                        v-show="shrimp.quantity > 0"
-                    ></app-modal-slots>
-                    
+                    <!-- Shrimp Category Title -->
+                    <h5 class="pb-3">Neocaridina</h5>
+
+                    <!-- Shrimp List -->
+                    <div class="col">
+                        
+                        <app-modal-slots 
+                            v-for="shrimp in neocaridinaMarket" 
+                            :shrimp="shrimp" 
+                            v-bind:key="shrimp.id" 
+                            v-show="shrimp.quantity > 0"
+                        ></app-modal-slots>
+                        
+                    </div>
+
+                    <hr>
+
                 </div>
 
-                <hr>
+                <!-- Caridina List -->
+                <div class="my-5" v-show="caridinaMarket.length > 0">
+
+                    <!-- Shrimp Category Title -->
+                    <h5 class="pb-3">Caridina</h5>
+
+                    <!-- Shrimp List -->
+                    <div class="col">
+                        
+                        <app-modal-slots 
+                            v-for="shrimp in caridinaMarket" 
+                            :shrimp="shrimp" 
+                            v-bind:key="shrimp.id" 
+                            v-show="shrimp.quantity > 0"
+                        ></app-modal-slots>
+                        
+                    </div>
+
+                    <hr>
+
+                </div>
 
             </div>
 
             <!-- Footer Area -->
-            <div class="row">
+            <div class="row mt-4">
 
                 <div class="col-6"></div>
 
@@ -71,7 +79,7 @@
                         @click="favModalToggle"
                     >
                         
-                        Close
+                        Done
 
                     </button>
 
@@ -216,5 +224,10 @@
     border: 1px solid #4AAE9B;
     border-radius: 2px;
     }
+
+    .scroll {
+    max-height: 420px;
+    overflow-y: auto;
+}
 
 </style>
