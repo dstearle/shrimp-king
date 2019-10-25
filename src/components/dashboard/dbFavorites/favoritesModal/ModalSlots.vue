@@ -26,7 +26,7 @@
 
             </div>
 
-            <!-- Remove From Favorites -->
+            <!-- Add To Favorites -->
             <div 
                 @click="favoriteItem"
                 @mouseover="activeStar = true"
