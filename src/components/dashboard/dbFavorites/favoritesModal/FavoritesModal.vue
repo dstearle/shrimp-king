@@ -33,7 +33,6 @@
                                 v-for="shrimp in neocaridinaMarket" 
                                 :shrimp="shrimp" 
                                 v-bind:key="shrimp.id" 
-                                v-show="shrimp.quantity > 0"
                             ></app-modal-slots>
                             
                         </div>
@@ -55,7 +54,6 @@
                                 v-for="shrimp in caridinaMarket" 
                                 :shrimp="shrimp" 
                                 v-bind:key="shrimp.id" 
-                                v-show="shrimp.quantity > 0"
                             ></app-modal-slots>
                             
                         </div>
