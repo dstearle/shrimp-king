@@ -4,92 +4,93 @@
 
     <div class="modal-backdrop">
 
-      <div class="card dbFavHeight">
+        <div class="card dbFavHeight">
 
-        <div class="card-body" style="height: 590px;">
-
-            <div>
+            <div class="card-body" style="height: 590px;">
 
                 <!-- Modal Title -->
-                <h3>Add Items To Favorites</h3>
+                <div>
 
-                <hr>
-
-            </div>
-
-            <div class="scroll">
-
-                <!-- Neocaridina List -->
-                <div class="my-5" v-show="neocaridinaMarket.length > 0">
-
-                    <!-- Shrimp Category Title -->
-                    <h5 class="pb-3">Neocaridina</h5>
-
-                    <!-- Shrimp List -->
-                    <div class="col">
-                        
-                        <app-modal-slots 
-                            v-for="shrimp in neocaridinaMarket" 
-                            :shrimp="shrimp" 
-                            v-bind:key="shrimp.id" 
-                            v-show="shrimp.quantity > 0"
-                        ></app-modal-slots>
-                        
-                    </div>
+                    <h3>Add Items To Favorites</h3>
 
                     <hr>
 
                 </div>
 
-                <!-- Caridina List -->
-                <div class="my-5" v-show="caridinaMarket.length > 0">
+                <!-- Scrollable List Area -->
+                <div class="scroll">
 
-                    <!-- Shrimp Category Title -->
-                    <h5 class="pb-3">Caridina</h5>
+                    <!-- Neocaridina List -->
+                    <div class="my-5" v-show="neocaridinaMarket.length > 0">
 
-                    <!-- Shrimp List -->
-                    <div class="col">
-                        
-                        <app-modal-slots 
-                            v-for="shrimp in caridinaMarket" 
-                            :shrimp="shrimp" 
-                            v-bind:key="shrimp.id" 
-                            v-show="shrimp.quantity > 0"
-                        ></app-modal-slots>
-                        
+                        <!-- Shrimp Category Title -->
+                        <h5 class="pb-3">Neocaridina</h5>
+
+                        <!-- Shrimp List -->
+                        <div class="col">
+                            
+                            <app-modal-slots 
+                                v-for="shrimp in neocaridinaMarket" 
+                                :shrimp="shrimp" 
+                                v-bind:key="shrimp.id" 
+                                v-show="shrimp.quantity > 0"
+                            ></app-modal-slots>
+                            
+                        </div>
+
+                        <hr>
+
                     </div>
 
-                    <hr>
+                    <!-- Caridina List -->
+                    <div class="my-5" v-show="caridinaMarket.length > 0">
+
+                        <!-- Shrimp Category Title -->
+                        <h5 class="pb-3">Caridina</h5>
+
+                        <!-- Shrimp List -->
+                        <div class="col">
+                            
+                            <app-modal-slots 
+                                v-for="shrimp in caridinaMarket" 
+                                :shrimp="shrimp" 
+                                v-bind:key="shrimp.id" 
+                                v-show="shrimp.quantity > 0"
+                            ></app-modal-slots>
+                            
+                        </div>
+
+                        <hr>
+
+                    </div>
 
                 </div>
 
-            </div>
+                <!-- Footer Area -->
+                <div class="row mt-4">
 
-            <!-- Footer Area -->
-            <div class="row mt-4">
+                    <div class="col-6"></div>
 
-                <div class="col-6"></div>
+                    <!-- Close Modal Button -->
+                    <div class="col-6">
 
-                <!-- Clost Modal Button -->
-                <div class="col-6">
+                        <button 
+                            type="button" 
+                            class="btn btn-block btn-outline-success"
+                            @click="favModalToggle"
+                        >
+                            
+                            Done
 
-                    <button 
-                        type="button" 
-                        class="btn btn-block btn-outline-success"
-                        @click="favModalToggle"
-                    >
-                        
-                        Done
+                        </button>
 
-                    </button>
+                    </div>
 
                 </div>
 
             </div>
 
         </div>
-
-    </div>
 
     </div>
 
@@ -167,67 +168,20 @@
 <style>
 
     .modal-backdrop {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-
-    .modal {
-    background: #FFFFFF;
-    box-shadow: 2px 2px 20px 1px;
-    overflow-x: auto;
-    display: flex;
-    flex-direction: column;
-    }
-
-    .modal-header,
-    .modal-footer {
-    padding: 15px;
-    display: flex;
-    }
-
-    .modal-header {
-    border-bottom: 1px solid #eeeeee;
-    color: #4AAE9B;
-    justify-content: space-between;
-    }
-
-    .modal-footer {
-    border-top: 1px solid #eeeeee;
-    justify-content: flex-end;
-    }
-
-    .modal-body {
-    position: relative;
-    padding: 20px 10px;
-    }
-
-    .btn-close {
-    border: none;
-    font-size: 20px;
-    padding: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #4AAE9B;
-    background: transparent;
-    }
-
-    .btn-green {
-    color: white;
-    background: #4AAE9B;
-    border: 1px solid #4AAE9B;
-    border-radius: 2px;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .scroll {
-    max-height: 420px;
-    overflow-y: auto;
-}
+        max-height: 420px;
+        overflow-y: auto;
+    }
 
 </style>
