@@ -21,7 +21,7 @@
                 <div class="scroll">
 
                     <!-- Neocaridina List -->
-                    <div class="mt-5" v-show="neocaridinaMarket.length > 0">
+                    <div v-show="neocaridinaMarket.length > 0">
 
                         <!-- Shrimp Category Title -->
                         <h5 class="pb-3">Neocaridina</h5>

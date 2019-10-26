@@ -13,7 +13,7 @@
 
         </div>
 
-        <div class="pointer">
+        <div class="pointer" :disabled="favoritesCounterGet >= 5">
 
             <!-- Title -->
             <div class="row m-0">
@@ -32,6 +32,7 @@
                 @mouseover="activeStar = true"
                 @mouseleave="activeStar = false"
                 class="row pt-1 m-0"
+                v-show="this.favoritesCounterGet <= 5"
             >
 
                 <!-- Star Icon -->
@@ -43,6 +44,26 @@
 
                 <!-- Remove Text -->
                 <p class="align-self-center m-0 ml-1"> Add </p>
+
+            </div>
+
+            <!-- Favorites Full -->
+            <div 
+                @mouseover="activeStar = true"
+                @mouseleave="activeStar = false"
+                class="row pt-1 m-0"
+                v-show="this.favoritesCounterGet >= 6"
+            >
+
+                <!-- Star Icon -->
+                <font-awesome-icon 
+                    icon="star"
+                    class="align-self-center m-0"
+                    :class="{ 'text-secondary inActiveHover' : !activeStar , 'text-warning': activeStar }"
+                />
+
+                <!-- Remove Text -->
+                <p class="align-self-center m-0 ml-1"> Favorites Full </p>
 
             </div>
 
