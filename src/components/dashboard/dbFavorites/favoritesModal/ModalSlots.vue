@@ -13,7 +13,7 @@
 
         </div>
 
-        <div>
+        <div class="pointer">
 
             <!-- Title -->
             <div class="row m-0">
@@ -124,5 +124,7 @@
         width: 4rem;
         border-radius: 9999px;
     }
+
+    .pointer {cursor: pointer;}
 
 </style>
