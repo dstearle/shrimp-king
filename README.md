@@ -52,10 +52,10 @@ The Dashboard Chart:
 
 - Navbar: 
 - About Section:
-- Dashboard Section: dynamic Y axis for chart, limit additions for favorites
+- Dashboard Section: dynamic Y axis for chart
 - Inventory Section:
 - Market Section:
-- Misc: solve issue with responsiveness
+- Misc:
 
 <br>
 
