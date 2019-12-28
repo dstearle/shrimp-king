@@ -55,7 +55,7 @@ The Dashboard Chart:
 - Dashboard Section: dynamic Y axis for chart
 - Inventory Section:
 - Market Section:
-- Misc:
+- Misc: sass for badges
 
 <br>
 
