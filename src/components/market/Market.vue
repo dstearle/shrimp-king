@@ -2,6 +2,7 @@
     
     <div class="container">
 
+        <app-search-filter></app-search-filter>
         <!-- Favorites List -->
         <div class="mb-5" v-show="favoritesMarket.length > 0">
 
@@ -77,12 +78,15 @@
 
     import {mapGetters} from 'vuex';    
     import Livestock from './Livestock.vue';
+    import SearchFilter from './../SearchFilter.vue';
 
     export default {
         
         components: {
             
-            appLivestock: Livestock
+            appLivestock: Livestock,
+
+            appSearchFilter: SearchFilter
             
         },
         
