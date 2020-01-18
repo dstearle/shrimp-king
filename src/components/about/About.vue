@@ -21,10 +21,14 @@
                         <div class="card-body">
 
                             <!-- What Is This? -->
-                            <h5><u class="about-ul">What Is This?</u></h5>
+                            <h5><u class="about-ul">What Is This Project?</u></h5>
 
                             <p>
                                 Shrimp King is an ecommerce website sim where you can buy or sell fancy shrimp.
+                                The main purpose of this project is to demonstrate my skills using Vuex.
+                                Vuex is a state management pattern tool for Vue.js just like React's "Redux" or Facebook's "Flux".
+                                With this very useful tool you can create a centralized store which can serve as the source of a state for data used across multiple components.
+
                             </p>
 
                             <!-- What Do I Do? -->
