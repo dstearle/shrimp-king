@@ -4,10 +4,15 @@
         
         <div class="row py-3">
 
-            <div class="col">
+            <div class="col form-group">
 
-                <!-- Links To Portfolio & Github -->
-                test
+                <!-- Search Filter Input -->
+                <input 
+                    type="text" 
+                    name="searchFilter" 
+                    placeholder="Search by #Tag..."
+                    class="col form-control" 
+                />
 
             </div>
 
