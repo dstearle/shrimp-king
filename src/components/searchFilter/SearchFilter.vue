@@ -6,8 +6,8 @@
 
             <!-- Search Select Input -->
             <search-select 
-                v-model="selectedEmbryo" 
-                :options="embryos"
+                v-model="selectedTag" 
+                :options="tags"
                 :filter-function="applySearchFilter"
             ></search-select>
 
@@ -33,8 +33,8 @@
 
             return {
 
-                selectedEmbryo: null,
-                embryos: [
+                selectedTag: null,
+                tags: [
 
                     "Apatosaurus",
                     "Suchomimus",
