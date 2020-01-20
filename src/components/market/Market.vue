@@ -78,7 +78,7 @@
 
     import {mapGetters} from 'vuex';    
     import Livestock from './Livestock.vue';
-    import SearchFilter from './../SearchFilter.vue';
+    import SearchFilter from './../searchFilter/SearchFilter.vue';
 
     export default {
         
