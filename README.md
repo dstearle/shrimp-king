@@ -55,7 +55,7 @@ The Dashboard Chart:
 - Dashboard Section: dynamic Y axis for chart
 - Inventory Section:
 - Market Section:
-- Search Filter: create dropdown list, connect to vuex, use in both inventory and market pages
+- Search Filter: clear out code in SearchSelect.vue, connect to vuex, use in both Inventory and Market pages
 - Misc: sass for badges
 
 <br>
