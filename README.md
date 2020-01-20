@@ -10,7 +10,7 @@
 
 **What Is This Project? :**
 
-- Shrimp King is an ecommerce website sim where you can buy or sell fancy shrimp.
+- Shrimp King is an ecommerce website sim where you can buy or sell fancy shrimp. The main purpose of this project is to demonstrate my skills using Vuex. Vuex is a state management pattern tool for Vue.js just like React's "Redux" or Facebook's "Flux". With this very useful tool you can create a centralized store which can serve as the source of a state for data used across multiple components.
 
 <br>
 
@@ -55,13 +55,13 @@ The Dashboard Chart:
 - Dashboard Section: dynamic Y axis for chart
 - Inventory Section:
 - Market Section:
+- Search Filter: create dropdown list, connect to vuex, use in both inventory and market pages
 - Misc: sass for badges
 
 <br>
 
 **Future Developments:**
 
-- Search filter for tags
 - Collapsable categories
 - Ghost shrimp for skeleton screen demo
 - Mark up/down sales?
