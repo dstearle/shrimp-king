@@ -36,20 +36,22 @@
                 selectedTag: null,
                 tags: [
 
-                    "Apatosaurus",
-                    "Suchomimus",
-                    "Dryosaurus",
-                    "Kentrosaurus",
-                    "Velociraptor",
-                    "Pachyrhinosaurus",
-                    "Brachiosaurus",
-                    "Iguanodon",
-                    "T-Rex",
-                    "Proceratosaurus",
-                    "Dracorex",
-                    "Carnotaurus",
-                    "Mamenchisaurus"
-
+                    "Neocaridina",
+                    "Caridina",
+                    "Common",
+                    "Uncommon",
+                    "Rare",
+                    "Red",
+                    "Yellow",
+                    "Green",
+                    "Blue",
+                    "Brown",
+                    "Black",
+                    "Markings",
+                    "Rili",
+                    "Crystal",
+                    "Tiger",
+                    
                 ]
 
             }
