@@ -91,14 +91,18 @@
 
                 // Array to hold available shrimp
                 const arr = this.shrimpMarket;
-                const oop = [];
+                const arr2 = [];
 
                 const loop = arr.forEach(element => {
 
-                    console.log(element.tags)
+                    const loop2 = element.tags.forEach(item => {
+
+                        arr2.push(item)
+
+                    })
                     
                 });
-                console.log(oop)
+                console.log(arr2)
                 
             }
 
