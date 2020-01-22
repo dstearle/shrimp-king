@@ -4,19 +4,18 @@
 
         <div class="col form-group">
 
-            <!-- Search Select Input -->
             <!-- List Of Tags -->
-            <span 
+            <!-- <span 
                 class="d-inline-flex m-1 badge mr-1"
                 :class="tag.color"
                 v-for="tag in shrimp.tags" 
                 :tag="tag"
                 v-bind:key="tag.name" 
             >
-            
+
                 {{ tag.name }}
             
-            </span>
+            </span> -->
 
         </div>
 
