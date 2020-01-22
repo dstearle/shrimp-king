@@ -21,6 +21,7 @@
 
 <script>
 
+    import {mapGetters} from 'vuex';
     import SearchSelect from './SearchSelect.vue';
     import CurrentTags from './CurrentTags.vue';
 
@@ -30,6 +31,17 @@
 
             SearchSelect,
             CurrentTags
+
+        },
+
+        computed: {
+
+            ...mapGetters({
+                
+                // Retrieves the data for market from the store
+                shrimpMarket: 'shrimpMarketDataGet',
+                
+            }),
 
         },
 
@@ -72,7 +84,30 @@
 
                 })
 
+            },
+
+            // Retrieves all of the available unique tags
+            mapTags() {
+
+                // Array to hold available shrimp
+                const arr = this.shrimpMarket;
+                const oop = [];
+
+                const loop = arr.forEach(element => {
+
+                    console.log(element.tags)
+                    
+                });
+                console.log(oop)
+                
             }
+
+        },
+
+        mounted () {
+
+            // Retrieves all of the available unique tags on load
+            this.mapTags();
 
         },
 
