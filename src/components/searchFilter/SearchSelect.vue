@@ -78,7 +78,8 @@
 
         isOpen: false,
         search: '',
-        highlightedIndex: 0
+        highlightedIndex: 0,
+        arr: []
 
       }
 
@@ -135,6 +136,9 @@
 
         // Sets index back to the start after selection
         this.highlightedIndex = 0
+
+        this.arr.push(option);
+        console.log(this.arr);
 
         // Closes the search when done
         this.close()
