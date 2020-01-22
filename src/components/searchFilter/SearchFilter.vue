@@ -11,6 +11,8 @@
                 :filter-function="applySearchFilter"
             ></search-select>
 
+            <current-tags></current-tags>
+
         </div>
 
     </div>
@@ -19,13 +21,15 @@
 
 <script>
 
-    import SearchSelect from './SearchSelect.vue'
+    import SearchSelect from './SearchSelect.vue';
+    import CurrentTags from './CurrentTags.vue';
 
     export default {
 
         components: {
 
-            SearchSelect
+            SearchSelect,
+            CurrentTags
 
         },
 
@@ -51,7 +55,7 @@
                     "Rili",
                     "Crystal",
                     "Tiger",
-                    
+
                 ]
 
             }
