@@ -95,6 +95,7 @@
                 // Set to hold unique values for tags in form of JSON string
                 const arr2 = new Set();
 
+                // The final array to store the unique data objects
                 const arr3 = [];
                 
                 // A forEach loop to iterate through each data object
@@ -110,10 +111,12 @@
                     
                 });
 
-                const finalloop = arr2.forEach(element => {
+                // The last forEach loop used to parse all of the items in arr2 back into data objects
+                const finalLoop = arr2.forEach(element => {
 
+                    // Pushes each parsed item to the final array
                     arr3.push(JSON.parse(element))
-                    
+
                 });
                 
                 console.log(arr3)
