@@ -383,7 +383,7 @@ export default [
                 
                 { name: '#Caridina', color: 'badge-light' },  
                 {name:'#Red', color: 'badge-danger' }, 
-                {name:'#Tiger', color: 'badge-orange' },
+                {name:'#Tiger', color: 'badge-dark' },
                 {name:'#Markings', color: 'badge-light' },
                 { name:'#Rare', color: 'badge-danger'} ]
 
