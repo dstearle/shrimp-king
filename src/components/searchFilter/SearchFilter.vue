@@ -91,13 +91,17 @@
 
                 // Array to hold available shrimp
                 const arr = this.shrimpMarket;
+
+                // Set to hold unique values for tags in form of JSON string
                 const arr2 = new Set();
                 
-
+                // A forEach loop to iterate through each data object
                 const loop = arr.forEach(element => {
 
+                    // Another forEach loop to iterate through the tags held by each data object
                     const loop2 = element.tags.forEach(item => {
 
+                        // Sets each unique value to a string to be stored
                         arr2.add(JSON.stringify(item))
 
                     })
