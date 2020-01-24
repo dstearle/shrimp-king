@@ -7,7 +7,7 @@
             <!-- Search Select Input -->
             <search-select 
                 v-model="selectedTag" 
-                :options="tags"
+                :options="mapTagNames"
                 :filter-function="applySearchFilter"
             ></search-select>
 
@@ -78,6 +78,15 @@
                 
                 return arr3;
                                 
+            },
+
+            mapTagNames() {
+
+                const arr = this.mapTags;
+
+                const arr2 = arr.map( item => item.name )
+
+                return arr2
             }
 
         },
@@ -87,25 +96,7 @@
             return {
 
                 selectedTag: null,
-                tags: [
-
-                    "Neocaridina",
-                    "Caridina",
-                    "Common",
-                    "Uncommon",
-                    "Rare",
-                    "Red",
-                    "Yellow",
-                    "Green",
-                    "Blue",
-                    "Brown",
-                    "Black",
-                    "Markings",
-                    "Rili",
-                    "Crystal",
-                    "Tiger",
-
-                ]
+                tags: []
 
             }
 
@@ -128,8 +119,7 @@
         mounted () {
 
             // Retrieves all of the available unique tags on load
-            this.mapTags;
-            console.log(this.mapTags)
+            console.log(this.mapTagNames)
 
         },
 
