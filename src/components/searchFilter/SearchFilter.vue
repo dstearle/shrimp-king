@@ -80,13 +80,18 @@
                                 
             },
 
+            // Retrieves all of the tag names to be used in the search list
+            // Note: It was just easier to make another computed method to extract the names to be used with the current code than to use mapTags
             mapTagNames() {
 
+                // Array to hold all of the unique tags found by mapTags
                 const arr = this.mapTags;
 
+                // Array to hold all of the extracted names of the tags from mapTags
                 const arr2 = arr.map( item => item.name )
 
                 return arr2
+
             }
 
         },
