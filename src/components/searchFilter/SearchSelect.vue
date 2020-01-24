@@ -138,7 +138,6 @@
         this.highlightedIndex = 0
 
         this.arr.push(option);
-        console.log(this.arr);
 
         // Closes the search when done
         this.close()
