@@ -43,6 +43,43 @@
                 
             }),
 
+            // Retrieves all of the available unique tags
+            mapTags() {
+
+                // Array to hold available shrimp
+                const arr = this.shrimpMarket;
+
+                // Set to hold unique values for tags in form of JSON string
+                const arr2 = new Set();
+
+                // The final array to store the unique data objects
+                const arr3 = [];
+                
+                // A forEach loop to iterate through each data object
+                arr.forEach(element => {
+
+                    // Another forEach loop to iterate through the tags held by each data object
+                    element.tags.forEach(item => {
+
+                        // Sets each unique value to a string to be stored
+                        arr2.add(JSON.stringify(item))
+
+                    })
+                    
+                });
+
+                // The last forEach loop used to parse all of the items in arr2 back into data objects
+                arr2.forEach(element => {
+
+                    // Pushes each parsed item to the final array
+                    arr3.push(JSON.parse(element))
+
+                });
+                
+                return arr3;
+                                
+            }
+
         },
 
         data() {
@@ -86,49 +123,13 @@
 
             },
 
-            // Retrieves all of the available unique tags
-            mapTags() {
-
-                // Array to hold available shrimp
-                const arr = this.shrimpMarket;
-
-                // Set to hold unique values for tags in form of JSON string
-                const arr2 = new Set();
-
-                // The final array to store the unique data objects
-                const arr3 = [];
-                
-                // A forEach loop to iterate through each data object
-                const loop = arr.forEach(element => {
-
-                    // Another forEach loop to iterate through the tags held by each data object
-                    const loop2 = element.tags.forEach(item => {
-
-                        // Sets each unique value to a string to be stored
-                        arr2.add(JSON.stringify(item))
-
-                    })
-                    
-                });
-
-                // The last forEach loop used to parse all of the items in arr2 back into data objects
-                const finalLoop = arr2.forEach(element => {
-
-                    // Pushes each parsed item to the final array
-                    arr3.push(JSON.parse(element))
-
-                });
-                
-                console.log(arr3)
-                
-            }
-
         },
 
         mounted () {
 
             // Retrieves all of the available unique tags on load
-            this.mapTags();
+            this.mapTags;
+            console.log(this.mapTags)
 
         },
 
