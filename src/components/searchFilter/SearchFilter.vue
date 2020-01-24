@@ -11,6 +11,7 @@
                 :filter-function="applySearchFilter"
             ></search-select>
 
+            <!-- Currently Selected Tags -->
             <current-tags></current-tags>
 
         </div>
@@ -101,7 +102,6 @@
             return {
 
                 selectedTag: null,
-                tags: []
 
             }
 
@@ -118,13 +118,6 @@
                 })
 
             },
-
-        },
-
-        mounted () {
-
-            // Retrieves all of the available unique tags on load
-            console.log(this.mapTagNames)
 
         },
 
