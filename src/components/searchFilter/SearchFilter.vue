@@ -103,7 +103,7 @@
             return {
 
                 selectedTag: null,
-                whoops: []
+                selectedTagsArray: []
 
             }
 
@@ -115,16 +115,20 @@
             applySearchFilter(search, options) {
 
                 return options.filter(option => {
-                return option.toLowerCase().startsWith(search.toLowerCase())
+                    
+                    return option.toLowerCase().startsWith(search.toLowerCase())
 
                 })
 
             },
 
+            // Retrieves selected tags
             onChildClick (value) {
-      this.whoops.push(value)
-      console.log(this.whoops)
-    }
+
+                // Pushes the selected tag from child component to an array
+                this.selectedTagsArray.push(value)
+
+            },
 
         },
 
