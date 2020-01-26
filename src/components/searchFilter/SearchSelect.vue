@@ -137,7 +137,8 @@
         // Sets index back to the start after selection
         this.highlightedIndex = 0
 
-        this.arr.push(option);
+        this.$emit('childToParent', option)
+        
 
         // Closes the search when done
         this.close()

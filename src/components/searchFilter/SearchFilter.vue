@@ -9,6 +9,7 @@
                 v-model="selectedTag" 
                 :options="mapTagNames"
                 :filter-function="applySearchFilter"
+                v-on:childToParent="onChildClick"
             ></search-select>
 
             <!-- Currently Selected Tags -->
@@ -102,6 +103,7 @@
             return {
 
                 selectedTag: null,
+                whoops: []
 
             }
 
@@ -118,6 +120,11 @@
                 })
 
             },
+
+            onChildClick (value) {
+      this.whoops.push(value)
+      console.log(this.whoops)
+    }
 
         },
 
