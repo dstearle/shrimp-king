@@ -125,8 +125,13 @@
             // Retrieves selected tags
             onChildClick (value) {
 
-                // Pushes the selected tag from child component to an array
-                this.selectedTagsArray.push(value)
+                // Checks to make sure the value has not been added to the array yet
+                if(!this.selectedTagsArray.includes(value)) {
+
+                    // Pushes the selected tag from child component to an array
+                    this.selectedTagsArray.push(value)
+
+                }
 
             },
 
