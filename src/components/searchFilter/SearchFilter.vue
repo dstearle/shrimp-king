@@ -13,7 +13,9 @@
             ></search-select>
 
             <!-- Currently Selected Tags -->
-            <current-tags></current-tags>
+            <current-tags
+                :selectedTagsArray="selectedTagsArray"
+            ></current-tags>
 
         </div>
 
@@ -130,6 +132,7 @@
 
                     // Pushes the selected tag from child component to an array
                     this.selectedTagsArray.push(value)
+                    console.log(this.selectedTagsArray)
 
                 }
 

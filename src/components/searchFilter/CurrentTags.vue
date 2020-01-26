@@ -5,20 +5,29 @@
         <div class="col form-group">
 
             <!-- List Of Tags -->
-            <!-- <span 
+            <span 
                 class="d-inline-flex m-1 badge mr-1"
-                :class="tag.color"
-                v-for="tag in shrimp.tags" 
+                v-for="tag in selectedTagsArray" 
                 :tag="tag"
-                v-bind:key="tag.name" 
+                v-bind:key="tag" 
             >
 
-                {{ tag.name }}
+                {{ tag }}
             
-            </span> -->
+            </span>
 
         </div>
 
     </div>
     
 </template>
+
+<script>
+
+    export default {
+        
+        props: ['selectedTagsArray'],
+
+    }
+
+</script>
