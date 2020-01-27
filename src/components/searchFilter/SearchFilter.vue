@@ -14,7 +14,7 @@
 
             <!-- Currently Selected Tags -->
             <current-tags
-                :selectedTagsArray="selectedTagsArray"
+                :selectedTags="setListTracker"
             ></current-tags>
 
         </div>
@@ -96,6 +96,13 @@
 
                 return arr2
 
+            },
+
+            // Allows selectedTags to be reactive
+            setListTracker() {
+
+                return this.selectedTagsTracker && Array.from(this.selectedTags);
+
             }
 
         },
@@ -105,7 +112,8 @@
             return {
 
                 selectedTag: null,
-                selectedTagsArray: new Set()
+                selectedTags: new Set(),
+                selectedTagsTracker: 1
 
             }
 
@@ -137,7 +145,10 @@
                     if(tag.name.indexOf(value) > -1) {
 
                         // Adds the selected tag from child component to a set
-                        this.selectedTagsArray.add(tag)
+                        this.selectedTags.add(tag)
+
+                        // Trigger Vue updates
+                        this.selectedTagsTracker += 1;
 
                     }
 
