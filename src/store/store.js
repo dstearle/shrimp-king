@@ -4,6 +4,7 @@ import Vuex from 'vuex';
 import dashboardChart from './modules/dashboardChart.js';
 import shrimpMarket from './modules/shrimpMarket.js';
 import shrimpInventory from './modules/shrimpInventory.js';
+import searchSelect from './modules/searchSelect.js';
 
 import * as actions from './actions';
 
@@ -20,6 +21,8 @@ export default new Vuex.Store({
         shrimpMarket,
         
         shrimpInventory,
+
+        searchSelect
 
     }
     
