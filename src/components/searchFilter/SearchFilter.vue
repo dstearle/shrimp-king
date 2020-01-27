@@ -105,7 +105,7 @@
             return {
 
                 selectedTag: null,
-                selectedTagsArray: []
+                selectedTagsArray: new Set()
 
             }
 
@@ -127,14 +127,20 @@
             // Retrieves selected tags
             onChildClick (value) {
 
-                // Checks to make sure the value has not been added to the array yet
-                if(!this.selectedTagsArray.includes(value)) {
+                const arr = this.mapTags;
 
-                    // Pushes the selected tag from child component to an array
-                    this.selectedTagsArray.push(value)
-                    console.log(this.selectedTagsArray)
+                // The last forEach loop used to parse all of the items in arr2 back into data objects
+                arr.forEach(element => {
 
-                }
+                    //
+                    if(element.name.indexOf(value) > -1) {
+
+                        // Pushes the selected tag from child component to an array
+                        this.selectedTagsArray.add(element)
+
+                    }
+
+                });
 
             },
 
