@@ -8,7 +8,7 @@
             <span 
                 class="d-inline-flex m-1 badge mr-1"
                 :class="tag.color"
-                v-for="tag in selectedTagsArray" 
+                v-for="tag in selectedTags" 
                 :tag="tag.name"
                 v-bind:key="tag.name" 
             >
@@ -27,7 +27,7 @@
 
     export default {
         
-        props: ['selectedTagsArray'],
+        props: ['selectedTags'],
 
     }
 

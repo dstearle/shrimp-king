@@ -137,7 +137,7 @@
         // Sets index back to the start after selection
         this.highlightedIndex = 0
 
-        // Sends the selected tag to selectedTagsArray in parent component
+        // Sends the selected tag to selectedTags in parent component
         this.$emit('childToParent', option)
 
         // Closes the search when done
