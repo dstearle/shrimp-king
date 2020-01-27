@@ -127,16 +127,17 @@
             // Retrieves selected tags
             onChildClick (value) {
 
+                // Holds retrieved tags
                 const arr = this.mapTags;
 
-                // The last forEach loop used to parse all of the items in arr2 back into data objects
-                arr.forEach(element => {
+                // A forEach loop used to iterate through every available tag
+                arr.forEach(tag => {
 
-                    //
-                    if(element.name.indexOf(value) > -1) {
+                    // Checks to see which tag names match the selected vaule
+                    if(tag.name.indexOf(value) > -1) {
 
-                        // Pushes the selected tag from child component to an array
-                        this.selectedTagsArray.add(element)
+                        // Adds the selected tag from child component to a set
+                        this.selectedTagsArray.add(tag)
 
                     }
 
