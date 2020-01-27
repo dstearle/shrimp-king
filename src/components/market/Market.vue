@@ -2,7 +2,31 @@
     
     <div class="container">
 
+        <!-- Search Filter -->
         <app-search-filter></app-search-filter>
+
+        <!-- Filtered List -->
+        <div class="mb-5" v-show="favoritesMarket.length > 0">
+
+            <!-- Shrimp Category Title -->
+            <h1 class="text-white pb-3">Filtered</h1>
+
+            <!-- Shrimp List -->
+            <div class="card-columns">
+                
+                <app-livestock 
+                    v-for="shrimp in favoritesMarket" 
+                    :shrimp="shrimp" 
+                    v-bind:key="shrimp.id" 
+                    v-show="shrimp.quantity > 0"
+                ></app-livestock>
+                
+            </div>
+
+            <hr>
+
+        </div>
+
         <!-- Favorites List -->
         <div class="mb-5" v-show="favoritesMarket.length > 0">
 
@@ -100,6 +124,17 @@
                 favoritesCounterGet: 'favoritesCounterGet'
                 
             }),
+
+            // The filtered list for favorited shrimps
+            filteredMarket() {
+                
+                // Array to hold available shrimp
+                const arr = this.shrimpMarket;
+
+                // Filters out shrimp that have not been favorited
+                return arr.filter(shrimp => shrimp.favorited != false)
+                
+            },
 
             // The filtered list for favorited shrimps
             favoritesMarket() {
