@@ -1,16 +1,16 @@
 const state = {
 
-    // Array to store available shrimp for the Market
-    selectedTags2: []
+    // Set to store unique tags
+    selectedTags: new Set()
     
 };
 
 const mutations = {
     
-    // Sets the stored data from imports into the array
+    // Adds the chosen tag to the set
     'ADD_TAG' (state, tag) {
         
-        state.selectedTags2.push(tag);
+        state.selectedTags.add(tag);
         
     }, 
     
@@ -29,10 +29,10 @@ const actions = {
 
 const getters = {
     
-    // Getter for available shrimp in Market
-    selectedTags2Get: state => {
+    // Getter for selected tags
+    selectedTagsGet: state => {
         
-        return state.selectedTags2;
+        return state.selectedTags;
         
     }
     

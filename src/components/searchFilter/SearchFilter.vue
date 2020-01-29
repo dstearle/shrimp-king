@@ -45,7 +45,8 @@
                 // Retrieves the data for market from the store
                 shrimpMarket: 'shrimpMarketDataGet',
 
-                selectedTags2: 'selectedTags2Get'
+                // Retrieves the data of currently selected tags
+                selectedTags: 'selectedTagsGet'
                 
             }),
 
@@ -114,7 +115,6 @@
             return {
 
                 selectedTag: null,
-                selectedTags: new Set(),
                 selectedTagsTracker: 1
 
             }
@@ -143,7 +143,7 @@
             // Retrieves selected tags
             onChildClick (value) {
 
-                // Holds retrieved tags
+                // The available tags to be compared to
                 const arr = this.mapTags;
 
                 // A forEach loop used to iterate through every available tag
@@ -152,9 +152,7 @@
                     // Checks to see which tag names match the selected vaule
                     if(tag.name.indexOf(value) > -1) {
 
-                        // Adds the selected tag from child component to a set
-                        this.selectedTags.add(tag);
-
+                        // Adds the selected tag from child component to a set in the store
                         this.addTag(tag);
 
                         // Trigger Vue updates
