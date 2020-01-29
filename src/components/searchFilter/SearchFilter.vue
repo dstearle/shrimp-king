@@ -25,7 +25,7 @@
 
 <script>
 
-    import {mapGetters} from 'vuex';
+    import {mapGetters, mapMutations} from 'vuex';
     import SearchSelect from './SearchSelect.vue';
     import CurrentTags from './CurrentTags.vue';
 
@@ -44,6 +44,8 @@
                 
                 // Retrieves the data for market from the store
                 shrimpMarket: 'shrimpMarketDataGet',
+
+                selectedTags2: 'selectedTags2Get'
                 
             }),
 
@@ -121,6 +123,12 @@
 
         methods: {
 
+            ...mapMutations({
+                
+                addTag: 'ADD_TAG'
+                
+            }),
+
             // Filters the list with user input
             applySearchFilter(search, options) {
 
@@ -145,7 +153,9 @@
                     if(tag.name.indexOf(value) > -1) {
 
                         // Adds the selected tag from child component to a set
-                        this.selectedTags.add(tag)
+                        this.selectedTags.add(tag);
+
+                        this.addTag(tag);
 
                         // Trigger Vue updates
                         this.selectedTagsTracker += 1;
