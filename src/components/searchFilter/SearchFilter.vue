@@ -44,7 +44,6 @@
                 
                 // Retrieves the data for market from the store
                 shrimpMarket: 'shrimpMarketDataGet',
-
                 // Retrieves the data of currently selected tags
                 selectedTags: 'selectedTagsGet'
                 

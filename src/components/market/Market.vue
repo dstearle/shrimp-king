@@ -6,7 +6,7 @@
         <app-search-filter></app-search-filter>
 
         <!-- Filtered List -->
-        <div class="mb-5" v-show="favoritesMarket.length > 0">
+        <div class="mb-5" v-show="filteredMarket.length > 0">
 
             <!-- Shrimp Category Title -->
             <h1 class="text-white pb-3">Filtered</h1>
@@ -15,7 +15,7 @@
             <div class="card-columns">
                 
                 <app-livestock 
-                    v-for="shrimp in favoritesMarket" 
+                    v-for="shrimp in filteredMarket" 
                     :shrimp="shrimp" 
                     v-bind:key="shrimp.id" 
                     v-show="shrimp.quantity > 0"
@@ -121,18 +121,28 @@
                 // Retrieves the data for market from the store
                 shrimpMarket: 'shrimpMarketDataGet',
                 // Retrieves the counter for favorited items
-                favoritesCounterGet: 'favoritesCounterGet'
+                favoritesCounterGet: 'favoritesCounterGet',
+                // Retrieves the data of currently selected tags
+                selectedTags: 'selectedTagsGet'
                 
             }),
 
-            // The filtered list for favorited shrimps
+            // The filtered list based off of selected tags
             filteredMarket() {
                 
                 // Array to hold available shrimp
                 const arr = this.shrimpMarket;
 
-                // Filters out shrimp that have not been favorited
-                return arr.filter(shrimp => shrimp.favorited != false)
+                let nam2 = '#Red';
+
+                // Filters out shrimp based off of selected tags
+                let filt = arr.filter(shrimp => shrimp.tags.some((tags) => tags.name === nam2));
+
+                for(let data in filt){ filt[data].name = {"name": nam2}; }
+
+                console.log(filt)
+
+                return filt;
                 
             },
 
