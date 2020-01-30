@@ -138,10 +138,6 @@
                 // Filters out shrimp based off of selected tags
                 let filt = arr.filter(shrimp => shrimp.tags.some((tags) => tags.name === nam2));
 
-                for(let data in filt){ filt[data].name = {"name": nam2}; }
-
-                console.log(filt)
-
                 return filt;
                 
             },
