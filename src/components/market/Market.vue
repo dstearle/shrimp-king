@@ -129,18 +129,29 @@
 
             // The filtered list based off of selected tags
             filteredMarket() {
-                
-                // Array to hold available shrimp
-                const arr = this.shrimpMarket;
 
-                const nam2 = ['#Red', '#Neocaridina'];
+                const out = [];
 
-                // Filters out shrimp based off of selected tags
-                let filt = arr.filter(shrimp => shrimp.tags.some(tag => nam2.includes(tag.name)));
+                let tags = ['#Neocaridina', '#Red']
 
-                console.log(nam2)
+                entry:
 
-                return filt;
+                // Iterates through each item in the array
+                for (const v of this.shrimpMarket) {
+                    
+                    //
+                    for (let i = 0; i < tags.length; i++) {
+
+                        if (!v.tags.some((t) => t.name === tags[i]))
+                        continue entry;
+
+                    }
+
+                    out.push(v);
+
+                }
+
+                return out;
                 
             },
 
