@@ -133,10 +133,12 @@
                 // Array to hold available shrimp
                 const arr = this.shrimpMarket;
 
-                let nam2 = '#Red';
+                const nam2 = ['#Red', '#Neocaridina'];
 
                 // Filters out shrimp based off of selected tags
-                let filt = arr.filter(shrimp => shrimp.tags.some((tags) => tags.name === nam2));
+                let filt = arr.filter(shrimp => shrimp.tags.some(tag => nam2.includes(tag.name)));
+
+                console.log(nam2)
 
                 return filt;
                 
