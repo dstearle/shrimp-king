@@ -12,8 +12,18 @@
                 :tag="tag.name"
                 v-bind:key="tag.name" 
             >
-
+                
                 {{ tag.name }}
+
+                <!-- Remove Tag Icon -->
+                <font-awesome-icon 
+                    icon="times-circle" 
+                    class="text-light pl-1"
+                    @mouseover="activeInfo = true"
+                    @mouseleave="activeInfo = false"
+                    :class="{ active: activeInfo , 'inActiveHover': !activeInfo }"
+                />
+
             
             </span>
 
