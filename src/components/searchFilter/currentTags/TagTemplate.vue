@@ -1,16 +1,14 @@
 <template>
     
-    <div class="row py-3">
+    <div>
 
-        <h4 class="col form-group">
+        <!-- Determines Size For Badge -->
+        <h4>
 
-            <!-- List Of Tags -->
+            <!-- Badge -->
             <span 
-                class="d-inline-flex m-1 badge mr-1"
-                :class="tag.color"
-                v-for="tag in selectedTags" 
-                :tag="tag.name"
-                v-bind:key="tag.name" 
+                class="d-inline-flex badge mr-2"
+                :class="tag.color" 
             >
                 
                 {{ tag.name }}
@@ -35,7 +33,7 @@
 
     export default {
         
-        props: ['selectedTags'],
+        props: ['selectedTags', 'tag'],
 
         data() {
 

@@ -14,6 +14,7 @@
 
             <!-- Currently Selected Tags -->
             <current-tags
+                class="row"
                 :selectedTags="setListTracker"
             ></current-tags>
 
@@ -26,8 +27,8 @@
 <script>
 
     import {mapGetters, mapMutations} from 'vuex';
-    import SearchSelect from './SearchSelect.vue';
-    import CurrentTags from './CurrentTags.vue';
+    import SearchSelect from './searchSelect/SearchSelect.vue';
+    import CurrentTags from './currentTags/CurrentTags.vue';
 
     export default {
 
