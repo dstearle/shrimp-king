@@ -17,13 +17,11 @@
 
                 <!-- Remove Tag Icon -->
                 <font-awesome-icon 
-                    icon="times-circle" 
+                    :icon="myIcon" 
                     class="text-light pl-1"
-                    @mouseover="activeInfo = true"
-                    @mouseleave="activeInfo = false"
-                    :class="{ active: activeInfo , 'inActiveHover': !activeInfo }"
+                    @mouseover="myIcon = ['fa', 'info-circle']" 
+                    @mouseout="myIcon = ['fa', 'times-circle']"
                 />
-
             
             </span>
 
@@ -38,6 +36,16 @@
     export default {
         
         props: ['selectedTags'],
+
+        data() {
+
+            return {
+
+                myIcon: ['fa', 'times-circle'],
+
+            }
+
+        },
 
     }
 
