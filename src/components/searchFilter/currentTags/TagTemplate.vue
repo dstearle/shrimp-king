@@ -16,9 +16,9 @@
                 <!-- Remove Tag Icon -->
                 <font-awesome-icon 
                     :icon="myIcon" 
-                    class="text-light pl-1"
-                    @mouseover="myIcon = ['fa', 'info-circle']" 
-                    @mouseout="myIcon = ['fa', 'times-circle']"
+                    class="text-light ml-1 pl-1"
+                    @mouseover="myIcon = ['fa', 'times-circle']" 
+                    @mouseout="myIcon = ['fa', 'times']"
                 />
             
             </span>
@@ -39,7 +39,7 @@
 
             return {
 
-                myIcon: ['fa', 'times-circle'],
+                myIcon: ['fa', 'times'],
 
             }
 
