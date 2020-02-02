@@ -19,6 +19,7 @@
                     class="text-light ml-1 pl-1"
                     @mouseover="myIcon = ['fa', 'times-circle']" 
                     @mouseout="myIcon = ['fa', 'times']"
+                    @click="removeTag(tag)"
                 />
             
             </span>
@@ -31,6 +32,8 @@
 
 <script>
 
+    import { mapMutations} from 'vuex';
+
     export default {
         
         props: ['selectedTags', 'tag'],
@@ -42,6 +45,24 @@
                 myIcon: ['fa', 'times'],
 
             }
+
+        },
+
+        methods: {
+
+            ...mapMutations({
+                
+                deleteTag: 'DELETE_TAG'
+                
+            }),
+
+            // Method for removing a tag
+            removeTag(tag) {
+
+                // Deletes the selected tag from the set in the store
+                this.deleteTag(tag);
+
+            },
 
         },
 

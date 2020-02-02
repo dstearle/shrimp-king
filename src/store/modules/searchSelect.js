@@ -13,6 +13,13 @@ const mutations = {
         state.selectedTags.add(tag);
         
     }, 
+
+    // Removes the chosen tag to the set
+    'DELETE_TAG' (state, tag) {
+        
+        state.selectedTags.delete(tag);
+        
+    },
     
 };
 
