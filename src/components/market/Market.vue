@@ -130,28 +130,40 @@
             // The filtered list based off of selected tags
             filteredMarket() {
 
-                const out = [];
+                // Array to hold filtered items
+                const filt = [];
 
-                let tags = ['#Neocaridina', '#Red']
+                // The selected tags to be compared to
+                const tags = [];
+
+                // A forEach loop to grab all of the selected tag names
+                this.selectedTags.forEach(function(obj){
+
+                    tags.push(obj.name);
+
+                })
 
                 entry:
 
-                // Iterates through each item in the array
-                for (const v of this.shrimpMarket) {
+                // A for of loop that Iterates through each item in the array
+                for (const shrimp of this.shrimpMarket) {
                     
-                    //
+                    // A for loop to iterate through an item's tags
                     for (let i = 0; i < tags.length; i++) {
 
-                        if (!v.tags.some((t) => t.name === tags[i]))
+                        // If item does not contain each tag ignore
+                        if (!shrimp.tags.some((tag) => tag.name === tags[i]))
                         continue entry;
 
                     }
 
-                    out.push(v);
+                    // Return each item that contains selected tags
+                    filt.push(shrimp);
 
                 }
 
-                return out;
+                // The filtered list to be used
+                return filt;
                 
             },
 
