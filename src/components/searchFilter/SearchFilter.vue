@@ -47,7 +47,7 @@
                 shrimpMarket: 'shrimpMarketDataGet',
                 // Retrieves the data of currently selected tags
                 selectedTags: 'selectedTagsGet',
-
+                // Current count for selected tags
                 selectedTagsTracker: 'selectedTagsTrackerGet'
                 
             }),
@@ -106,6 +106,7 @@
             // Allows selectedTags to be reactive
             setListTracker() {
 
+                // Note: the selectedTagsTracker is for keeping track of changes in selectedTags since sets do not work with Vue's reactivity
                 return this.selectedTagsTracker && Array.from(this.selectedTags);
 
             }
