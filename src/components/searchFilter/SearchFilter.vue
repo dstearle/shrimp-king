@@ -46,7 +46,9 @@
                 // Retrieves the data for market from the store
                 shrimpMarket: 'shrimpMarketDataGet',
                 // Retrieves the data of currently selected tags
-                selectedTags: 'selectedTagsGet'
+                selectedTags: 'selectedTagsGet',
+
+                selectedTagsTracker: 'selectedTagsTrackerGet'
                 
             }),
 
@@ -115,7 +117,6 @@
             return {
 
                 selectedTag: null,
-                selectedTagsTracker: 1
 
             }
 
@@ -125,7 +126,9 @@
 
             ...mapMutations({
                 
-                addTag: 'ADD_TAG'
+                addTag: 'ADD_TAG',
+
+                bumpListTracker: 'TAG_LIST_TRACKER'
                 
             }),
 
@@ -156,7 +159,7 @@
                         this.addTag(tag);
 
                         // Trigger Vue updates
-                        this.selectedTagsTracker += 1;
+                        this.bumpListTracker();
 
                     }
 

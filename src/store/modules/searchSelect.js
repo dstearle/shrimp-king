@@ -1,7 +1,9 @@
 const state = {
 
     // Set to store unique tags
-    selectedTags: new Set()
+    selectedTags: new Set(),
+
+    selectedTagsTracker: 1
     
 };
 
@@ -20,6 +22,13 @@ const mutations = {
         state.selectedTags.delete(tag);
         
     },
+
+    // Allows selectedTags to be reactive
+    'TAG_LIST_TRACKER'() {
+
+        state.selectedTagsTracker++
+
+    }
     
 };
 
@@ -41,7 +50,14 @@ const getters = {
         
         return state.selectedTags;
         
-    }
+    },
+
+    // Getter for selected tags
+    selectedTagsTrackerGet: state => {
+        
+        return state.selectedTagsTracker;
+        
+    },
     
 };
 
