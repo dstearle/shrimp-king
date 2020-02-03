@@ -42,7 +42,7 @@
 
             return {
 
-                myIcon: ['fa', 'times'],
+                myIcon: ['fa', 'times']
 
             }
 
@@ -52,7 +52,9 @@
 
             ...mapMutations({
                 
-                deleteTag: 'DELETE_TAG'
+                deleteTag: 'DELETE_TAG',
+
+                bumpListTracker: 'TAG_LIST_TRACKER'
                 
             }),
 
@@ -61,6 +63,9 @@
 
                 // Deletes the selected tag from the set in the store
                 this.deleteTag(tag);
+
+                // Trigger Vue updates
+                this.bumpListTracker();
 
             },
 
