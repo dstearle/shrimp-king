@@ -123,7 +123,9 @@
                 // Retrieves the counter for favorited items
                 favoritesCounterGet: 'favoritesCounterGet',
                 // Retrieves the data of currently selected tags
-                selectedTags: 'selectedTagsGet'
+                selectedTags: 'selectedTagsGet',
+                // Current count for selected tags
+                selectedTagsTracker: 'selectedTagsTrackerGet'
                 
             }),
 
@@ -163,7 +165,8 @@
                 }
 
                 // The filtered list to be used
-                return filt;
+                // Note: the selectedTagsTracker is for keeping track of changes in selectedTags since sets do not work with Vue's reactivity
+                return this.selectedTagsTracker && Array.from(filt);
                 
             },
 
