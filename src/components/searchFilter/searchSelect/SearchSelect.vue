@@ -12,7 +12,7 @@
         <span v-if="value !== null">{{ value }}</span>
 
         <!-- Default value if nothing has been selected -->
-        <span v-else class="search-select-placeholder">Search by #Tag...</span>
+        <span v-else class="search-select-placeholder">Search {{ $route.name }} by #Tag...</span>
 
       </button>
 

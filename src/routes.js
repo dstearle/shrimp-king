@@ -5,12 +5,12 @@ import Market from './components/market/Market.vue';
 
 export const routes = [
     
-    { path: '/', component: About },
+    { path: '/', component: About, name: "About" },
 
-    { path: '/dashboard', component: Dashboard },
+    { path: '/dashboard', component: Dashboard, name: "Dashboard" },
 
-    { path: '/inventory', component: Inventory },
+    { path: '/inventory', component: Inventory, name: "Inventory" },
 
-    { path: '/market', component: Market }
+    { path: '/market', component: Market, name: "Market" }
     
 ];
