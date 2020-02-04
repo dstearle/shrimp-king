@@ -16,7 +16,8 @@
                 <!-- Remove Tag Icon -->
                 <font-awesome-icon 
                     :icon="myIcon" 
-                    class="text-light ml-1 pl-1"
+                    class="ml-1 pl-1"
+                    :class="tag.color"
                     @mouseover="myIcon = ['fa', 'times-circle']" 
                     @mouseout="myIcon = ['fa', 'times']"
                     @click="removeTag(tag)"
