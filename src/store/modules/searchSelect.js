@@ -3,7 +3,7 @@ const state = {
     // Set to store unique tags
     selectedTags: new Set(),
 
-    selectedTagsTracker: 1
+    selectedTagsTracker: 0
     
 };
 

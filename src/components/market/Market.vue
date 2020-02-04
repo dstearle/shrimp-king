@@ -6,7 +6,7 @@
         <app-search-filter></app-search-filter>
 
         <!-- Filtered List -->
-        <div class="mb-5" v-show="filteredMarket.length > 0">
+        <div class="mb-5" v-show="Array.from(this.selectedTags).length > 0">
 
             <!-- Shrimp Category Title -->
             <h1 class="text-white pb-3">Filtered</h1>
