@@ -12,7 +12,10 @@
             <h1 class="text-white pb-3">Filtered</h1>
 
             <!-- Shrimp List -->
-            <div class="card-columns">
+            <div 
+                class="card-columns"
+                v-if="filteredMarket.length > 0"
+            >
                 
                 <app-livestock 
                     v-for="shrimp in filteredMarket" 
@@ -20,6 +23,13 @@
                     v-bind:key="shrimp.id" 
                     v-show="shrimp.quantity > 0"
                 ></app-livestock>
+                
+            </div>
+
+            <!-- No Results -->
+            <div v-else>
+                
+                <h6 class="text-white pb-3">Sorry, but no items match your search criteria!</h6>
                 
             </div>
 
