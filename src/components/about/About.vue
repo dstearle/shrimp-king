@@ -127,6 +127,18 @@
                             </p>
 
                             <!-- Dashboard Chart Description -->
+                            <h5><u class="about-ul">The Search Filter</u></h5>
+
+                            <p>
+                                Both the Inventory and Market pages feature a search filter at the top of the page. When you hover the tag icon for an item you will
+                                see a list of tags associated with that card. When a user types into or selects the input field for the search filter, a drop down list
+                                of available tags will apear. This list is populated by a function that searches through each item and brings back a set of unique tags.
+                                As long as the data supplied is formatted correctly, the search list will always bring back a list of available tags. When one or more tags are selected by the user, a filtered list 
+                                will appear below the search filter showing all of items that contain all of those tags (but not limited to). The list will update whenever 
+                                a tag is added or removed from the selected tags array which appears below the search filter after a selection is made.
+                            </p>
+
+                            <!-- Dashboard Chart Description -->
                             <h5><u class="about-ul">The Dashboard Chart</u></h5>
 
                             <p>
