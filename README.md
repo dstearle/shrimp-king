@@ -44,7 +44,11 @@ The Favorites System:
 
 The Dashboard Chart:
 
-- On the Dashboard page you will see a large chart I made using a package called Chart.js (documentation here https://www.chartjs.org/). Building off of the favorites system, this chart displays the prices for favorited items over a period of two weeks. The idea being that when you hit the "End Day" button above the chart you can immeadiately see the current day's prices (located on the far right of the chart) for any favorited items and decide if it is a good time to buy or sell. The chart is dynamic and will move older prices (the data being shown) and day labels (on the X axis) to the left to make room for new data. Hovering over the data points on the chart will also bring up "tooltips" to display the name and price of said item..
+- On the Dashboard page you will see a large chart I made using a package called Chart.js (documentation here https://www.chartjs.org/). Building off of the favorites system, this chart displays the prices for favorited items over a period of two weeks. The idea being that when you hit the "End Day" button above the chart you can immeadiately see the current day's prices (located on the far right of the chart) for any favorited items and decide if it is a good time to buy or sell. The chart is dynamic and will move older prices (the data being shown) and day labels (on the X axis) to the left to make room for new data. Hovering over the data points on the chart will also bring up "tooltips" to display the name and price of said item.
+
+The Search Filter:
+
+- Both the Inventory and Market pages feature a search filter at the top of the page. When you hover the tag icon for an item you will see a list of tags associated with that card. When a user types into or selects the input field for the search filter, a drop down list of available tags will apear. This list is populated by a function that searches through each item and brings back a set of unique tags. As long as the data supplied is formatted correctly, the search list will always bring back a list of available tags. When one or more tags are selected by the user, a filtered list will appear below the search filter showing all of items that contain all of those tags (but not limited to). The list will update whenever a tag is added or removed from the selected tags array which appears below the search filter after a selection is made.
 
 <br>
 
