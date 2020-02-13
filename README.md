@@ -59,7 +59,7 @@ The Search Filter:
 - Dashboard Section: dynamic Y axis for chart
 - Inventory Section:
 - Market Section:
-- Search Filter: have chosen tags filter out a list, ability to remove tags, connect to vuex, use in both Inventory and Market pages
+- Search Filter:
 - Misc: sass for badges
 
 <br>
