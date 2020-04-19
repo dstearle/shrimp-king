@@ -14,11 +14,11 @@
       <div class="col m-3 mt-5 pt-5">
             
         <router-view></router-view>
+
+        <!-- Footer -->
+        <app-footer></app-footer>
             
       </div>
-
-      <!-- Footer -->
-      <app-footer></app-footer>
 
     </div>
                   
@@ -64,16 +64,16 @@
 
       routeStyles () {
 
-        // Applies background for the dashboard
+        // Applies background for the About page
         if (['/'].includes(this.$route.path)) document.body.className = 'bg-about'
 
-        // Applies background for the dashboard
+        // Applies background for the Dashboard page
         if (['/dashboard'].includes(this.$route.path)) document.body.className = 'bg-dashboard'
 
-        // Applies background for inventory
+        // Applies background for the Inventory page
         if (['/inventory'].includes(this.$route.path)) document.body.className = 'bg-inventory'
 
-        // Applies background for market
+        // Applies background for the Market page
         if (['/market'].includes(this.$route.path)) document.body.className = 'bg-market'
 
       }
