@@ -102,7 +102,7 @@
                 </div>
 
                 <!-- Notable Features -->
-                <div class="my-5">
+                <div class="mt-5">
 
                     <h1 class="text-white">Notable Features</h1>
 

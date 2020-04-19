@@ -82,7 +82,7 @@
         </div>
 
         <!-- Caridina List -->
-        <div class="my-5" v-show="caridinaMarket.length > 0">
+        <div class="mt-5" v-show="caridinaMarket.length > 0">
 
             <!-- Shrimp Category Title -->
             <h1 class="text-white pb-3">Caridina</h1>
