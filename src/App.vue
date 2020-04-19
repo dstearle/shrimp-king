@@ -17,6 +17,9 @@
             
       </div>
 
+      <!-- Footer -->
+      <app-footer></app-footer>
+
     </div>
                   
   </div>
@@ -27,6 +30,7 @@
     
   import Navbar from "./components/Navbar.vue";
   import NavbarDrop from "./components/NavbarDrop.vue";
+  import Footer from "./components/inc/Footer.vue";
 
   export default {
       
@@ -34,7 +38,9 @@
         
       appNavbar: Navbar,
 
-      appNavbarDrop: NavbarDrop
+      appNavbarDrop: NavbarDrop,
+
+      appFooter: Footer
         
     },
       
